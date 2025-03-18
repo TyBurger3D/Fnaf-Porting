@@ -5,11 +5,11 @@ from .logger import Log
 from .processing.importer import Importer
 
 bl_info = {
-    "name": "Rivals Porting",
-    "description": "Import Server for Rivals Porting",
-    "author": "Half, DeveloperChipmunk",
+    "name": "FNAF Porting",
+    "description": "Import Server for FNAF Porting",
+    "author": "Half, DeveloperChipmunk, TyBurger3D",
     "blender": (4, 2, 0),
-    "version": (0, 1, 5),
+    "version": (0, 0, 1),
     "category": "Import-Export",
 }
 

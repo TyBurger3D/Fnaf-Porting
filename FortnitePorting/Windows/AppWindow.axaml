@@ -10,7 +10,7 @@
         TransparencyLevelHint="{Binding Theme.TransparencyHints}" ExtendClientAreaToDecorationsHint="True"
         WindowStartupLocation="CenterScreen"
         Icon="/Assets/LogoMR.ico"
-        Title="Fortnite Porting">
+        Title="FNAF Porting">
     <Grid RowDefinitions="30, *" Margin="{Binding $parent[Window].OffScreenMargin}">
         <ExperimentalAcrylicBorder Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" IsVisible="{Binding !Theme.UseMica}">
             <ExperimentalAcrylicBorder.Material>
@@ -202,7 +202,7 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="1" Text="RivalsPorting" FontWeight="SemiBold" FontSize="16"
+            <TextBlock Grid.Column="1" Text="FNAFPorting" FontWeight="SemiBold" FontSize="16"
                        HorizontalAlignment="Left" VerticalAlignment="Center" />
             <TextBlock Grid.Column="3" Text="{Binding VersionString}" Classes="TextFillColorTertiaryBrush" FontSize="13" Margin="-2 2 0 0"
                        HorizontalAlignment="Left" VerticalAlignment="Center" />

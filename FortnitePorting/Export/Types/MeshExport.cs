@@ -71,7 +71,7 @@ public class MeshExport : BaseExport
     {
         string ExportCustom(string path)
         {
-            var stream = Avalonia.Platform.AssetLoader.Open(new Uri($"avares://RivalsPorting/{path}"));
+            var stream = Avalonia.Platform.AssetLoader.Open(new Uri($"avares://FNAFPorting/{path}"));
             
             var outPathPortion = path.SubstringAfter("Assets/");
             var outPath = Path.Combine(metaData.AssetsRoot, outPathPortion);
@@ -115,12 +115,7 @@ public class MeshExport : BaseExport
         {
             case EExportType.Outfit:
             {
-                if (asset.TryGetValue(out UObject characterMesh, "Mesh1"))
-                {
-                    Meshes.AddIfNotNull(Exporter.MeshComponent(characterMesh));
-                }
-                // Weapon meshes?
-                
+                Meshes.AddIfNotNull(Exporter.Mesh(asset));
                 break;
             }
             case EExportType.CharacterPart:

@@ -88,8 +88,9 @@ class ImportContext:
             self.import_model(mesh, can_spawn_at_3d_cursor=True)
 
         self.import_light_data(data.get("Lights"))
-            
-        if self.type == EExportType.OUTFIT:
+        
+        # TODO: Eventually change to allow for tasty rig FNAF?
+        if self.type == EExportType.FALL_GUYS_OUTFIT:
             master_skeleton = get_selected_armature()
             master_mesh = get_armature_mesh(master_skeleton)
             
@@ -764,6 +765,10 @@ class ImportContext:
 
         if "RimOnly" in base_material_path:
             replace_shader_node("MR Rim")
+
+        if "Char_Master_Mat_Characters" in base_material_path:
+            replace_shader_node("FNAF Material")
+            socket_mappings = fnaf_character_mappings
         
         # TODO: Common_Cape, Symbiote (1035)
         # Cloak, Punisher

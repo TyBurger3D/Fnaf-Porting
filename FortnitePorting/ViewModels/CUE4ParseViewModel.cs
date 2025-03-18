@@ -62,13 +62,13 @@ public class CUE4ParseViewModel : ViewModelBase
     public readonly Dictionary<int, FLinearColor> BeanstalkMaterialProps = [];
     public readonly Dictionary<int, FVector> BeanstalkAtlasTextureUVs = [];
     
-    private static readonly Regex RivalsArchiveRegex = new(@"^Marvel(/|\\)Content(/|\\)Paks(/|\\)(pakchunk(?:0|10.*|\w+)-WindowsClient|global)\.(pak|utoc)$", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+    private static readonly Regex RivalsArchiveRegex = new(@"^freddys(/|\\)Content(/|\\)Paks(/|\\)(pakchunk(?:0|10.*|\w+)-WindowsClient|global)\.(pak|utoc)$", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-    private const EGame LATEST_GAME_VERSION = EGame.GAME_MarvelRivals;
+    private const EGame LATEST_GAME_VERSION = EGame.GAME_UE4_23;
 
     public override async Task Initialize()
     {
-        ObjectTypeRegistry.RegisterEngine(Assembly.Load("RivalsPorting"));
+        ObjectTypeRegistry.RegisterEngine(Assembly.Load("FNAFPorting"));
         ObjectTypeRegistry.RegisterEngine(Assembly.Load("FortnitePorting.Shared"));
 
         await CleanupCache();
@@ -90,7 +90,7 @@ public class CUE4ParseViewModel : ViewModelBase
         
         await LoadKeys();
         Provider.LoadVirtualPaths();
-        await LoadMappings();
+        // await LoadMappings();
         
         Provider.PostMount();
         
@@ -137,7 +137,7 @@ public class CUE4ParseViewModel : ViewModelBase
     
     private async Task InitializeProvider()
     {
-        Provider.CustomEncryption = MarvelAes.MarvelDecrypt;
+        // Provider.CustomEncryption = MarvelAes.MarvelDecrypt;
         Provider.Initialize();
     }
 

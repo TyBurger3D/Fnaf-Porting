@@ -10,7 +10,7 @@ public class AppSettings
 {
     public static SettingsViewModel Current = new();
 
-    private static readonly DirectoryInfo DirectoryPath = new(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "RivalsPorting"));
+    private static readonly DirectoryInfo DirectoryPath = new(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FNAFPorting"));
     private static readonly FileInfo FilePath = new(Path.Combine(DirectoryPath.FullName, "AppSettings.json"));
 
     public static void Load()

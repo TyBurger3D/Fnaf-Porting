@@ -24,7 +24,7 @@ public static class DependencyService
     {
         TaskService.Run(() =>
         {
-            EnsureResourceBased("Assets/Mappings/5.3.2-1626869+++depot_marvel+S1_1_release-Marvel+PY.usmap", MappingsFile);
+            // EnsureResourceBased("Assets/Mappings/5.3.2-1626869+++depot_marvel+S1_1_release-Marvel+PY.usmap", MappingsFile);
             EnsureResourceBased("Assets/Dependencies/binkadec.exe", BinkaDecoderFile);
             EnsureResourceBased("Assets/Dependencies/radadec.exe", RadaDecoderFile);
             EnsureResourceBased("Assets/Dependencies/FortnitePorting.Updater.exe", UpdaterFile);
@@ -37,7 +37,7 @@ public static class DependencyService
 
     private static void EnsureResourceBased(string path, FileInfo targetFile)
     {
-        var assetStream = AssetLoader.Open(new Uri($"avares://RivalsPorting/{path}"));
+        var assetStream = AssetLoader.Open(new Uri($"avares://FNAFPorting/{path}"));
         if (targetFile is { Exists: true, Length: > 0 } && targetFile.GetHash() == assetStream.GetHash()) return;
 
         targetFile.Directory?.Create();

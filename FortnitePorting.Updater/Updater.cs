@@ -45,7 +45,7 @@ public static class Updater
     {
         try
         {
-            var processes = Process.GetProcessesByName("RivalsPorting");
+            var processes = Process.GetProcessesByName("FNAFPorting");
             return processes.Any(process => process.MainModule is { } mainModule && mainModule.FileName.Equals(path.Replace("/", "\\")));
         }
         catch (Exception)

@@ -29,7 +29,7 @@ public partial class InstallationProfile : ObservableValidator
     [ArchiveDirectory]
     [ObservableProperty] private string _archiveDirectory;
     
-    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_MarvelRivals;
+    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_UE4_23;
     
     [NotifyDataErrorInfo]
     [EncryptionKey]
@@ -41,7 +41,7 @@ public partial class InstallationProfile : ObservableValidator
     
     [ObservableProperty] 
     [NotifyPropertyChangedFor(nameof(MappingsFileEnabled))]
-    private bool _useMappingsFile = true;
+    private bool _useMappingsFile;
     
     [ObservableProperty] private string _mappingsFile = DependencyService.MappingsFile.FullName;
     

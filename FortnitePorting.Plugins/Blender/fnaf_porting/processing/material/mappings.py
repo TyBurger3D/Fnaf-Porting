@@ -691,3 +691,20 @@ gmap_material_mappings = MappingCollection(
         SlotMapping("Uses ColorVariety/Scratch/Dirt Mask")
     ]
 )
+
+fnaf_character_mappings = MappingCollection(
+    textures=[
+        SlotMapping("Base_Color", "Base Color"),
+        SlotMapping("AO_Rough_Metal", "Roughness/Metallic"),
+        SlotMapping("NormalBase_Color_1", "Normal"),
+    ],
+    scalars=[
+        SlotMapping("Roughness Leafs", "Roughness"),
+        SlotMapping("Specular_Leafs", "Specular")
+    ],
+    vectors=[
+        SlotMapping("Color1_Base"),
+        SlotMapping("Color2_Lit"),
+        SlotMapping("Color3_Shadows")
+    ]
+)

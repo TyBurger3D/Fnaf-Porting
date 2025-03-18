@@ -16,7 +16,7 @@ namespace FortnitePorting.Installer.ViewModels;
 
 public partial class IntroViewModel : ViewModelBase
 {
-    [ObservableProperty] private string _installationPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "RivalsPorting");
+    [ObservableProperty] private string _installationPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FNAFPorting");
     [ObservableProperty] private ReleaseResponse _releaseInfo;
     [ObservableProperty] private string _releaseVersion;
     [ObservableProperty] private bool _installDependencies;

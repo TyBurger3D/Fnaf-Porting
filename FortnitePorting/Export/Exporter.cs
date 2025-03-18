@@ -65,7 +65,7 @@ public static class Exporter
                 if (await ApiVM.FortnitePortingServer.PingAsync(serverType) is false)
                 {
                     var serverName = serverType.GetDescription();
-                    AppWM.Message($"{serverName} Server", $"The {serverName} Plugin for Rivals Porting is not currently installed, running, or is busy.", 
+                    AppWM.Message($"{serverName} Server", $"The {serverName} Plugin for FNAF Porting is not currently installed, running, or is busy.", 
                         severity: InfoBarSeverity.Error, false,
                         useButton: true, buttonTitle: "Install Plugin", buttonCommand: () =>
                         {
@@ -99,13 +99,6 @@ public static class Exporter
                 var asset = assetInfo.Asset;
                 var styles = metaData.ExportLocation.IsFolder() ? assetInfo.GetAllStyles() : assetInfo.GetSelectedStyles();
                 var exportType = asset.CreationData.ExportType;
-
-                var styleData = (AssetStyleData)styles[0];
-                if (styleData.StyleData.TryGetValue(out UBlueprintGeneratedClass actorClass, "ShowActorClass")
-                    && actorClass.ClassDefaultObject.TryLoad(out UObject showActorClass))
-                {
-                    asset.CreationData.Object = showActorClass;
-                }
 
                 return CreateExport(asset.CreationData.DisplayName, asset.CreationData.Object, exportType, styles,
                     metaData);

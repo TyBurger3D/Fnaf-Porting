@@ -3,12 +3,12 @@ schema_version = "1.0.0"
 type = "add-on"
 license = ["SPDX:GPL-3.0-or-later"]
 
-id = "rivals_porting"
-version = "0.1.5"
+id = "fnaf_porting"
+version = "0.0.1"
 blender_version_min = "4.2.0"
-name = "Rivals Porting"
-tagline = "Import Server for Rivals Porting"
-maintainer = "https://github.com/bmarquez1997"
+name = "FNAF Porting"
+tagline = "Import Server for FNAF Porting"
+maintainer = "https://github.com/TyBurger3D"
 
 tags = ["Import-Export"]
 

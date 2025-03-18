@@ -43,113 +43,39 @@ public partial class AssetLoaderCollection : ObservableObject
             [
                 new AssetLoader(EExportType.Outfit)
                 {
-                    //Marvel/Content/Marvel/Data/DataTable/MarvelHeroSkinTable.uasset - Styles and base meshes
-                    //Marvel/Content/Marvel/Data/DataTable/MarvelHeroBaseAttributeTable.uasset - Translations?
-                    
-                    //Marvel/Content/Marvel/Data/DataTable/HeroGallery/UIHeroTable.uasset - UI Definitions: Name, Description, icon
-                    //Marvel/Content/Marvel/Data/DataTable/HeroGallery/UISkinTable.uasset - Skin definitions: Link to actor, skin names
-                    
-                    ClassNames = ["Blueprint"],
-                    AssetNames = ["001_ShowBP"],
-                    PlaceholderIconPath = "Marvel/UI/Textures/Gallery/Logo/img_gallery_insidepage_logo",
-                    LoadHiddenAssets = true,
-                    IconHandler = asset =>
-                    {
-                        var iconName = "Marvel/Content/Marvel/UI/Textures/HeroPortrait/SelectHero/img_selecthero_" +
-                                       asset.Name.Substring(9, 7);
-                        CUE4ParseVM.Provider.TryLoadPackageObject(iconName, out UTexture2D previewImage);
-
-                        return previewImage;
-                    },
-                    AssetHandler = async loader =>
-                    {
-                        async Task<UTexture2D> GetDataTableIcon(FStructFallback iconStruct)
+                    ManuallyDefinedAssets = new Lazy<ManuallyDefinedAsset[]>(
+                    [
+                        new ManuallyDefinedAsset
                         {
-                            if (iconStruct.TryGetValue(out FStructFallback icon,
-                                "HeroHeadBig_18_9ACCBB7F4F69AA4CADA5CA94E3788DB5",
-                                "HeroHeadSpuare_11_B4C0FC694F2D5538B14839BD2DCAA5B3") 
-                                && icon.TryGetValue(out FSoftObjectPath texturePath, "Image_2_BDA02B484B8F00FAFED6C0A9E2AF13EF")
-                                && texturePath.TryLoad(out UTexture2D texture))
-                            {
-                                return texture;
-                            }
-                            return await CUE4ParseVM.Provider.SafeLoadPackageObjectAsync<UTexture2D>("Marvel/Content/Marvel/UI/Textures/Gallery/Logo/img_gallery_insidepage_logo");
-                        }
-
-                        async Task<Dictionary<HeroKey, List<FStructFallback>>> GetSkinMap()
+                            Name = "Freddy",
+                            AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Freddy/RIG_Freddy",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Freddy",
+                        },
+                        new ManuallyDefinedAsset
                         {
-                            var dictionary = new Dictionary<HeroKey, List<FStructFallback>>();
-                            var skinsTable = await CUE4ParseVM.Provider.SafeLoadPackageObjectAsync<UDataTable>(
-                                "Marvel/Content/Marvel/Data/DataTable/HeroGallery/UISkinTable");
-                            if (skinsTable?.RowMap == null) return null;
-                            
-                            foreach (var skin in skinsTable.RowMap.Values)
-                            {
-                                if (skin.TryGetValue(out FStructFallback identifier, "Identifier"))
-                                {
-                                    var key = new HeroKey(identifier);
-                                    if (!dictionary.ContainsKey(key))
-                                        dictionary[key] = new List<FStructFallback>();
-                                    
-                                    dictionary[key].Add(skin);
-                                }
-                            }
-                            return dictionary;
-                        }
-                        
-                        var heroData =
-                            await CUE4ParseVM.Provider.SafeLoadPackageObjectAsync<UDataTable>(
-                                "Marvel/Content/Marvel/Data/DataTable/HeroGallery/UIHeroTable");
-                        
-                         // put in map by hero id, add before putting in source
-                         var skinMap = await GetSkinMap();
-                         
-                        var finished = false;
-                        if (heroData?.RowMap == null) return;
-
-                        loader.TotalAssets = heroData.RowMap.Count();
-                        foreach (var (key, value) in heroData.RowMap)
+                            Name = "Bonnie",
+                            AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Bonnie/RIG_Bonnie",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Bonnie"
+                        },
+                        new ManuallyDefinedAsset
                         {
-                            var heroBasic = value.GetOrDefault<FStructFallback>("HeroBasic_84_5082D460476D0C101A47818F6EE3DC2E");
-                            var heroIcon = value.GetOrDefault<FStructFallback>("HeroHead_80_B82E1E9744B6FE24DF708982FF5B46D0");
-                            
-                            var assetArgs = new AssetItemCreationArgs()
-                            {
-                                ID = key.Text,
-                                DisplayName = heroBasic.GetOrDefault("TName_10_93EE6AC745A8786CA1DF5A83B5253AC4", new FText(key.Text)).Text.ToLower().TitleCase(),
-                                Description = heroBasic.GetOrDefault("Desc_63_F34334EF45CD2DCEF0F5CEB7B7893F3F", new FText("No Description")).Text,
-                                MainColor = heroBasic.GetOrDefault("HeroInfoMainColor_60_DF3A9B7B49FBF4A7F47FDCB06DADE676", new FLinearColor(1, 1, 1, 1)),
-                                SecondaryColor = heroBasic.GetOrDefault("HeroInfoMainColor_60_DF3A9B7B49FBF4A7F47FDCB06DADE676", new FLinearColor(0, 0, 0, 1)),
-                                Icon = await GetDataTableIcon(heroIcon),
-                                ExportType = EExportType.Outfit,
-                            };
-                            var assetItem = new AssetItem(assetArgs);
-                            
-                            //TODO: fix AssetInfo creation
-                            if (skinMap.ContainsKey(new HeroKey(key.Text)))
-                            {
-                                var skins = skinMap[new HeroKey(key.Text)];
-                                assetItem.AssetInfo = new AssetInfo(assetItem, skins.ToArray());
-                            }
-                            else
-                            {
-                                assetItem.AssetInfo = new AssetInfo(assetItem);
-                            }
-
-                            loader.Source.AddOrUpdate(assetItem);
-                            loader.LoadedAssets++;
-                        }
-
-                        loader.LoadedAssets = loader.TotalAssets;
-                        // HeroHeadBig_18_9ACCBB7F4F69AA4CADA5CA94E3788DB5 - Icon
-                        // HeroBasic_84_5082D460476D0C101A47818F6EE3DC2E:
-                        // TName_10_93EE6AC745A8786CA1DF5A83B5253AC4 - Display Name
-                        // EnName_45_A241DED14FF7C14AD94F109AF1ECEF52 - Display Name
-                        // Desc_63_F34334EF45CD2DCEF0F5CEB7B7893F3F - Description
-                        // HeroInfoMainColor_60_DF3A9B7B49FBF4A7F47FDCB06DADE676 - Primary color
-                        // HeroInfoSecondaryColor_66_9A43BF184D53A7114048DBA131305FFB - Secondary color
-
-                    }
+                            Name = "Chica",
+                            AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Chica/RIG_Chica",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Chica"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mr. Cupcake",
+                            AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Cupcake/RIG_Cupcake",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ICO_Cupcake"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Foxy",
+                            AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Foxy/RIG_Foxy_Clean",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Foxy"
+                        },
+                    ]),
                 },
                 new AssetLoader(EExportType.Emoticon)
                 {
@@ -225,7 +151,7 @@ public partial class AssetLoaderCollection : ObservableObject
                     SelectsOnInvoked = false,
                     IconSource = new ImageIconSource
                     {
-                        Source = ImageExtensions.AvaresBitmap($"avares://RivalsPorting/Assets/FN/{category.Category.ToString()}.png")
+                        Source = ImageExtensions.AvaresBitmap($"avares://FNAFPorting/Assets/FN/{category.Category.ToString()}.png")
                     },
                     MenuItemsSource = category.Loaders.Select(loader => new NavigationViewItem
                     {
@@ -233,7 +159,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         Content = loader.Type.GetDescription(), 
                         IconSource = new ImageIconSource
                         {
-                            Source = ImageExtensions.AvaresBitmap($"avares://RivalsPorting/Assets/FN/{loader.Type.ToString()}.png")
+                            Source = ImageExtensions.AvaresBitmap($"avares://FNAFPorting/Assets/FN/{loader.Type.ToString()}.png")
                         },
                     })
                 });
