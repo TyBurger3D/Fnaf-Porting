@@ -1,4 +1,4 @@
-RivalsPorting - Automation of the Marvel Rivals Porting Process
+FNAFPorting - Automation of the FNAF Porting Process
 ------------------------------------------
 
 #### Powered by [Avalonia UI](https://avaloniaui.net/) and [CUE4Parse](https://github.com/FabianFG/CUE4Parse)
