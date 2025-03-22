@@ -251,6 +251,42 @@ public partial class AssetLoaderCollection : ObservableObject
                         },
                         new ManuallyDefinedAsset
                         {
+                            Name = "Plush Baby",
+                            AssetPath = "freddys/Content/ProductionAssets/Character_Assets/PlushCircusBaby/RIG_Plushy_CircusBaby",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Plushbaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Grimm Foxy",
+                            AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/DLCFoxy/RIG_DLC_Foxy",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Plushbaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jack-O-Bonnie",
+                            AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/JackOBonnie/RIG_JackOBonnie",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Plushbaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jack-O-Chica",
+                            AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/JackOChica/RIG_JackOChica",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Plushbaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Pirate Foxy",
+                            AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/PirateFoxy/RIG_PirateFoxy",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Plushbaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Dreadbear",
+                            AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/PirateFoxy/RIG_PirateFoxy",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Plushbaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
                             Name = "GLAMROCKFREDDY BUT DONT GO PAST THIS LINE TILL END OF HW1",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Freddy/RIG_Glamrock_Freddy",
                             IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
