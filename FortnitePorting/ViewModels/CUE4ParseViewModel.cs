@@ -64,7 +64,7 @@ public class CUE4ParseViewModel : ViewModelBase
     
     private static readonly Regex RivalsArchiveRegex = new(@"^freddys(/|\\)Content(/|\\)Paks(/|\\)(pakchunk(?:0|10.*|\w+)-WindowsClient|global)\.(pak|utoc)$", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-    private const EGame LATEST_GAME_VERSION = EGame.GAME_UE4_23;
+    private const EGame LATEST_GAME_VERSION = EGame.GAME_UE4_28;
 
     public override async Task Initialize()
     {
