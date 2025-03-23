@@ -56,25 +56,25 @@
                     </Style>
                 </StackPanel.Styles>
                 
-                <ui:SettingsExpander Header="FNAF Installation Version" Description="The type of game installation that FNAF Porting will be loading.">
+                <ui:SettingsExpander Header="Rivals Installation Version" Description="The type of game installation that Rivals Porting will be loading.">
                     <ui:SettingsExpander.Footer>
                         <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type fortnitePorting:EFortniteVersion}}"
                                   SelectedItem="{Binding Profile.FortniteVersion, Converter={StaticResource EnumToRecord}}" />
                     </ui:SettingsExpander.Footer>
                     
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Help Wanted 1 - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="Five Night's at Freddy's Help Wanted 1 (Curse of Dreadbear DLC not required to work, but it's already setup!)" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="Latest (Installed) - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="The current/most up to date version of the game." HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Security Breach - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Text="Five Night's at Freddy's Security Breach (RUIN DLC not required to work, but it's already setup!)" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="Custom - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="An older version of the game that requires more setup." HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </StackPanel>
                 </ui:SettingsExpander>
                 <ui:SettingsExpander Header="Archive Directory" Description="The directory that contains all of the required game files. (*.pak, *.sig, *.ucas, *.utoc)" >
                     <ui:SettingsExpander.Footer>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Profile.ArchiveDirectory}" Watermark="Ex. C:/Steam/steamapps/common/FNAFVRHelpWanted/freddys/Content/Paks"/>
+                            <TextBox Text="{Binding Profile.ArchiveDirectory}" Watermark="Ex. C:/Program Files (x86)/Steam/steamapps/common/MarvelRivals/MarvelGame/Marvel/Content/Paks"/>
                             <Button Margin="4 0 0 0" Command="{Binding Profile.BrowseArchivePath}">
                                 <ui:SymbolIcon Symbol="Folder"/>
                             </Button>

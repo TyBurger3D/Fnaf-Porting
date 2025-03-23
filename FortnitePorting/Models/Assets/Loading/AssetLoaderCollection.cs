@@ -282,12 +282,12 @@ public partial class AssetLoaderCollection : ObservableObject
                         new ManuallyDefinedAsset
                         {
                             Name = "Dreadbear",
-                            AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/PirateFoxy/RIG_PirateFoxy",
+                            AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/DLCFreddy/RIG_DLC1_Freddy",
                             IconPath = "freddys/Plugins/HalloweenDLC/Content/Textures/Icons/Gallery/ICO_Dreadbear_Gallery"
                         },
                         new ManuallyDefinedAsset
                         {
-                            Name = "GLAMROCKFREDDY BUT DONT GO PAST THIS LINE TILL END OF HW1",
+                            Name = "Glamrock Freddy",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Freddy/RIG_Glamrock_Freddy",
                             IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
                         },
