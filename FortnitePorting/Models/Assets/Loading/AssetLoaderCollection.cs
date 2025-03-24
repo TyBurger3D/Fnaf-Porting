@@ -287,8 +287,44 @@ public partial class AssetLoaderCollection : ObservableObject
                         },
                         new ManuallyDefinedAsset
                         {
+                            Name = "The Blob",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Blob/RIG_Blob",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Burntrap",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Burntrap/RIG_Burntrap",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Glamrock Chica",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Chica/RIG_Glamrock_Chica",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "DJ Music Man",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/DJ_MusicMan/RIG_DJ_Music_Man",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Endo",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Endo/RIG_Endo",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
                             Name = "Glamrock Freddy",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Freddy/RIG_Glamrock_Freddy",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Gregory",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Gregory/RIG_Gregory_",
                             IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
                         },
                         

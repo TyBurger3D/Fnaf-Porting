@@ -29,7 +29,7 @@ public partial class InstallationProfile : ObservableValidator
     [ArchiveDirectory]
     [ObservableProperty] private string _archiveDirectory;
     
-    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_UE4_23;
+    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_UE4_27;
     
     [NotifyDataErrorInfo]
     [EncryptionKey]
