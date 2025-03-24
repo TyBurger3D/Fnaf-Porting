@@ -327,6 +327,150 @@ public partial class AssetLoaderCollection : ObservableObject
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Gregory/RIG_Gregory_",
                             IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
                         },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Lil DJ Music Man",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Lil_DJ_Music_Man/RIG_Little_DJ_Music_Man",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Montgomery Gator (Monty)",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Monty/RIG_Montgomery_Gator",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Sun (Daycare Attendant)",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/MoonMan/RIG_Sunman",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Moon (Daycare Attendant)",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/MoonMan/RIG_MoonMan",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Roxane Wolf (Roxy)",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Roxy/RIG_Glamrock_Roxy",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Shattered Chica",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Chica/RIG_Shattered_Chica",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Shattered Monty",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Monty/RIG_Shattered_Montgomery",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Shattered Roxy",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Roxy/RIG_Shattered_Roxy",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Staff Bot (Will have styles later)",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Staffbot/RIG_Chefbot",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Vanessa",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanessa/RIG_Vanessa",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Vanny",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanny/RIG_Vanny",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ruined Chica",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Chica/SK_DLC_Chica",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ruined Monty",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Monty/SK_Monty_DLC",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Scrapped Rabbit",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Rabbit/SK_DLC_Rabbit",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ruined Roxy",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Roxy/SK_Roxy_DLC",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Candy Cadet",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_CandyCadet/SK_DLC_CandyCadet",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ruined Freddy (Prototype)",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Freddy/SK_DLC_Freddy",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mascot Mimic",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Mascot/SK_Mascot4",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Maskbot",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Maskbot/SK_Maskbot",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Scooper",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Scooper/SK_DLC_Scooper",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "MXES",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Rabbit_6x/SK_DLC_Rabbit_6x",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Cassie",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Player/SK_DLC_Player_Body",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Mimic",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_OldEndo/SK_DLC_Old_Endo",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Eclipse",
+                            AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_MoonSun/SK_Moonman_DLC",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                        },
                         
                     ]),
                 },
