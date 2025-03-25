@@ -767,7 +767,7 @@ class ImportContext:
             replace_shader_node("MR Rim")
 
         if "Char_Master_Mat_Characters" in base_material_path:
-            replace_shader_node("FNAF Material")
+            replace_shader_node("5P Material")
             socket_mappings = fnaf_character_mappings
         
         # TODO: Common_Cape, Symbiote (1035)

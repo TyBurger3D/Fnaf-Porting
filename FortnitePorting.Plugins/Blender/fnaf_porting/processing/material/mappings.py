@@ -697,6 +697,8 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("Base_Color", "Base Color"),
         SlotMapping("AO_Rough_Metal", "Roughness/Metallic"),
         SlotMapping("NormalBase_Color_1", "Normal"),
+        SlotMapping("Emissive", "Emission"),
+        SlotMapping("Opacity", "Alpha"),
     ],
     scalars=[
         SlotMapping("Roughness Leafs", "Roughness"),
