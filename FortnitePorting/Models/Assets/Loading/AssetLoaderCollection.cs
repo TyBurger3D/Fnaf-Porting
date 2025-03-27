@@ -289,187 +289,529 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "The Blob",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Blob/RIG_Blob",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Burntrap",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Burntrap/RIG_Burntrap",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Glamrock Chica",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Chica/RIG_Glamrock_Chica",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_ChicaVogue"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "DJ Music Man",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DJ_MusicMan/RIG_DJ_Music_Man",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Endo",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Endo/RIG_Endo",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Endo_Poster_03"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Glamrock Freddy",
-                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Freddy/RIG_Glamrock_Freddy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            AssetPath = "fnaf9/Content/ShadingAssets/Textures/Poster_FreddyPop",
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_FreddyPop"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Gregory",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Gregory/RIG_Gregory_",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Lil DJ Music Man",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Lil_DJ_Music_Man/RIG_Little_DJ_Music_Man",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Montgomery Gator (Monty)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Monty/RIG_Montgomery_Gator",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_MontyPop"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Sun (Daycare Attendant)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/MoonMan/RIG_Sunman",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Sunnydrop"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Moon (Daycare Attendant)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/MoonMan/RIG_MoonMan",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_MoonDrop"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Roxane Wolf (Roxy)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Roxy/RIG_Glamrock_Roxy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_RoxyNegal"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Shattered Chica",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Chica/RIG_Shattered_Chica",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Shattered Monty",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Monty/RIG_Shattered_Montgomery",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Shattered Roxy",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Roxy/RIG_Shattered_Roxy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Staff Bot (Will have styles later)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Staffbot/RIG_Chefbot",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_FatalAccidents-poster"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Vanessa",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanessa/RIG_Vanessa",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_VannyGraffiti_Decal"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Vanny",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanny/RIG_Vanny",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Chica",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Chica/SK_DLC_Chica",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Monty",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Monty/SK_Monty_DLC",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Scrapped Rabbit",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Rabbit/SK_DLC_Rabbit",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Roxy",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Roxy/SK_Roxy_DLC",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Candy Cadet",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_CandyCadet/SK_DLC_CandyCadet",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Freddy (Prototype)",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Freddy/SK_DLC_Freddy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Mascot Mimic",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Mascot/SK_Mascot4",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Maskbot",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Maskbot/SK_Maskbot",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Scooper",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Scooper/SK_DLC_Scooper",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "MXES",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Rabbit_6x/SK_DLC_Rabbit_6x",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Cassie",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Player/SK_DLC_Player_Body",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "The Mimic",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_OldEndo/SK_DLC_Old_Endo",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Eclipse",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_MoonSun/SK_Moonman_DLC",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Freddy_figure"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ballora",
+                            AssetPath = "Thumper/Content/Characters/Ballora/SK_Ballora",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Ballora"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Carnie",
+                            AssetPath = "Thumper/Content/Characters/BarkerBear/SK_BarkerBear",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Carnie"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Bidybab",
+                            AssetPath = "Thumper/Content/Characters/Bidybab/SK_Bidybab",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Bidybab"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "BonBon",
+                            AssetPath = "Thumper/Content/Characters/BonBon/SK_Bonbon",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_BonBon"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Bonnet",
+                            AssetPath = "Thumper/Content/Characters/Bonnet/SK_Bonnet",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Bonnet"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Captain Foxy",
+                            AssetPath = "Thumper/Content/Characters/CaptainFoxy/SK_CaptainFoxy",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_CaptainFoxy"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Cassie",
+                            AssetPath = "Thumper/Content/Characters/Cassie/SK_Cassie",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Celebrate_"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Glamrock Chica",
+                            AssetPath = "Thumper/Content/Characters/Chica/SK_ChicaGlamrock",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_GlamChica"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Circus Baby",
+                            AssetPath = "Thumper/Content/Characters/CircusBaby/SK_CircusBaby",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_CircusBaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mr Cupcake",
+                            AssetPath = "Thumper/Content/Characters/Cupcake/SK_MrCupcake",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "DJ Music Man",
+                            AssetPath = "Thumper/Content/Characters/DJ_Music_Man/SK_DJMM",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_DJMM"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ruined DJ Music Man",
+                            AssetPath = "Thumper/Content/Characters/DJ_MusicMan_Ruined/SK_DJMusicManRuined",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_RuinedDJMM"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Candy Cadet",
+                            AssetPath = "Thumper/Content/Characters/DLC_CandyCadet/SK_DLC_CandyCadet",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Endo",
+                            AssetPath = "Thumper/Content/Characters/Endo/SK_Endo",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Endo"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ennard",
+                            AssetPath = "Thumper/Content/Characters/Ennard/SK_Ennard",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Ennard"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Glamrock Freddy (Repair)",
+                            AssetPath = "Thumper/Content/Characters/Freddy_ColdStorage/SK_ST_CS_Freddy_Rig",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_GlamFreddy"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Funtime Chica (Cupcake)",
+                            AssetPath = "Thumper/Content/Characters/Funtime_Chica/SK_FuntimeChica",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_FTChica"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Funtime Chica's Cupcake",
+                            AssetPath = "Thumper/Content/Characters/Funtime_Chica/SK_FTChica_CupcakeOnly",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_FTChica"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Funtime Foxy",
+                            AssetPath = "Thumper/Content/Characters/Funtime_Foxy/SK_FTFoxy",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Funtime Freddy",
+                            AssetPath = "Thumper/Content/Characters/Funtime_Freddy/SK_FTFreddy",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_FTFreddy"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Glitchtrap",
+                            AssetPath = "Thumper/Content/Characters/GlitchTrap/SK_Glitchtrap",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Headchef Bot",
+                            AssetPath = "Thumper/Content/Characters/HeadChefBot/SK_HeadChefBot",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_HeadChefBot"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Helpy Body Parts (WIP, just copy and paste after these lines)",
+                            AssetPath = "Thumper/Content/Characters/Jackie/SM_Jackie_Gallery",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Helpy"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jackie",
+                            AssetPath = "Thumper/Content/Characters/Jackie/SM_Jackie_Gallery",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_JackieModel"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Lefty",
+                            AssetPath = "Thumper/Content/Characters/Lefty/SK_Lefty",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Lefty"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Lemonade Clown",
+                            AssetPath = "Thumper/Content/Characters/LemonadeClown/SM_LemonadeClown",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Lil' DJ Music Man",
+                            AssetPath = "Thumper/Content/Characters/LittleMusicMan/SK_LMM",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ruined Lil' DJ Music Man (Styles later)",
+                            AssetPath = "Thumper/Content/Characters/LittleMusicMan_Ruined/SK_LMM_01",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Masked Bonnie Doll",
+                            AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Bonnie",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Masked Chica Doll",
+                            AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Chica",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Masked Foxy Doll",
+                            AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Foxy",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Masked Freddy Doll",
+                            AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Freddy",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Masked Golden Freddy Doll",
+                            AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_GoldenFreddy",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Masked Puppet",
+                            AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Puppet",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Minireena",
+                            AssetPath = "Thumper/Content/Characters/Minireena/SK_Minireena",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Minireena"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Monty",
+                            AssetPath = "Thumper/Content/Characters/Monty/SK_Monty",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Monty"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "MXES",
+                            AssetPath = "Thumper/Content/Characters/MXES_Rabbit/SK_DLC_Rabbit",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mystic Hippo",
+                            AssetPath = "Thumper/Content/Characters/MysticHippo/SK_MysticHippo",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Pig Patch",
+                            AssetPath = "Thumper/Content/Characters/PigPatch/SK_PPatch",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_PigPatch"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Plush Glamrock Bonnie",
+                            AssetPath = "Thumper/Content/Characters/Plush_GlamBonnie/SK_Plush_GlamBonnie",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Plush Glamrock Chica",
+                            AssetPath = "Thumper/Content/Characters/Plush_GlamChica/SK_Plush_GlamChica",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Plush Glamrock Freddy",
+                            AssetPath = "Thumper/Content/Characters/Plush_GlamFreddy/SK_Plush_GlamFreddy",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Plush Monty",
+                            AssetPath = "Thumper/Content/Characters/Plush_GlamMonty/SK_Plush_GlamMonty",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Plush Roxy",
+                            AssetPath = "Thumper/Content/Characters/Plush_GlamRoxy/SK_Plush_GlamRoxy",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Plush Moon",
+                            AssetPath = "Thumper/Content/Characters/Plush_SunMoon/SK_Plush_MoonMan",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Plush Baby",
+                            AssetPath = "Thumper/Content/Characters/PlushBaby/SK_PBaby",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_PlushBaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Roxanne Wolf (Roxy)",
+                            AssetPath = "Thumper/Content/Characters/Roxy/SK_Roxy",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Roxy"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Scrap Baby",
+                            AssetPath = "Thumper/Content/Characters/ScrapBaby/SK_ScrapBaby",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_ScrapBaby"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Shattered Chica",
+                            AssetPath = "Thumper/Content/Characters/Shattered_Chica/SK_Chica_Shattered",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_ShatteredChica"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Shattered Roxy",
+                            AssetPath = "Thumper/Content/Characters/Shattered_Roxy/SK_Roxy_ShatteredNoJaw",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_ShatteredRoxy"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Staffbot",
+                            AssetPath = "Thumper/Content/Characters/Staffbot/SK_Staffbot",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Staffbots"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Daycare Attendant (sun/moon)",
+                            AssetPath = "Thumper/Content/Characters/SunMoon/SK_Moonman",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Moon"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Eclipse",
+                            AssetPath = "Thumper/Content/Characters/SunMoonRuin/SK_Moonman_Ruin",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Glitchtrap puppet",
+                            AssetPath = "Thumper/Content/Characters/Tilt/SK_Tilt_Puppet",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Vanny",
+                            AssetPath = "Thumper/Content/Characters/Vanny/SK_Vanny",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Vanny"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "White Tiger",
+                            AssetPath = "Thumper/Content/Characters/WhiteTiger/SK_WhiteTiger",
+                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Yenndo",
+                            AssetPath = "Thumper/Content/Characters/Yenndo/SK_Yendo",
+                            IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Yenndo"
                         },
                         
                     ]),
