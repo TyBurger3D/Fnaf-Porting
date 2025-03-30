@@ -695,9 +695,9 @@ gmap_material_mappings = MappingCollection(
 fnaf_character_mappings = MappingCollection(
     textures=[
         SlotMapping("Base_Color", "Base Color"),
-        SlotMapping("AO_Rough_Metal", "Roughness/Metallic"),
+        SlotMapping("AO_Rough_Metal", "ORM"),
         SlotMapping("NormalBase_Color_1", "Normal"),
-        SlotMapping("Emissive", "Emission"),
+        SlotMapping("Emissive", "Color"),
         SlotMapping("Opacity", "Alpha"),
     ],
     scalars=[

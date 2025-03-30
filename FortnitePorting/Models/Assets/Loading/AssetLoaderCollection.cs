@@ -318,7 +318,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         new ManuallyDefinedAsset
                         {
                             Name = "Glamrock Freddy",
-                            AssetPath = "fnaf9/Content/ShadingAssets/Textures/Poster_FreddyPop",
+                            AssetPath = "fnaf9/Content/Model_Assets/Chars/Freddy/RIG_Glamrock_Freddy",
                             IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_FreddyPop"
                         },
                         new ManuallyDefinedAsset
