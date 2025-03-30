@@ -54,7 +54,7 @@ public class CUE4ParseViewModel : ViewModelBase
 
     public readonly DefaultFileProvider Provider = new (
         AppSettings.Current.Installation.CurrentProfile.ArchiveDirectory, SearchOption.AllDirectories, true,
-        new VersionContainer(AppSettings.Current.Installation.CurrentProfile.UnrealVersion));
+        new VersionContainer(AppSettings.Current.Installation.CurrentProfile.FortniteVersion == EFortniteVersion.HelpWanted ? HELP_WANTED_GAME_VERSION : AppSettings.Current.Installation.CurrentProfile.UnrealVersion));
     
     public readonly List<FAssetData> AssetRegistry = [];
     public readonly List<FRarityCollection> RarityColors = [];
@@ -64,7 +64,8 @@ public class CUE4ParseViewModel : ViewModelBase
     
     private static readonly Regex RivalsArchiveRegex = new(@"^freddys(/|\\)Content(/|\\)Paks(/|\\)(pakchunk(?:0|10.*|\w+)-WindowsClient|global)\.(pak|utoc)$", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
-    private const EGame LATEST_GAME_VERSION = EGame.GAME_UE4_28;
+    private const EGame HELP_WANTED_GAME_VERSION = EGame.GAME_UE4_23;
+    private const EGame SECURITY_BREACH_GAME_VERSION = EGame.GAME_UE4_28;
 
     public override async Task Initialize()
     {
@@ -137,71 +138,14 @@ public class CUE4ParseViewModel : ViewModelBase
     
     private async Task InitializeProvider()
     {
-        // Provider.CustomEncryption = MarvelAes.MarvelDecrypt;
         Provider.Initialize();
-    }
-
-    private async Task InitializeTextureStreaming()
-    {
-        try
-        {
-            var tocPath = await GetTocPath(AppSettings.Current.Installation.CurrentProfile.FortniteVersion);
-            if (string.IsNullOrEmpty(tocPath)) return;
-
-            var tocName = tocPath.SubstringAfterLast("/");
-            var onDemandFile = new FileInfo(Path.Combine(DataFolder.FullName, tocName));
-            if (!onDemandFile.Exists || onDemandFile.Length == 0)
-            {
-                await ApiVM.DownloadFileAsync($"https://download.epicgames.com/{tocPath}", onDemandFile.FullName);
-            }
-
-            var options = new IoStoreOnDemandOptions
-            {
-                ChunkBaseUri = new Uri("https://download.epicgames.com/ias/fortnite/", UriKind.Absolute),
-                ChunkCacheDirectory = CacheFolder,
-                Authorization = new AuthenticationHeaderValue("Bearer", AppSettings.Current.Online.EpicAuth?.Token),
-                Timeout = TimeSpan.FromSeconds(30)
-            };
-
-            var chunkToc = new IoChunkToc(onDemandFile);
-            await Provider.RegisterVfs(chunkToc, options);
-            await Provider.MountAsync();
-        }
-        catch (Exception e)
-        {
-            AppWM.Dialog("Failed to Initialize Texture Streaming", 
-                $"Please enable the \"Pre-Download Streamed Assets\" option for Fortnite in the Epic Games Launcher and disable texture streaming in installation settings to remove this popup\n\nException: {e}");
-        }
-    }
-    
-    private async Task<string> GetTocPath(EFortniteVersion loadingType)
-    {
-        var onDemandText = string.Empty;
-        switch (loadingType)
-        {
-            case EFortniteVersion.LatestInstalled:
-            {
-                var onDemandPath = Path.Combine(AppSettings.Current.Installation.CurrentProfile.ArchiveDirectory, @"..\..\..\Cloud\IoStoreOnDemand.ini");
-                if (File.Exists(onDemandPath)) onDemandText = await File.ReadAllTextAsync(onDemandPath);
-                break;
-            }
-        }
-
-        if (string.IsNullOrEmpty(onDemandText)) return string.Empty;
-
-        var onDemandIni = new ConfigIni();
-        onDemandIni.Read(new StringReader(onDemandText));
-        return onDemandIni
-            .Sections.FirstOrDefault(section => section.Name?.Equals("Endpoint") ?? false)?
-            .Tokens.OfType<InstructionToken>().FirstOrDefault(token => token.Key.Equals("TocPath"))?
-            .Value.Replace("\"", string.Empty) ?? string.Empty;
     }
 
     private async Task LoadKeys()
     {
         var mainKey = AppSettings.Current.Installation.CurrentProfile.IsCustom ? 
             AppSettings.Current.Installation.CurrentProfile.MainKey
-            : new FileEncryptionKey(Globals.LATEST_AES);
+            : new FileEncryptionKey(AppSettings.Current.Installation.CurrentProfile.FortniteVersion == EFortniteVersion.HelpWanted ? Globals.HELP_WANTED_AES : Globals.SECURITY_BREACH_AES);
         if (mainKey.IsEmpty) mainKey = FileEncryptionKey.Empty;
         
         await Provider.SubmitKeyAsync(Globals.ZERO_GUID, mainKey.EncryptionKey);

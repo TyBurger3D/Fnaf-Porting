@@ -7,7 +7,7 @@ from collections import deque
 class Server(Thread):
     def __init__(self, app):
         Thread.__init__(self, daemon=True)
-        self.server = make_server('127.0.0.1', 20025, app)
+        self.server = make_server('127.0.0.1', 20026, app)
         self.context = app.app_context()
         self.context.push()
 

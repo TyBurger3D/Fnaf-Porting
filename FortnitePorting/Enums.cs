@@ -8,8 +8,14 @@ namespace FortnitePorting;
 
 public enum EFortniteVersion
 {
-    [Description("Latest (Installed)")]
-    LatestInstalled,
+    [Description("Help Wanted 1")]
+    HelpWanted,
+    
+    [Description("Help Wanted 2")]
+    HelpWanted2,
+    
+    [Description("Security Breach")]
+    SecurityBreach,
     
     [Description("Custom")]
     Custom

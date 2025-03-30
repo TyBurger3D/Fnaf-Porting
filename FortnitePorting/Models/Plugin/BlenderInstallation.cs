@@ -30,7 +30,7 @@ public partial class BlenderInstallation(string blenderExecutablePath) : Observa
         BlenderVersion.ToString(2), 
         "extensions", 
         "user_default",
-        "rivals_porting",
+        "fnaf_porting",
         "blender_manifest.toml");
     
     public static readonly DirectoryInfo PluginWorkingDirectory = new(Path.Combine(PluginsFolder.FullName, "Blender"));
@@ -60,7 +60,7 @@ public partial class BlenderInstallation(string blenderExecutablePath) : Observa
         Status = "Installing";
         
         var ueFormatZip = BuildPlugin("io_scene_ueformat");
-        var fnPortingZip = BuildPlugin("rivals_porting");
+        var fnPortingZip = BuildPlugin("fnaf_porting");
 
         InstallPlugin(ueFormatZip);
         InstallPlugin(fnPortingZip);
@@ -73,7 +73,7 @@ public partial class BlenderInstallation(string blenderExecutablePath) : Observa
     public void Uninstall()
     {
         Status = "Uninstalling";
-        RemovePlugin("rivals_porting");
+        RemovePlugin("fnaf_porting");
         RemovePlugin("io_scene_ueformat");
     }
 

@@ -32,7 +32,7 @@ public enum EExportServerType
 {
     None = -1,
     
-    Blender = 20025,
+    Blender = 20026,
     Unreal = 20001,
     Unity = 20002
 }

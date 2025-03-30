@@ -23,7 +23,7 @@ public partial class InstallationProfile : ObservableValidator
     [NotifyPropertyChangedFor(nameof(EncryptionKeyEnabled))]
     [NotifyPropertyChangedFor(nameof(MappingsFileEnabled))]
     [NotifyPropertyChangedFor(nameof(IsCustom))]
-    private EFortniteVersion _fortniteVersion = EFortniteVersion.LatestInstalled;
+    private EFortniteVersion _fortniteVersion = EFortniteVersion.HelpWanted;
     
     [NotifyDataErrorInfo]
     [ArchiveDirectory]
