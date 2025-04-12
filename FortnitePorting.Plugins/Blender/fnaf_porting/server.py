@@ -7,7 +7,7 @@ from collections import deque
 class Server(Thread):
     def __init__(self, app):
         Thread.__init__(self, daemon=True)
-        self.server = make_server('127.0.0.1', 20026, app)
+        self.server = make_server('127.0.0.1', 20035, app)
         self.context = app.app_context()
         self.context.push()
 
@@ -15,27 +15,27 @@ class Server(Thread):
 
     @staticmethod
     def create():
-        app = Flask("Rivals Porting Server")
+        app = Flask("FNAF Porting Server")
         server = Server(app)
 
-        @app.route('/rivals-porting/data', methods=['POST'])
+        @app.route('/fnaf-porting/data', methods=['POST'])
         def post_data():
             data = request.get_data().decode('utf-8')
             server.queue.append(data)
             return data
 
-        @app.route('/rivals-porting/ping', methods=['GET'])
+        @app.route('/fnaf-porting/ping', methods=['GET'])
         def ping():
             return "Pong!"
 
         return server
 
     def run(self):
-        Log.info("Started Rivals Porting Server")
+        Log.info("Started FNAF Porting Server")
         self.server.serve_forever()
 
     def shutdown(self):
-        Log.info("Shutdown Rivals Porting Server")
+        Log.info("Shutdown FNAF Porting Server")
         self.server.shutdown()
 
     def get_data(self):

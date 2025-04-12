@@ -7,7 +7,7 @@ from mathutils import Matrix, Vector, Euler, Quaternion
 def ensure_blend_data():
     addon_dir = os.path.dirname(os.path.splitext(__file__)[0])
     # TODO: change data blend name
-    with bpy.data.libraries.load(os.path.join(addon_dir, "data", "rivals_porting_data.blend")) as (data_from, data_to):
+    with bpy.data.libraries.load(os.path.join(addon_dir, "data", "fnaf_porting_data.blend")) as (data_from, data_to):
         for node_group in data_from.node_groups:
             if not bpy.data.node_groups.get(node_group):
                 data_to.node_groups.append(node_group)

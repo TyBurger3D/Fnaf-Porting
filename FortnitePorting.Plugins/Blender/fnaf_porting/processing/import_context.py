@@ -767,7 +767,7 @@ class ImportContext:
             replace_shader_node("MR Rim")
 
         if "Char_Master_Mat_Characters" in base_material_path:
-            replace_shader_node("5P Material")
+            replace_shader_node("Fnaf Shader")
             socket_mappings = fnaf_character_mappings
         
         # TODO: Common_Cape, Symbiote (1035)
@@ -790,6 +790,12 @@ class ImportContext:
                 set_param("Subsurface", self.options.get("Subsurface"))
                     
                 if diffuse_node := get_node(shader_node, "BaseColor"):
+                    nodes.active = diffuse_node
+                    
+            case "Fnaf Shader":
+                set_param("AO", self.options.get("AmbientOcclusion"))
+                    
+                if diffuse_node := get_node(shader_node, "Base Color"):
                     nodes.active = diffuse_node
 
             case "FP Glass":
