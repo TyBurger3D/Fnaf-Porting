@@ -507,7 +507,7 @@ class ImportContext:
         output_node.location = (200, 0)
 
         shader_node = nodes.new(type="ShaderNodeGroup")
-        shader_node.node_tree = bpy.data.node_groups.get("MR Material Lite")
+        shader_node.node_tree = bpy.data.node_groups.get("Fnaf Shader")
 
         def replace_shader_node(name):
             nonlocal shader_node
@@ -724,7 +724,7 @@ class ImportContext:
                 links.new(pre_node.outputs[pre_slot], default_texture_node.inputs[0])
 
         # decide which material type and mappings to use
-        socket_mappings = default_mappings
+        socket_mappings = fnaf_character_mappings
         base_material_path = material_data.get("BaseMaterialPath")
 
         if get_param_multiple(switches, layer_switch_names) and get_param_multiple(textures, extra_layer_names):
@@ -733,18 +733,8 @@ class ImportContext:
 
             set_param("Is Transparent", override_blend_mode is not EBlendMode.BLEND_Opaque)
 
-        is_glass = material_data.get("PhysMaterialName") == "Glass" or any(glass_master_names, lambda x: x in base_material_path) or (base_blend_mode is EBlendMode.BLEND_Translucent and translucency_lighting_mode in [ETranslucencyLightingMode.TLM_SurfacePerPixelLighting, ETranslucencyLightingMode.TLM_VolumetricPerVertexDirectional])
-        if is_glass:
-            replace_shader_node("FP Glass")
-            socket_mappings = glass_mappings
-
-            material.surface_render_method = "BLENDED"
-            material.show_transparent_back = False
-
         # TODO: Proper cape/two sided material handling
-        if any(hero_master_names, lambda x: x in base_material_path):
-            replace_shader_node("MR Hero")
-            socket_mappings = hero_mappings
+       
 
         if "Hair" in base_material_path:
             replace_shader_node("MR Hair")
@@ -754,17 +744,6 @@ class ImportContext:
         if "Translucent" in base_material_path or "FakeEyeShadow" in base_material_path:
             replace_shader_node("MR Translucent")
             socket_mappings = translucent_mappings
-
-        if "Common_Eye" in base_material_path or "Eye_Opt" in base_material_path:
-            replace_shader_node("MR Eye")
-            socket_mappings = eye_mappings
-
-        if any(eye_glass_master_names, lambda x: x in base_material_path) or (self.type == EExportType.OUTFIT and "SimpleGlass" in base_material_path):
-            replace_shader_node("MR Eye Glass")
-            socket_mappings = eye_glass_mappings
-
-        if "RimOnly" in base_material_path:
-            replace_shader_node("MR Rim")
 
         if "Char_Master_Mat_Characters" in base_material_path:
             replace_shader_node("Fnaf Shader")
