@@ -695,19 +695,26 @@ gmap_material_mappings = MappingCollection(
 fnaf_character_mappings = MappingCollection(
     textures=[
         SlotMapping("Base_Color", "Base Color"),
+        SlotMapping("BaseColor", "Base Color"),
+        SlotMapping("basecolor", "Base Color"),
+        SlotMapping("COLOR", "Base Color"),
         SlotMapping("Albedo", "Base Color"),
+        SlotMapping("AO"),
         SlotMapping("AO_Rough_Metal", "ORM"),
+        SlotMapping("Packed", "ORM"),
         SlotMapping("Normal"),
         SlotMapping("NormalBase_Color_1", "Normal"),
         SlotMapping("Emissive", "Emission Color"),
+        SlotMapping("Alpha"),
         SlotMapping("Opacity", "Alpha"),
+        SlotMapping("BaseMap", "Alpha"),
     ],
     scalars=[
         SlotMapping("Roughness Adjust", "Roughness"),
+        SlotMapping("Opacity", "Alpha"),
     ],
     vectors=[
-        SlotMapping("Color1_Base"),
-        SlotMapping("Color2_Lit"),
-        SlotMapping("Color3_Shadows")
+        SlotMapping("Color", "Base Color"),
+        SlotMapping("EmissiveColor", "Emission Color"),
     ]
 )

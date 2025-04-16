@@ -727,31 +727,10 @@ class ImportContext:
         socket_mappings = fnaf_character_mappings
         base_material_path = material_data.get("BaseMaterialPath")
 
-        if get_param_multiple(switches, layer_switch_names) and get_param_multiple(textures, extra_layer_names):
-            replace_shader_node("FP Layer")
-            socket_mappings = layer_mappings
-
-            set_param("Is Transparent", override_blend_mode is not EBlendMode.BLEND_Opaque)
-
-        # TODO: Proper cape/two sided material handling
-       
-
-        if "Hair" in base_material_path:
-            replace_shader_node("MR Hair")
-            socket_mappings = hair_mappings
-
-        # TODO: Come back to FakeEyeShadow, verify translucent coverage
-        if "Translucent" in base_material_path or "FakeEyeShadow" in base_material_path:
-            replace_shader_node("MR Translucent")
-            socket_mappings = translucent_mappings
-
         if "Char_Master_Mat_Characters" in base_material_path:
             replace_shader_node("Fnaf Shader")
             socket_mappings = fnaf_character_mappings
         
-        # TODO: Common_Cape, Symbiote (1035)
-        # Cloak, Punisher
-
         setup_params(socket_mappings, shader_node, True)
 
         links.new(shader_node.outputs[0], output_node.inputs[0])
@@ -762,83 +741,13 @@ class ImportContext:
             self.full_vertex_crunch_materials.append(material)
             return
 
-        match shader_node.node_tree.name:
-            case "FP Material":
-                set_param("AO", self.options.get("AmbientOcclusion"))
-                set_param("Cavity", self.options.get("Cavity"))
-                set_param("Subsurface", self.options.get("Subsurface"))
-                    
-                if diffuse_node := get_node(shader_node, "BaseColor"):
-                    nodes.active = diffuse_node
-                    
+        match shader_node.node_tree.name: 
             case "Fnaf Shader":
                 set_param("AO", self.options.get("AmbientOcclusion"))
                     
                 if diffuse_node := get_node(shader_node, "Base Color"):
                     nodes.active = diffuse_node
-
-            case "FP Glass":
-                mask_slot = shader_node.inputs["Mask"]
-                if len(mask_slot.links) > 0 and get_param(switches, "Use Diffuse Texture for Color [ignores alpha channel]"):
-                    links.remove(mask_slot.links[0])
-
-                if color_node := get_node(shader_node, "Color"):
-                    nodes.active = color_node
-                
-            case "FP Toon":
-                set_param("Brightness", self.options.get("ToonShadingBrightness"))
-                self.add_toon_outline = True
-            
-            case "MR Eye":
-                pre_eye_node = nodes.new(type="ShaderNodeGroup")
-                pre_eye_node.node_tree = bpy.data.node_groups.get("MR Pre Eye")
-                pre_eye_node.location = -600, -100
-                setup_params(pre_eye_mappings, pre_eye_node, False)
-
-                if node := get_node(shader_node, "ScleraBaseColor"):
-                    links.new(pre_eye_node.outputs["Sclera UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_EyeSclera_D", "sRGB", shader_node, "ScleraBaseColor", pre_eye_node, "Sclera UV")
-                    
-                if node := get_node(shader_node, "IrisBaseColor"):
-                    links.new(pre_eye_node.outputs["Iris UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Common_Eyes_03_D", "sRGB", shader_node, "IrisBaseColor", pre_eye_node, "Iris UV")
-
-                if node := get_node(shader_node, "IrisHeight"):
-                    links.new(pre_eye_node.outputs["Iris UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Iris001_01_H", "Non-Color", shader_node, "IrisHeight", pre_eye_node, "Iris UV")
-
-                if node := get_node(shader_node, "IrisBaseAO"):
-                    links.new(pre_eye_node.outputs["Iris UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Iris001_01_AO", "sRGB", shader_node, "IrisBaseAO", pre_eye_node, "Iris UV")
-
-                links.new(pre_eye_node.outputs["Sclera UV"], shader_node.inputs["Sclera UV"])
-                links.new(pre_eye_node.outputs["Iris UV"], shader_node.inputs["Iris UV"])
-
-                if diffuse_node := get_node(shader_node, "ScleraBaseColor"):
-                    nodes.active = diffuse_node
-            
-            case "MR Eye Glass":
-                pre_eye_glass_node = nodes.new(type="ShaderNodeGroup")
-                pre_eye_glass_node.node_tree = bpy.data.node_groups.get("MR Pre Eye Glass")
-                pre_eye_glass_node.location = -500, -75
-                setup_params(pre_eye_glass_mappings, pre_eye_glass_node, False)
-
-                if node := get_node(shader_node, "HighlightMask"):
-                    links.new(pre_eye_glass_node.outputs["Highlight UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Common_EyesHighLight_01_M", "sRGB", shader_node, "HighlightMask", pre_eye_glass_node, "Highlight UV")
-
-                if diffuse_node := get_node(shader_node, "HighlightMask"):
-                    nodes.active = diffuse_node
-            
-            case "FP Layer":
-                if diffuse_node := get_node(shader_node, "BaseColor"):
-                    nodes.active = diffuse_node
-
+        
     def import_sound_data(self, data):
         for sound in data.get("Sounds"):
             path = sound.get("Path")
