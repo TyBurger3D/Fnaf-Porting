@@ -9,7 +9,7 @@ namespace FortnitePorting;
 public static class Globals
 {
     public static string VersionString => Version.GetDisplayString(EVersionStringType.IdentifierPrefix);
-    public static readonly FPVersion Version = new(0, 0, 1, identifier: "Alpha");
+    public static readonly FPVersion Version = new(0, 1, 0, identifier: "Beta");
     public const string OnlineTag = "FNAFPorting";
     
     public static readonly FilePickerFileType MappingsFileType = new("Unreal Mappings") { Patterns = [ "*.usmap" ] };
@@ -34,8 +34,8 @@ public static class Globals
     
     public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([]);
     
-    public const string DISCORD_URL = "https://discord.gg/X7dzY6TUzw";
-    public const string TWITTER_URL = "https://twitter.com/RivalsPorting";
+    public const string DISCORD_URL = "https://discord.gg/E9krSwRWZH";
+    public const string TWITTER_URL = "https://x.com/FNAFPORTING";
     public const string GITHUB_URL = "https://github.com/TyBurger3D/FNAFPorting";
     public const string KOFI_URL = "https://ko-fi.com/halfuwu";
 }

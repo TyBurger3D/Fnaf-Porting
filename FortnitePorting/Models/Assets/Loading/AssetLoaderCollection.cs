@@ -385,13 +385,13 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "Vanessa",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanessa/RIG_Vanessa",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_VannyGraffiti_Decal"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Vanny",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanny/RIG_Vanny",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021"
+                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_VannyGraffiti_Decal"
                         },
                         new ManuallyDefinedAsset
                         {
