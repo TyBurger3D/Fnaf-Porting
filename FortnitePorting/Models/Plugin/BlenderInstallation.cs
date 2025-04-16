@@ -45,7 +45,7 @@ public partial class BlenderInstallation(string blenderExecutablePath) : Observa
     {
         if (!File.Exists(ManifestPath))
         {
-            AppWM.Message("Blender Extension", $"Plugin manifest does not exist at path {ManifestPath}, installation may have gone wrong.\nPlease remove the installation from Blender and Rivals Porting and try again.");
+            AppWM.Message("Blender Extension", $"Plugin manifest does not exist at path {ManifestPath}, installation may have gone wrong.\nPlease remove the installation from Blender and FNAF Porting and try again.");
             return false;
         }
         

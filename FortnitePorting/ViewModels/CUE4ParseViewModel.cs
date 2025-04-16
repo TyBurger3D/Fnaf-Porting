@@ -62,7 +62,7 @@ public class CUE4ParseViewModel : ViewModelBase
     public readonly Dictionary<int, FLinearColor> BeanstalkMaterialProps = [];
     public readonly Dictionary<int, FVector> BeanstalkAtlasTextureUVs = [];
     
-    private static readonly Regex RivalsArchiveRegex = new(@"^freddys(/|\\)Content(/|\\)Paks(/|\\)(pakchunk(?:0|10.*|\w+)-WindowsClient|global)\.(pak|utoc)$", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
+    private static readonly Regex FnafArchiveRegex = new(@"^Content(/|\\)Paks(/|\\)(pakchunk(?:0|10.*|\w+)-WindowsClient|global)\.(pak|utoc)$", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
 
     private const EGame HELP_WANTED_GAME_VERSION = EGame.GAME_UE4_23;
     private const EGame SECURITY_BREACH_GAME_VERSION = EGame.GAME_UE4_28;

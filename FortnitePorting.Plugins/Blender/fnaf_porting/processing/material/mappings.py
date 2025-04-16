@@ -235,113 +235,6 @@ default_mappings = MappingCollection(
     ]
 )
 
-hero_mappings = MappingCollection(
-    textures=[
-        SlotMapping("BaseColor"),
-        SlotMapping("ORM"),
-        SlotMapping("Normal"),
-        SlotMapping("SpecularTexture"),
-        SlotMapping("Emissive"),
-        SlotMapping("OpacityMask")
-    ],
-    scalars=[
-        SlotMapping("AOIntensity"),
-        SlotMapping("RoughnessPower"),
-        SlotMapping("Metallic"),
-        SlotMapping("NormalIntensity"),
-        SlotMapping("EmissiveStrength")
-    ],
-    vectors=[
-        SlotMapping("ExtraSpecularTint"),
-    ]
-)
-
-hair_mappings = MappingCollection(
-    textures=[
-        SlotMapping("BaseColor"),
-        SlotMapping("ShadowColor(UV1)", coords="UV1"),
-        SlotMapping("Normal"),
-        SlotMapping("SpecularShift"),
-        SlotMapping("AnisotropyBrightness", coords="UV1"),
-        SlotMapping("OpacityMask"),
-    ],
-    scalars=[
-        SlotMapping("Color Boost"),
-        SlotMapping("RoughnessPower"),
-        SlotMapping("NormalIntensity"),
-        SlotMapping("ExtraSpecularShift"),
-        SlotMapping("SpecularShiftPower"),
-        SlotMapping("Anisotropy Direction"),
-    ],
-    vectors=[
-        SlotMapping("Tangent"),
-    ]
-)
-
-translucent_mappings = MappingCollection(
-    textures=[
-        SlotMapping("BaseColor"),
-        SlotMapping("OpacityMask"),
-    ],
-    scalars=[
-        SlotMapping("OpacityMultiplier"),
-    ],
-    vectors=[
-        SlotMapping("BaseTint"),
-    ]
-)
-
-eye_mappings = MappingCollection(
-    textures=[
-        SlotMapping("ScleraBaseColor"),
-        SlotMapping("IrisBaseColor"),
-        SlotMapping("IrisHeight"),
-        SlotMapping("IrisBaseAO"),
-    ],
-    scalars=[
-        SlotMapping("ScleraRoughness"),
-        SlotMapping("IrisRoughness"),
-        SlotMapping("IrisBrightness"),
-    ]
-)
-
-pre_eye_mappings = MappingCollection(
-    scalars=[
-        SlotMapping("ScleraScale"),
-        SlotMapping("IrisUVRadius"),
-        SlotMapping("PupilScale")
-    ]
-)
-
-eye_glass_mappings = MappingCollection(
-    textures=[
-        SlotMapping("HighlightMask")
-    ],
-    scalars=[
-        SlotMapping("HighlightIntensity"),
-        SlotMapping("Opacity"),
-        SlotMapping("Opacity_HighLight")
-    ],
-    vectors=[
-        SlotMapping("Matcap - Color"),
-        SlotMapping("FakeHighlight_Color")
-    ],
-    switches=[
-        SlotMapping("FakeHighlight?")
-    ]
-)
-
-pre_eye_glass_mappings = MappingCollection(
-    scalars=[
-        SlotMapping("TileX"),
-        SlotMapping("TileY"),
-        SlotMapping("RotateAngle")
-    ],
-    vectors=[
-        SlotMapping("RotateFactor")
-    ]
-)
-
 layer_mappings = MappingCollection(
     textures=[
         SlotMapping("Diffuse", alpha_slot="MaskTexture"),
@@ -388,333 +281,90 @@ layer_mappings = MappingCollection(
     ]
 )
 
-toon_mappings = MappingCollection(
-    textures=[
-        SlotMapping("LitDiffuse"),
-        SlotMapping("Color_Lit_Map", "LitDiffuse"),
-        SlotMapping("ShadedDiffuse"),
-        SlotMapping("Color_Shaded_Map", "ShadedDiffuse"),
-        SlotMapping("DistanceField_InkLines"),
-        SlotMapping("DFL_Map", "DistanceField_InkLines"),
-        SlotMapping("InkLineColor_Texture"),
-        SlotMapping("SSC_Texture"),
-        SlotMapping("STM_Map", "SSC_Texture"),
-        SlotMapping("STT_Map"),
-        SlotMapping("Normals"),
-        SlotMapping("Normal_Map", "Normals")
-    ],
-    scalars=[
-        SlotMapping("ShadedColorDarkening"),
-        SlotMapping("FakeNormalBlend_Amt"),
-        SlotMapping("VertexBakedNormal_Blend", "FakeNormalBlend_Amt"),
-        SlotMapping("PBR_Shading", "Use PBR Shading", value_func=lambda value: int(value))
-    ],
-    vectors=[
-        SlotMapping("InkLineColor", "InkLineColor_Texture"),
-        SlotMapping("Color_Lit", "LitDiffuse"),
-        SlotMapping("Color_Shaded", "ShadedDiffuse"),
-        SlotMapping("SpecularTint"),
-        SlotMapping("Specular Tint", "SpecularTint"),
-    ]
-)
-
-valet_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Diffuse"),
-        SlotMapping("Mask", alpha_slot="Mask Alpha"),
-        SlotMapping("Decal", alpha_slot="Decal Alpha", coords="UV1"),
-        SlotMapping("Normal"),
-        SlotMapping("Specular Mask"),
-        SlotMapping("Scratch/Grime/EMPTY"),
-    ],
-    scalars=[
-        SlotMapping("Scratch Intensity"),
-        SlotMapping("Grime Intensity"),
-        SlotMapping("Grime Spec"),
-        SlotMapping("Grime Roughness"),
-
-        SlotMapping("Layer 01 Specular"),
-        SlotMapping("Layer 01 Metalness"),
-        SlotMapping("Layer 01 Roughness Min"),
-        SlotMapping("Layer 01 Roughness Max"),
-        SlotMapping("Layer 01 Clearcoat"),
-        SlotMapping("Layer 01 Clearcoat Roughness Min"),
-        SlotMapping("Layer 01 Clearcoat Roughness Max"),
-
-        SlotMapping("Layer 02 Specular"),
-        SlotMapping("Layer 02 Metalness"),
-        SlotMapping("Layer 02 Roughness Min"),
-        SlotMapping("Layer 02 Roughness Max"),
-        SlotMapping("Layer 02 Clearcoat"),
-        SlotMapping("Layer 02 Clearcoat Roughness Min"),
-        SlotMapping("Layer 02 Clearcoat Roughness Max"),
-
-        SlotMapping("Layer 03 Specular"),
-        SlotMapping("Layer 03 Metalness"),
-        SlotMapping("Layer 03 Roughness Min"),
-        SlotMapping("Layer 03 Roughness Max"),
-        SlotMapping("Layer 03 Clearcoat"),
-        SlotMapping("Layer 03 Clearcoat Roughness Min"),
-        SlotMapping("Layer 03 Clearcoat Roughness Max"),
-
-        SlotMapping("Layer 04 Specular"),
-        SlotMapping("Layer 04 Metalness"),
-        SlotMapping("Layer 04 Roughness Min"),
-        SlotMapping("Layer 04 Roughness Max"),
-        SlotMapping("Layer 04 Clearcoat"),
-        SlotMapping("Layer 04 Clearcoat Roughness Min"),
-        SlotMapping("Layer 04 Clearcoat Roughness Max"),
-    ],
-    vectors=[
-        SlotMapping("Scratch Tint"),
-        SlotMapping("Grime Tint"),
-
-        SlotMapping("Layer 01 Color"),
-        SlotMapping("Layer 02 Color"),
-        SlotMapping("Layer 03 Color"),
-        SlotMapping("Layer 04 Color"),
-    ]
-)
-
-glass_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Color_DarkTint"),
-        SlotMapping("Diffuse", "Color"),
-        SlotMapping("Diffuse Texture", "Color"),
-        SlotMapping("Diffuse Texture with Alpha Mask", "Color"),
-        SlotMapping("Diffuse Texture with Alpha Mask", "Color", alpha_slot="Mask"),
-        SlotMapping("PM_Diffuse", "Color"),
-        SlotMapping("BaseColorMap", "Color"),
-
-        SlotMapping("Normals"),
-        SlotMapping("BakedNormal", "Normals"),
-        SlotMapping("PM_Normals", "Normals"),
-        SlotMapping("CustomNormal", "Normals"),
-    ],
-    scalars=[
-        SlotMapping("Specular"),
-        SlotMapping("GlassSpecular", "Specular"),
-        SlotMapping("Metallic"),
-        SlotMapping("GlassMetallic", "Metallic"),
-        SlotMapping("Roughness"),
-        SlotMapping("GlassRoughness", "Roughness"),
-        SlotMapping("Window Tint Amount", "Tint Amount"),
-        SlotMapping("Opacity", "Tint Amount"),
-        SlotMapping("Exponent"),
-        SlotMapping("Fresnel Exponent", "Exponent"),
-        SlotMapping("FresnelExponentTransparency", "Exponent"),
-        SlotMapping("Inner Transparency"),
-        SlotMapping("InnerTransparency", "Inner Transparency"),
-        SlotMapping("Fresnel Inner Transparency", "Inner Transparency"),
-        SlotMapping("Inner Transparency Max Tint"),
-        SlotMapping("Fresnel Inner Transparency Max Tint", "Inner Transparency Max Tint"),
-        SlotMapping("Outer Transparency"),
-        SlotMapping("OuterTransparency", "Outer Transparency"),
-        SlotMapping("Fresnel Outer Transparency", "Outer Transparency"),
-        SlotMapping("Glass thickness", "Thickness"),
-        SlotMapping("GlassThickness", "Thickness"),
-        SlotMapping("Alpha Channel Mask Opacity", "Mask Opacity")
-    ],
-    vectors=[
-        SlotMapping("ColorFront", "Color"),
-        SlotMapping("Base Color", "Color"),
-        SlotMapping("BaseColorTint", "Color_DarkTint"),
-    ]
-)
-
-trunk_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Trunk_BaseColor", "Diffuse"),
-        SlotMapping("Trunk_Specular", "SpecularMasks"),
-        SlotMapping("Trunk_Normal", "Normals"),
-        SlotMapping("BaseColor_Trunk", "Diffuse"),
-        SlotMapping("SMR_Trunk", "SpecularMasks"),
-        SlotMapping("Normal_Trunk", "Normals"),
-    ]
-)
-
-foliage_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Diffuse"),
-        SlotMapping("DiffuseMap", "Diffuse", alpha_slot="MaskTexture"),
-        SlotMapping("Normals"),
-        SlotMapping("NormalMap", "Normals"),
-        SlotMapping("MaskTexture"),
-    ],
-    scalars=[
-        SlotMapping("Roughness Leafs", "Roughness"),
-        SlotMapping("Specular_Leafs", "Specular")
-    ],
-    vectors=[
-        SlotMapping("Color1_Base"),
-        SlotMapping("Color2_Lit"),
-        SlotMapping("Color3_Shadows")
-    ]
-)
-
-gradient_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Diffuse"),
-        SlotMapping("Layer Mask", alpha_slot="Layer Mask Alpha"),
-        SlotMapping("SkinFX_Mask"),
-        SlotMapping("Layer1_Gradient"),
-        SlotMapping("Layer2_Gradient"),
-        SlotMapping("Layer3_Gradient"),
-        SlotMapping("Layer4_Gradient"),
-        SlotMapping("Layer5_Gradient"),
-    ],
-    switches=[
-        SlotMapping("use Alpha Channel as mask", "Use Layer Mask Alpha")
-    ],
-    component_masks=[
-        SlotMapping("GmapSkinCustomization_Channel")
-    ]
-)
-
-gmap_mappings = MappingCollection(
-    textures=[
-        SlotMapping("M")
-    ]
-)
-
-bean_base_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Body_Pattern", coords="UV1"),
-    ],
-    vectors=[
-        SlotMapping("Body_EyesColor"),
-        SlotMapping("Body_MainColor"),
-        SlotMapping("Body_SecondaryColor"),
-        SlotMapping("Body_FacePlateColor"),
-        SlotMapping("Body_Eyes_MaterialProps"),
-        SlotMapping("Body_Faceplate_MaterialProps"),
-        SlotMapping("Body_GlassesEyeLashes"),
-        SlotMapping("Body_MaterialProps"),
-        SlotMapping("Body_Secondary_MaterialProps"),
-        SlotMapping("Eyelashes_Color"),
-        SlotMapping("Eyelashes_MaterialProps"),
-        SlotMapping("Glasses_Frame_Color"),
-        SlotMapping("Glasses_Frame_MaterialProps"),
-        SlotMapping("Body_EyesColor"),
-        SlotMapping("Glasses_Lense_Color"),
-        SlotMapping("Glasses_Lense_MaterialProps"),
-    ]
-)
-
-bean_costume_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Metalness/Roughness/Specular/Albedo", "Metalness/Roughness/Specular", alpha_slot="Albedo"),
-        SlotMapping("MaterialMasking"),
-        SlotMapping("NormalMap"),
-    ],
-    vectors=[
-        SlotMapping("Costume_MainColor"),
-        SlotMapping("Costume_MainMaterialProps"),
-        SlotMapping("Costume_Secondary_Color"),
-        SlotMapping("Costume_SecondaryMaterialProps"),
-        SlotMapping("Costume_AccentColor"),
-        SlotMapping("Costume_AccentMaterialProps"),
-    ]
-)
-
-bean_head_costume_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Metalness/Roughness/Specular/Albedo", "Metalness/Roughness/Specular", alpha_slot="Albedo"),
-        SlotMapping("MaterialMasking"),
-        SlotMapping("NormalMap"),
-    ],
-    vectors=[
-        SlotMapping("Head_Costume_MainColor", "Costume_MainColor"),
-        SlotMapping("Head_Costume_MainMaterialProps", "Costume_MainMaterialProps"),
-        SlotMapping("Head_Costume_Secondary_Color", "Costume_Secondary_Color"),
-        SlotMapping("Head_Costume_SecondaryMaterialProps", "Costume_SecondaryMaterialProps"),
-        SlotMapping("Head_Costume_AccentColor", "Costume_AccentColor"),
-        SlotMapping("Head_Costume_AccentMaterialProps", "Costume_AccentMaterialProps"),
-    ]
-)
-
-gmap_material_mappings = MappingCollection(
-    textures=[
-        SlotMapping("Diffuse"),
-        SlotMapping("M"),
-        SlotMapping("Color Mask 1"),
-        SlotMapping("Color Mask 2"),
-        SlotMapping("Color Mask 3"),
-        SlotMapping("ColorVariety/Scratch/Dirt Mask"),
-    ],
-    vectors=[
-        SlotMapping("Base Color: Color A"),
-        SlotMapping("Base Color: Color B"),
-        SlotMapping("Base Color: Color C"),
-        SlotMapping("Color Mask 1-R: Color A"),
-        SlotMapping("Color Mask 1-R: Color B"),
-        SlotMapping("Color Mask 1-R: Color C"),
-        SlotMapping("Color Mask 1-G: Color A"),
-        SlotMapping("Color Mask 1-G: Color B"),
-        SlotMapping("Color Mask 1-G: Color C"),
-        SlotMapping("Color Mask 1-B: Color A"),
-        SlotMapping("Color Mask 1-B: Color B"),
-        SlotMapping("Color Mask 1-B: Color C"),
-        SlotMapping("Color Mask 2-R: Color A"),
-        SlotMapping("Color Mask 2-R: Color B"),
-        SlotMapping("Color Mask 2-R: Color C"),
-        SlotMapping("Color Mask 2-G: Color A"),
-        SlotMapping("Color Mask 2-G: Color B"),
-        SlotMapping("Color Mask 2-G: Color C"),
-        SlotMapping("Color Mask 2-B: Color A"),
-        SlotMapping("Color Mask 2-B: Color B"),
-        SlotMapping("Color Mask 2-B: Color C"),
-        SlotMapping("Color Mask 3-R: Color A"),
-        SlotMapping("Color Mask 3-R: Color B"),
-        SlotMapping("Color Mask 3-R: Color C"),
-        SlotMapping("Color Mask 3-G: Color A"),
-        SlotMapping("Color Mask 3-G: Color B"),
-        SlotMapping("Color Mask 3-G: Color C"),
-        SlotMapping("Color Mask 3-B: Color A"),
-        SlotMapping("Color Mask 3-B: Color B"),
-        SlotMapping("Color Mask 3-B: Color C"),
-        SlotMapping("Color Variety Mask: Color A"),
-        SlotMapping("Color Variety Mask: Color B"),
-        SlotMapping("Color Variety Mask: Color C"),
-        SlotMapping("Scratch Color A"),
-        SlotMapping("Scratch Color B"),
-        SlotMapping("Dirt Color A"),
-        SlotMapping("Dirt Color B"),
-    ],
-    scalars=[
-        SlotMapping("Color Variety Mask: Opacity"),
-    ],
-    switches=[
-        SlotMapping("Use Diffuse as Base Color"),
-        SlotMapping("Uses 2+ Color Masks"),
-        SlotMapping("Uses 3 Color Masks"),
-        SlotMapping("Uses ColorVariety/Scratch/Dirt Mask")
-    ]
-)
-
 fnaf_character_mappings = MappingCollection(
     textures=[
+        SlotMapping("Base Color"),
+        SlotMapping("D", "Base Color"),
+        SlotMapping("BC", "Base Color"),
+        SlotMapping("Texture", "Base Color"),
         SlotMapping("Base_Color", "Base Color"),
         SlotMapping("BaseColor", "Base Color"),
         SlotMapping("basecolor", "Base Color"),
+        SlotMapping("MASK", "Base Color"),
         SlotMapping("COLOR", "Base Color"),
         SlotMapping("Albedo", "Base Color"),
+        SlotMapping("AlbedoTexture", "Base Color"),
+        SlotMapping("BaseMap", "Base Color"),
+        SlotMapping("Diffuse", "Base Color"),
+        SlotMapping("Color Texture", "Base Color"),
+        SlotMapping("DiffuseTexture", "Base Color"),
+        SlotMapping("T_Floor_BC", "Base Color", alpha_slot="Alpha"),
+        
+        SlotMapping("Sprite", "Base Color"), # TODO: Replace with proper Sprite material handling
+        
         SlotMapping("AO"),
-        SlotMapping("AO_Rough_Metal", "ORM"),
+        SlotMapping("OcclusionMap", "AO"),
+        
+        SlotMapping("ORM"),
+        SlotMapping("AORM", "ORM"),
         SlotMapping("Packed", "ORM"),
+        SlotMapping("ORM Texture", "ORM"),
+        SlotMapping("MergeMapInput", "ORM"),
+        SlotMapping("AO_Rough_Metal", "ORM"),
+        SlotMapping("AmbientOcclusionTexture", "ORM"),
+        SlotMapping("AO(R) Rough(G) Metallic(B)", "ORM"),
+        
+        SlotMapping("R", "Roughness"),
+        SlotMapping("Roughness", "Roughness"),
+        SlotMapping("Roughness Map", "Roughness"),
+        
+        SlotMapping("MT", "Metallic"),
+        SlotMapping("MetallicMap", "Metallic"),
+        SlotMapping("MetallicTexture", "Metallic"),
+        
         SlotMapping("Normal"),
+        SlotMapping("N", "Normal"),
+        SlotMapping("Norm", "Normal"),
+        SlotMapping("Normal Map", "Normal"),
+        SlotMapping("NormalTexture", "Normal"),
+        SlotMapping("Normal Texture", "Normal"),
+        SlotMapping("MainNormalInput", "Normal"),
         SlotMapping("NormalBase_Color_1", "Normal"),
+        
         SlotMapping("Emissive", "Emission Color"),
+        SlotMapping("EmissiveMap", "Emission Color"),
+        
         SlotMapping("Alpha"),
         SlotMapping("Opacity", "Alpha"),
-        SlotMapping("BaseMap", "Alpha"),
+        SlotMapping("OpacityMaskTexture", "Alpha"),
     ],
     scalars=[
+        SlotMapping("Rough", "Roughness"),
+        SlotMapping("Roughness", "Roughness"),
         SlotMapping("Roughness Adjust", "Roughness"),
+        
+        SlotMapping("NormalStrength", "Normal Strength"),
+        
+        SlotMapping("Emission Strength"),
+        SlotMapping("EM_Amount", "Emission Strength"),
+        
         SlotMapping("Opacity", "Alpha"),
     ],
     vectors=[
         SlotMapping("Color", "Base Color"),
+        SlotMapping("Base Color Value", "Base Color"),
+        
+        SlotMapping("Tint", "Base Color Multiply"),
+        SlotMapping("Color1", "Base Color Multiply"),
+        SlotMapping("ColorA", "Base Color Multiply"),
+        SlotMapping("Color01", "Base Color Multiply"),
+        SlotMapping("ColorMult", "Base Color Multiply"),
+        SlotMapping("ColorSide2", "Base Color Multiply"),
+        SlotMapping("LightColor", "Base Color Multiply"),
+        SlotMapping("Color Overlay", "Base Color Multiply"),
+        SlotMapping("Color_Multiply", "Base Color Multiply"),
+        SlotMapping("Base_Color_Multiply", "Base Color Multiply"),
         SlotMapping("EmissiveColor", "Emission Color"),
+        SlotMapping("Em_Color", "Custom Color"),
     ]
 )

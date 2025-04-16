@@ -27,14 +27,14 @@ public static class DiscordService
         },
         Assets = new Assets
         {
-            LargeImageText = $"Rivals Porting {Globals.VersionString}",
+            LargeImageText = $"FNAF Porting {Globals.VersionString}",
             LargeImageKey = "logo"
         },
         Buttons = 
         [
             new Button
             {
-                Label = "Join RivalsPorting",
+                Label = "Join FNAFPorting",
                 Url = Globals.DISCORD_URL
             }
         ]
