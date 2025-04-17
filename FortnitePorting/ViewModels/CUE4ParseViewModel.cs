@@ -66,6 +66,7 @@ public class CUE4ParseViewModel : ViewModelBase
 
     private const EGame HELP_WANTED_GAME_VERSION = EGame.GAME_UE4_23;
     private const EGame SECURITY_BREACH_GAME_VERSION = EGame.GAME_UE4_28;
+    private const EGame FLAF = EGame.GAME_UE4_27;
 
     public override async Task Initialize()
     {

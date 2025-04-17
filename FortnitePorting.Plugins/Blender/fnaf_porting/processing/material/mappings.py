@@ -290,6 +290,13 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("Base_Color", "Base Color"),
         SlotMapping("BaseColor", "Base Color"),
         SlotMapping("basecolor", "Base Color"),
+        SlotMapping("T_MangleEye_BaseColor", "Base Color"),
+        SlotMapping("T_BalloonBoyEye_BaseColor", "Base Color"),
+        SlotMapping("T_BonnieEye_BaseColor", "Base Color"),
+        SlotMapping("T_SpringtrapEye_BaseColor", "Base Color"),
+        SlotMapping("T_WoldEndoEye_BaseColor", "Base Color"),
+        SlotMapping("T_WolfEndoBody_BaseColor", "Base Color"),
+        SlotMapping("T_Eye_BaseColor", "Base Color"),
         SlotMapping("MASK", "Base Color"),
         SlotMapping("COLOR", "Base Color"),
         SlotMapping("Albedo", "Base Color"),
@@ -311,12 +318,16 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("ORM Texture", "ORM"),
         SlotMapping("MergeMapInput", "ORM"),
         SlotMapping("AO_Rough_Metal", "ORM"),
+        SlotMapping("XRM", "ORM"),
+        SlotMapping("T_WolfEndoBody_AORM", "ORM"),
+        
         SlotMapping("AmbientOcclusionTexture", "ORM"),
         SlotMapping("AO(R) Rough(G) Metallic(B)", "ORM"),
         
         SlotMapping("R", "Roughness"),
         SlotMapping("Roughness", "Roughness"),
         SlotMapping("Roughness Map", "Roughness"),
+        SlotMapping("T_EyeRoughness", "Roughness"),
         
         SlotMapping("MT", "Metallic"),
         SlotMapping("MetallicMap", "Metallic"),
@@ -330,8 +341,11 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("Normal Texture", "Normal"),
         SlotMapping("MainNormalInput", "Normal"),
         SlotMapping("NormalBase_Color_1", "Normal"),
+        SlotMapping("T_WolfEndoBody_Normal", "Normal"),
         
         SlotMapping("Emissive", "Emission Color"),
+        SlotMapping("T_SpringtrapEye_Emissive", "Emission Color"),
+        SlotMapping("T_WolfEndoEye_Emissive", "Emission Color"),
         SlotMapping("EmissiveMap", "Emission Color"),
         
         SlotMapping("Alpha"),

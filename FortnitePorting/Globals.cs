@@ -9,7 +9,7 @@ namespace FortnitePorting;
 public static class Globals
 {
     public static string VersionString => Version.GetDisplayString(EVersionStringType.IdentifierPrefix);
-    public static readonly FPVersion Version = new(0, 1, 0, identifier: "Beta");
+    public static readonly FPVersion Version = new(0, 1, 1, identifier: "Beta");
     public const string OnlineTag = "FNAFPorting";
     
     public static readonly FilePickerFileType MappingsFileType = new("Unreal Mappings") { Patterns = [ "*.usmap" ] };
@@ -31,6 +31,7 @@ public static class Globals
     
     public const string HELP_WANTED_AES = "0x710891DF17EAFFCA17CB0620F0F0DCA90A00C657F49BC131D4110B265EC2E41E";
     public const string SECURITY_BREACH_AES = "0x85F7D4007015493ED0359C9007266038F8F7B1F96988F19A610103874CC95286";
+    public const string FLAF_AES = "0x0000000000000000000000000000000000000000000000000000000000000000";
     
     public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([]);
     

@@ -813,10 +813,65 @@ public partial class AssetLoaderCollection : ObservableObject
                             AssetPath = "Thumper/Content/Characters/Yenndo/SK_Yendo",
                             IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_Yenndo"
                         },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Balloon Boy (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/BB/SK_BalloonBoy",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/BB/bbicon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Bonnie (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/Bonnie/SK_Bonnie",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/Bonnie/bonnieicon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Chica (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/Chica/SK_Chica",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/Chica/chicaicon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Foxy (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/Foxy/SK_Foxy",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/Foxy/foxyicon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Freddy (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/Freddy/SK_Freddy",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/Freddy/freddyicon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mangle (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/Mangle/SK_Mangle",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/Mangle/mangleicon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Puppet (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/Puppet/SK_Puppet",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/Puppet/puppeticon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Springtrap (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Characters/Springtrap/SK_Springtrap",
+                            IconPath = "flaf/Content/UI/CharacterIcons/NewInTrack/Springtrap/springtrapicon_base"
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Wolf Endo (FLAF)",
+                            AssetPath = "flaf/Content/Meshes/Enemy/WolfEndo/SK_WolfEndo",
+                            IconPath = "flaf/Content/UI/Items/Jumpscare/jumpscare"
+                        },
                         
                     ]),
                 },
                 new AssetLoader(EExportType.Emoticon)
+                
                 {
                     ClassNames = ["AthenaEmojiItemDefinition"],
                     HideNames = ["Emoji_100APlus"]

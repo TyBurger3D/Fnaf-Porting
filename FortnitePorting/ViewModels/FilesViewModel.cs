@@ -67,6 +67,7 @@ public partial class FilesViewModel : ViewModelBase
         new("freddys"),
         new("Thumper"),
         new("fnaf9"),
+        new("flaf"),
         new("Engine"),
     ];
 

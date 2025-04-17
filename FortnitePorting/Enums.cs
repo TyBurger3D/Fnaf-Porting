@@ -17,6 +17,9 @@ public enum EFortniteVersion
     [Description("Security Breach")]
     SecurityBreach,
     
+    [Description("Five Laps at Freddy's")]
+    FLAF,
+    
     [Description("Custom")]
     Custom
     
