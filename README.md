@@ -12,6 +12,11 @@ FNAFPorting - Automation of the FNAF Porting Process
 
 ![RivalsPorting_Preview](https://github.com/user-attachments/assets/b484bd1a-785b-4d83-ba35-93065888aafb)
 
+## Add to Portle
+Add the following URL in the Repositories tab of Portle
+```
+https://raw.githubusercontent.com/TyBurger3D/Fnaf-Porting/refs/heads/FNAFPorting/Repository.json
+```
 
 ## Building FNAFPorting
 
