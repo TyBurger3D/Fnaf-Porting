@@ -1,13 +1,13 @@
 {
-  "Id": "RivalsPorting",
+  "Id": "FNAFPorting",
   "Title": "FNAF Porting",
   "Description": "The repository for FNAF Porting builds",
   "Icon": "https://raw.githubusercontent.com/TyBurger3D/Fnaf-Porting/refs/heads/FNAFPorting/FortnitePorting/Assets/LogoPlain.png",
   "Versions": [
     {
-      "Version": "v0.1.1-beta",
-      "ExecutableURL": "https://github.com/TyBurger3D/Fnaf-Porting/releases/download/5P-0.1.1/FNAFPorting.exe",
-      "UploadTime": "04-17-2025"
+      "Version": "v0.1.2-beta",
+      "ExecutableURL": "https://github.com/TyBurger3D/Fnaf-Porting/releases/download/5P-0.1.2/FNAFPorting.exe",
+      "UploadTime": "04-27-2025"
     }
   ]
 }
