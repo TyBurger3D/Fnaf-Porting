@@ -32,6 +32,7 @@ using CUE4Parse.Utils;
 using EpicManifestParser;
 using EpicManifestParser.UE;
 using FortnitePorting.Application;
+using FortnitePorting.Models;
 using FortnitePorting.Models.API.Responses;
 using FortnitePorting.Models.CUE4Parse;
 using FortnitePorting.Models.Fortnite;
@@ -54,7 +55,8 @@ public class CUE4ParseViewModel : ViewModelBase
 
     public readonly DefaultFileProvider Provider = new (
         AppSettings.Current.Installation.CurrentProfile.ArchiveDirectory, SearchOption.AllDirectories, true,
-        new VersionContainer(AppSettings.Current.Installation.CurrentProfile.FortniteVersion == EFortniteVersion.HelpWanted ? HELP_WANTED_GAME_VERSION : AppSettings.Current.Installation.CurrentProfile.UnrealVersion));
+        new VersionContainer(AppSettings.Current.Installation.CurrentProfile.FortniteVersion == EFortniteVersion.Custom ? AppSettings.Current.Installation.CurrentProfile.UnrealVersion 
+            : AppSettings.Current.Installation.CurrentProfile.FortniteVersion.GetUEVersion()));
     
     public readonly List<FAssetData> AssetRegistry = [];
     public readonly List<FRarityCollection> RarityColors = [];
@@ -63,10 +65,6 @@ public class CUE4ParseViewModel : ViewModelBase
     public readonly Dictionary<int, FVector> BeanstalkAtlasTextureUVs = [];
     
     private static readonly Regex FnafArchiveRegex = new(@"^Content(/|\\)Paks(/|\\)(pakchunk(?:0|10.*|\w+)-WindowsClient|global)\.(pak|utoc)$", RegexOptions.Compiled | RegexOptions.Singleline | RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
-
-    private const EGame HELP_WANTED_GAME_VERSION = EGame.GAME_UE4_23;
-    private const EGame SECURITY_BREACH_GAME_VERSION = EGame.GAME_UE4_28;
-    private const EGame FLAF = EGame.GAME_UE4_27;
 
     public override async Task Initialize()
     {
@@ -146,7 +144,7 @@ public class CUE4ParseViewModel : ViewModelBase
     {
         var mainKey = AppSettings.Current.Installation.CurrentProfile.IsCustom ? 
             AppSettings.Current.Installation.CurrentProfile.MainKey
-            : new FileEncryptionKey(AppSettings.Current.Installation.CurrentProfile.FortniteVersion == EFortniteVersion.HelpWanted ? Globals.HELP_WANTED_AES : Globals.SECURITY_BREACH_AES);
+            : new FileEncryptionKey(AppSettings.Current.Installation.CurrentProfile.FortniteVersion.GetAESKey());
         if (mainKey.IsEmpty) mainKey = FileEncryptionKey.Empty;
         
         await Provider.SubmitKeyAsync(Globals.ZERO_GUID, mainKey.EncryptionKey);
@@ -176,7 +174,7 @@ public class CUE4ParseViewModel : ViewModelBase
     private async Task LoadMappings()
     {
         var mappingsPath = !AppSettings.Current.Installation.CurrentProfile.IsCustom ?
-            DependencyService.MappingsFile.FullName
+            null
             : File.Exists(AppSettings.Current.Installation.CurrentProfile.MappingsFile)
             ? AppSettings.Current.Installation.CurrentProfile.MappingsFile
             : null;

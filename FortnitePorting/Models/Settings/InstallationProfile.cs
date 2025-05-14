@@ -43,7 +43,7 @@ public partial class InstallationProfile : ObservableValidator
     [NotifyPropertyChangedFor(nameof(MappingsFileEnabled))]
     private bool _useMappingsFile;
     
-    [ObservableProperty] private string _mappingsFile = DependencyService.MappingsFile.FullName;
+    [ObservableProperty] private string _mappingsFile;
     
     [ObservableProperty] private ELanguage _gameLanguage = ELanguage.English;
 

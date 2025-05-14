@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using CUE4Parse.UE4.Versions;
 using FortnitePorting.Models;
 using FortnitePorting.Shared.Extensions;
 using FortnitePorting.Shared.Models;
@@ -8,17 +9,21 @@ namespace FortnitePorting;
 
 public enum EFortniteVersion
 {
-    [Description("Help Wanted 1")]
+    [Description("Help Wanted 1"), UEVersion(EGame.GAME_UE4_23), AESKey(Globals.HELP_WANTED_AES)]
     HelpWanted,
     
-    [Description("Help Wanted 2")]
+    [Description("Help Wanted 2"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.SECURITY_BREACH_AES)]
     HelpWanted2,
     
-    [Description("Security Breach")]
+    [Description("Security Breach"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.SECURITY_BREACH_AES)]
     SecurityBreach,
     
-    [Description("Five Laps at Freddy's")]
+    [Description("Five Laps at Freddy's"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.ZERO_CHAR)]
     FLAF,
+    
+    [Description("Secret of the Mimic"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.ZERO_CHAR)]
+    [Disabled]
+    SOTM,
     
     [Description("Custom")]
     Custom

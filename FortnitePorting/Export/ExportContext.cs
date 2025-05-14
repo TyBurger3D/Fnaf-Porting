@@ -15,6 +15,7 @@ using CUE4Parse.UE4.Assets.Exports;
 using CUE4Parse.UE4.Assets.Exports.Animation;
 using CUE4Parse.UE4.Assets.Exports.Component;
 using CUE4Parse.UE4.Assets.Exports.Component.SkeletalMesh;
+using CUE4Parse.UE4.Assets.Exports.Component.SplineMesh;
 using CUE4Parse.UE4.Assets.Exports.Component.StaticMesh;
 using CUE4Parse.UE4.Assets.Exports.Engine.Font;
 using CUE4Parse.UE4.Assets.Exports.Material;
@@ -592,7 +593,7 @@ public class ExportContext
                 }
             }
             
-            if (actor.TryGetValue(out UStaticMeshComponent staticMeshComponent, "StaticMeshComponent", "StaticMesh", "Mesh", "LightMesh", "MeshComponent"))
+            if (actor.TryGetValue(out UStaticMeshComponent staticMeshComponent, "StaticMeshComponent", "StaticMesh", "Mesh", "LightMesh", "MeshComponent", "New Mesh"))
             {
                 var exportMesh = MeshComponent(staticMeshComponent) ?? new ExportMesh { IsEmpty = true };
                 exportMesh.Name = actor.Name;
@@ -849,7 +850,7 @@ public class ExportContext
         var mesh = meshComponent.GetStaticMesh().Load<UStaticMesh>();
         if (mesh is null) return null;
 
-        var exportMesh = Mesh(mesh);
+        var exportMesh = meshComponent is USplineMeshComponent splineComp ? Mesh(splineComp) : Mesh(mesh);
         if (exportMesh is null) return null;
         
         var overrideMaterials = meshComponent.GetOrDefault("OverrideMaterials", Array.Empty<UMaterialInterface?>());
@@ -940,6 +941,37 @@ public class ExportContext
         {
             Name = mesh.Name,
             Path = Export(mesh),
+            NumLods = convertedMesh.LODs.Count
+        };
+
+        var sections = convertedMesh.LODs[0].Sections.Value;
+        foreach (var (index, section) in sections.Enumerate())
+        {
+            if (section.Material is null) continue;
+            if (!section.Material.TryLoad(out var materialObject)) continue;
+            if (materialObject is not UMaterialInterface material) continue;
+
+            exportPart.Materials.AddIfNotNull(Material(material, index));
+        }
+
+        return exportPart;
+    }
+    
+    public ExportMesh? Mesh(USplineMeshComponent? mesh)
+    {
+        return Mesh<ExportMesh>(mesh);
+    }
+    
+    public T? Mesh<T>(USplineMeshComponent? mesh) where T : ExportMesh, new()
+    {
+        if (mesh is null) return null;
+        if (!mesh.TryConvert(out var convertedMesh)) return null;
+        if (convertedMesh.LODs.Count <= 0) return null;
+
+        var exportPart = new T
+        {
+            Name = mesh.Name,
+            Path = Export(mesh, embeddedAsset: true),
             NumLods = convertedMesh.LODs.Count
         };
 
@@ -1236,6 +1268,12 @@ public class ExportContext
         
         var returnValue = returnRealPath ? path : (embeddedAsset ? $"{asset.Owner.Name}/{asset.Name}.{asset.Name}" : asset.GetPathName());
 
+        if (asset is USplineMeshComponent splineComponent)
+        {
+            var assetName = $"{asset.Name}-{splineComponent.GetMeshId().AsSpan(0, 6)}";
+            returnValue = $"{asset.Owner.Name}/{assetName}.{assetName}";
+        }
+        
         var shouldExport = asset switch
         {
             UTexture texture => IsTextureHigherResolutionThanExisting(texture, path),
@@ -1436,6 +1474,11 @@ public class ExportContext
         var directory = Path.Combine(Meta.CustomPath ?? Meta.AssetsRoot, path);
         Directory.CreateDirectory(directory.SubstringBeforeLast("/"));
 
+        if (obj is USplineMeshComponent splineComponent)
+        {
+            directory += string.Concat("-", splineComponent.GetMeshId().AsSpan(0, 6));
+        }
+        
         var finalPath = $"{directory}.{ext.ToLower()}";
         return finalPath;
     }

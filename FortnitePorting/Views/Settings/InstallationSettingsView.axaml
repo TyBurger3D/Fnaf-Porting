@@ -58,11 +58,29 @@
             <ui:SettingsExpander Header="Installation Version" Description="The type of game installation that FNAF Porting will be loading.">
                 <ui:SettingsExpander.Footer>
                     <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type fortnitePorting:EFortniteVersion}}"
-                              SelectedItem="{Binding CurrentProfile.FortniteVersion, Converter={StaticResource EnumToRecord}}" />
+                              SelectedItem="{Binding CurrentProfile.FortniteVersion, Converter={StaticResource EnumToRecord}}">
+                        <ComboBox.ItemContainerTheme>
+                            <ControlTheme x:DataType="ext:EnumRecord" TargetType="ComboBoxItem" BasedOn="{StaticResource {x:Type ComboBoxItem}}">
+                                <Setter Property="IsEnabled" Value="{Binding !IsDisabled}"/>
+                            </ControlTheme>
+                        </ComboBox.ItemContainerTheme>
+                    </ComboBox>
                 </ui:SettingsExpander.Footer>
                 
                 <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="Latest (Installed) - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="Help Wanted 1 - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="The current/most up to date version of the game." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Help Wanted 2 - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="The current/most up to date version of the game." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Security Breach - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <TextBlock Text="The current/most up to date version of the game." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Five Laps at Freddy's - " Classes="BodyStrongTextBlockStyle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <TextBlock Text="The current/most up to date version of the game." HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">

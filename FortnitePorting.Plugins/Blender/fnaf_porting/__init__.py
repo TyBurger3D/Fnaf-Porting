@@ -9,7 +9,7 @@ bl_info = {
     "description": "Import Server for FNAF Porting",
     "author": "Half, DeveloperChipmunk, TyBurger3D",
     "blender": (4, 2, 0),
-    "version": (0, 1, 0),
+    "version": (0, 1, 1),
     "category": "Import-Export",
 }
 
