@@ -11,9 +11,9 @@ using CUE4Parse_Conversion.UEFormat.Enums;
 using CUE4Parse.UE4.Versions;
 using FluentAvalonia.UI.Controls;
 using FortnitePorting.Application;
+using FortnitePorting.Framework;
 using FortnitePorting.Models.Radio;
 using FortnitePorting.Shared;
-using FortnitePorting.Shared.Framework;
 using FortnitePorting.ViewModels.Settings;
 using NAudio.Wave;
 using Newtonsoft.Json;
@@ -57,6 +57,8 @@ public partial class BaseExportSettings : ViewModelBase
 
     [ObservableProperty] private EImageFormat _imageFormat = EImageFormat.PNG;
     [ObservableProperty] private bool _exportMaterials = true;
+    
+    [ObservableProperty] private bool _importGameModel = false;
     
     [ObservableProperty] private EMeshFormat _meshFormat = EMeshFormat.UEFormat;
     [ObservableProperty] private bool _importInstancedFoliage = true;

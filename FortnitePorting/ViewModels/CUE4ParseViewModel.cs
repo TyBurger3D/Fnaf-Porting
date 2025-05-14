@@ -6,6 +6,8 @@ using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using CUE4Parse_Conversion.Textures;
+using CUE4Parse_Conversion.Textures.BC;
 using CUE4Parse.Compression;
 using CUE4Parse.Encryption.Aes;
 using CUE4Parse.FileProvider;
@@ -16,6 +18,7 @@ using CUE4Parse.UE4.AssetRegistry.Objects;
 using CUE4Parse.UE4.Assets;
 using CUE4Parse.UE4.Assets.Exports.Animation;
 using CUE4Parse.UE4.Assets.Exports.Engine;
+using CUE4Parse.UE4.Assets.Exports.Material;
 using CUE4Parse.UE4.Assets.Exports.SkeletalMesh;
 using CUE4Parse.UE4.Assets.Exports.Sound;
 using CUE4Parse.UE4.Assets.Exports.StaticMesh;
@@ -32,14 +35,15 @@ using CUE4Parse.Utils;
 using EpicManifestParser;
 using EpicManifestParser.UE;
 using FortnitePorting.Application;
+using FortnitePorting.Framework;
 using FortnitePorting.Models;
 using FortnitePorting.Models.API.Responses;
 using FortnitePorting.Models.CUE4Parse;
 using FortnitePorting.Models.Fortnite;
+using FortnitePorting.Models.Unreal.Material;
 using FortnitePorting.Services;
 using FortnitePorting.Shared;
 using FortnitePorting.Shared.Extensions;
-using FortnitePorting.Shared.Framework;
 using FortnitePorting.Shared.Services;
 using FortnitePorting.Views;
 using FortnitePorting.Windows;
@@ -83,6 +87,7 @@ public class CUE4ParseViewModel : ViewModelBase
         HomeVM.UpdateStatus("Loading Native Libraries");
         await InitializeOodle();
         await InitializeZlib();
+        await InitializeDetex();
         
         HomeVM.UpdateStatus("Loading Game Files");
         await InitializeProvider();
@@ -133,6 +138,14 @@ public class CUE4ParseViewModel : ViewModelBase
         var zlibPath = Path.Combine(DataFolder.FullName, ZlibHelper.DLL_NAME);
         if (!File.Exists(zlibPath)) await ZlibHelper.DownloadDllAsync(zlibPath);
         ZlibHelper.Initialize(zlibPath);
+    }
+    
+    private async Task InitializeDetex()
+    {
+        TextureDecoder.UseAssetRipperTextureDecoder = true;
+        var detexPath = Path.Combine(DataFolder.FullName, DetexHelper.DLL_NAME);
+        if (!File.Exists(detexPath)) await DetexHelper.LoadDllAsync(detexPath);
+        DetexHelper.Initialize(detexPath);
     }
     
     private async Task InitializeProvider()

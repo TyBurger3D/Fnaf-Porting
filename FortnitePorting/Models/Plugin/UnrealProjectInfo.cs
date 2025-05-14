@@ -3,6 +3,7 @@ using System.IO;
 using Avalonia.Media.Imaging;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CUE4Parse.Utils;
+using FortnitePorting.Extensions;
 using FortnitePorting.Shared.Extensions;
 using FortnitePorting.ViewModels.Plugin;
 using Newtonsoft.Json;
@@ -18,9 +19,9 @@ public partial class UnrealProjectInfo : ObservableObject
     public string Name => ProjectFilePath.SubstringAfterLast("/").SubstringBeforeLast(".");
 
     public string PluginsFolder => Path.Combine(ProjectFilePath.SubstringBeforeLast("/"), "Plugins");
-    public string FortnitePortingFolder => Path.Combine(PluginsFolder, "FortnitePorting");
+    public string RivalsPortingFolder => Path.Combine(PluginsFolder, "RivalsPorting");
     public string UEFormatFolder => Path.Combine(PluginsFolder, "UEFormat");
-    public string PluginPath => Path.Combine(FortnitePortingFolder, "FortnitePorting.uplugin");
+    public string PluginPath => Path.Combine(RivalsPortingFolder, "RivalsPorting.uplugin");
 
     public UnrealProjectInfo(string projectFilePath)
     {

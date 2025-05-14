@@ -8,13 +8,14 @@ using FortnitePorting.Application;
 
 using FortnitePorting.Export;
 using FortnitePorting.Export.Models;
+using FortnitePorting.Framework;
 using FortnitePorting.Models.Assets;
 using FortnitePorting.Models.Assets.Asset;
 using FortnitePorting.Models.Leaderboard;
 using FortnitePorting.Services;
 using FortnitePorting.Shared;
-using FortnitePorting.Shared.Framework;
 using FortnitePorting.Shared.Services;
+using FortnitePorting.Views;
 using RestSharp;
 using AssetLoaderCollection = FortnitePorting.Models.Assets.Loading.AssetLoaderCollection;
 
@@ -52,8 +53,11 @@ public partial class AssetsViewModel : ViewModelBase
                 var creationData = asset.Asset.CreationData;
                 return new PersonalExport(creationData.Object.GetPathName());
             });
-            
-            await ApiVM.FortnitePorting.PostExportsAsync(exports);
+
+            if (exports != null && exports.Any())
+            {
+                await ApiVM.FortnitePorting.PostExportsAsync(exports);
+            }
         }
     }
     
@@ -64,5 +68,12 @@ public partial class AssetsViewModel : ViewModelBase
         {
             info.Asset.Favorite();
         }
+    }
+
+    [RelayCommand]
+    public async Task OpenSettings()
+    {
+        AppWM.Navigate<ExportSettingsView>();
+        AppSettings.Current.ExportSettings.Navigate(ExportLocation);
     }
 }
