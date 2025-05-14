@@ -47,8 +47,8 @@ public partial class HomeViewModel : ViewModelBase
             {
                 var dialog = new ContentDialog
                 {
-                    Title = "Enjoying RivalsPorting?",
-                    Content = "Consider donating to half's Ko-Fi to support the development of Fortnite Porting and Rivals Porting!!",
+                    Title = "Enjoying FNAFPorting?",
+                    Content = "Consider donating to half's Ko-Fi to support the development of Fortnite Porting and FNAF Porting!!",
                     CloseButtonText = "No",
                     PrimaryButtonText = "Donate",
                     PrimaryButtonCommand = new RelayCommand(LaunchKoFi),

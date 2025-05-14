@@ -51,18 +51,7 @@ public class MeshExport : BaseExport
         {
             foreach (var objectStyle in objectStyles)
             {
-                if (metaData.Settings.ImportGameModel
-                    && objectStyle.StyleData.TryGetValue(out UObject resultInfoStruct, "ResultInfo")
-                    && resultInfoStruct.TryGetValue(out UBlueprintGeneratedClass likeActorClass, "LikeActorClass")
-                    && likeActorClass.ClassDefaultObject.TryLoad(out UObject likeActorObject))
-                {
-                    Export(likeActorObject, exportType);
-                }
-                else if (objectStyle.StyleData.TryGetValue(out UBlueprintGeneratedClass showActorClass, "ShowActorClass")
-                         && showActorClass.ClassDefaultObject.TryLoad(out UObject showActorObject))
-                {
-                    Export(showActorObject, exportType);
-                }
+                Export(objectStyle.StyleData, exportType);
             }
             
             return;
