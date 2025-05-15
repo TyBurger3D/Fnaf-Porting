@@ -83,7 +83,7 @@ public enum EExportType
     
     // COSMETIC
     
-    [Description("Heros"), Export(EPrimitiveExportType.Mesh)]
+    [Description("Animatronics"), Export(EPrimitiveExportType.Mesh)]
     Outfit,
     
     [Description("Character Parts"), Export(EPrimitiveExportType.Mesh)]
