@@ -884,10 +884,9 @@ public partial class AssetLoaderCollection : ObservableObject
                     ]),
                 },
                 new AssetLoader(EExportType.Emoticon)
-                
+                    
                 {
-                    ClassNames = ["AthenaEmojiItemDefinition"],
-                    HideNames = ["Emoji_100APlus"]
+
                 },
                 new AssetLoader(EExportType.Spray)
                 {
@@ -916,22 +915,17 @@ public partial class AssetLoaderCollection : ObservableObject
             [
                 new AssetLoader(EExportType.Item)
                 {
-                    ClassNames = ["AthenaGadgetItemDefinition", "FortWeaponRangedItemDefinition", 
-                        "FortWeaponMeleeItemDefinition", "FortCreativeWeaponMeleeItemDefinition", 
-                        "FortCreativeWeaponRangedItemDefinition", "FortWeaponMeleeDualWieldItemDefinition"],
-                    HideNames = ["_Harvest", "Weapon_Pickaxe_", "Weapons_Pickaxe_", "Dev_WID"],
-                    HidePredicate = (loader, asset, name) =>
-                    {
-                        if (loader.FilteredAssetBag.Contains(name)) return true;
-                        loader.FilteredAssetBag.Add(name);
-                        return false;
-                    },
-                    AddStyleHandler = (loader, asset, name) =>
-                    {
-                        var path = asset.GetPathName();
-                        loader.StyleDictionary.TryAdd(name, []);
-                        loader.StyleDictionary[name].Add(path);
-                    }
+                    ManuallyDefinedAssets = new Lazy<ManuallyDefinedAsset[]>(
+                    [
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "FNAF 1 Freddy",
+                            AssetPath = "freddys/Content/Meshes/GalleryCharacters/BonniePose.uasset",
+                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Freddy",
+                        },
+                        
+                    ]),
+                    
                 },
             ],
         }
