@@ -73,6 +73,7 @@ public partial class FilesViewModel : ViewModelBase
         new("Thumper"),
         new("fnaf9"),
         new("flaf"),
+        new("FNAF_SOTM"),
         new("Engine"),
     ];
 

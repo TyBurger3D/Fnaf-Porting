@@ -21,8 +21,7 @@ public enum EFortniteVersion
     [Description("Five Laps at Freddy's"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.ZERO_CHAR)]
     FLAF,
     
-    [Description("Secret of the Mimic"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.ZERO_CHAR)]
-    [Disabled]
+    [Description("Secret of the Mimic"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.SOTM_AES)]
     SOTM,
     
     [Description("Custom")]
