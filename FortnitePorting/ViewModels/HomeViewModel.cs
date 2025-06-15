@@ -72,11 +72,6 @@ public partial class HomeViewModel : ViewModelBase
             await FilesVM.Initialize();
         });
         
-        var news = await ApiVM.FortnitePorting.GetNewsAsync();
-        News = [..news.OrderByDescending(item => item.Date)];
-        
-        var featured = await ApiVM.FortnitePorting.GetFeaturedAsync();
-        Featured = [..featured];
     }
     
     public void UpdateStatus(string text)

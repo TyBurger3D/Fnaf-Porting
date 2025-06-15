@@ -880,7 +880,12 @@ public partial class AssetLoaderCollection : ObservableObject
                             AssetPath = "flaf/Content/Meshes/Enemy/WolfEndo/SK_WolfEndo",
                             IconPath = "flaf/Content/UI/Items/Jumpscare/jumpscare"
                         },
-                        
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Bee",
+                            AssetPath = "FNAF_SOTM/Content/Characters/PlayerArms/SK_Player_Arms",
+                            IconPath = "avares://D:/Downloads/Five Nights At Freddy's Porting/Fnaf-Porting/FortnitePorting/Assets/SotM/PlayerHands.png",
+                        },
                     ]),
                 },
                 new AssetLoader(EExportType.Emoticon)
