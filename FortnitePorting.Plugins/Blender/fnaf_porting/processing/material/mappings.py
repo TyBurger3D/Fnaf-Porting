@@ -334,7 +334,9 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("MetallicTexture", "Metallic"),
         
         SlotMapping("Normal"),
+        SlotMapping("Normals", "Normal"),
         SlotMapping("N", "Normal"),
+        SlotMapping("_N", "Normal"),
         SlotMapping("Norm", "Normal"),
         SlotMapping("Normal Map", "Normal"),
         SlotMapping("NormalTexture", "Normal"),
