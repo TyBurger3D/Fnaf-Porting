@@ -884,7 +884,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "Bee",
                             AssetPath = "FNAF_SOTM/Content/Characters/PlayerArms/SK_Player_Arms",
-                            IconPath = "avares://D:/Downloads/Five Nights At Freddy's Porting/Fnaf-Porting/FortnitePorting/Assets/SotM/PlayerHands.png",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Bee.png",
                         },
                     ]),
                 },

@@ -56,7 +56,7 @@ public partial class AssetItem : Base.BaseAssetItem
 
         // Role handling?
         
-        var iconBitmap = CreationData.Icon.Decode()!.ToSkBitmap();
+        var iconBitmap = CreationData.ManualIcon ?? CreationData.Icon.Decode()!.ToSkBitmap();
         IconDisplayImage = iconBitmap.ToWriteableBitmap();
         DisplayImage = CreateDisplayImage(iconBitmap).ToWriteableBitmap();
     }

@@ -28,6 +28,7 @@ using Material.Icons;
 using ReactiveUI;
 using ScottPlot.Colormaps;
 using Serilog;
+using SkiaSharp;
 
 namespace FortnitePorting.Models.Assets.Loading;
 
@@ -312,14 +313,21 @@ public partial class AssetLoader : ObservableObject
         if (asset is null) return;
 
         var displayName = manualAsset.Name;
-            
-        var icon = await CUE4ParseVM.Provider.SafeLoadPackageObjectAsync<UTexture2D>(manualAsset.IconPath) ?? await CUE4ParseVM.Provider.SafeLoadPackageObjectAsync<UTexture2D>(PlaceholderIconPath);
-        if (icon is null) return;
+
+        var manualIcon = manualAsset.LocalIconPath != null ? 
+            SKBitmap.Decode(Avalonia.Platform.AssetLoader.Open(new Uri(manualAsset.LocalIconPath))) : null;
         
+        var icon = manualAsset.IconPath != null ? 
+            await CUE4ParseVM.Provider.SafeLoadPackageObjectAsync<UTexture2D>(manualAsset.IconPath) ??
+            await CUE4ParseVM.Provider.SafeLoadPackageObjectAsync<UTexture2D>(PlaceholderIconPath)
+            : null;
+        if (icon is null && manualIcon is null) return;
+
         var args = new AssetItemCreationArgs
         {
             Object = asset,
             Icon = icon,
+            ManualIcon = manualIcon,
             ID = asset.Name,
             DisplayName = displayName,
             Description = manualAsset.Description,
