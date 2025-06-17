@@ -882,10 +882,548 @@ public partial class AssetLoaderCollection : ObservableObject
                         },
                         new ManuallyDefinedAsset
                         {
-                            Name = "Bee",
+                            Name = "Player Hands",
                             AssetPath = "FNAF_SOTM/Content/Characters/PlayerArms/SK_Player_Arms",
-                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Bee.png",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/PlayerHands.png",
                         },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Dead Guy with a bee head",
+                            AssetPath = "FNAF_SOTM/Content/Characters/OtherWorkers/SK_OtherWorkers_SpringBeeHead",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/DeadGuy.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Dead Guy in a jester suit",
+                            AssetPath = "FNAF_SOTM/Content/Characters/OtherWorkers/WorkerJester/SK_WorkerJester",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/WorkerJester.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Big Top",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/BigTop/SK_BigTop",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/BigTop.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Busted/Broken Big Top",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/BigTop/SK_BustedBigTop",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/BustedBigTop.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jackie",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/Jackie/SK_Jackie",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Jackie.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jackie (Detattched)",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/Jackie/SK_JackieB",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/JackieB.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jackie Broken Stage 1",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/Jackie/SK_Jackie_C",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/JackieC.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jackie Broken Stage 2",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/Jackie/SK_Jackie_D",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/JackieD.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "MR2ND",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/M2RND/SK_M2RND",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/MR2ND.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Mimic",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/Mimic/SK_Mimic",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Mimic.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Nurse Dollie",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/NurseDolly/SK_NurseDollie",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Dollie.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mimic Nurse Dollie",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/NurseDolly/SK_NurseDollie_B",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/MimicDollie.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Molten Nurse Dollie",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/NurseDolly/SK_NurseDollie_C",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/MoltenDollie.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Party Chica",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Primary/PChica/SK_PChica",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Partychica.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mimic Birthday Puppy",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/BirthdayPuppy/SK_BirthdayPuppy",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/MimicBirthdayPuppy.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Birthday Puppy",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/BirthdayPuppy/SK_FoamBirthdayPuppy",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/PrototypeBirthdayPuppy.png",
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Birthday Elephant",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/ElephantMascot/SK_Elephant",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Birthday Elephant.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Birthday Elephant",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/FoamElephant/SK_FoamElephant",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Prototype Birthday Elephant.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Lion",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/FoamLion/SK_FoamLion",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Prototype Lion.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Penguin",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/FoamPenguin/SK_FoamPenguin",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Prototype Penguin.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Lion",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/Lion/SK_LionMascot",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Lion.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Penguin",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeA/Penguin/SK_PenguinMascot",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Penguin.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Hedgeghog",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeB/FoamHedgehog/SK_FoamHedgehog",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Prototype Hedgehog.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Sharpay",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeB/FoamSharpay/SK_FoamSharpay",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/FoamSharpay.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Hedgehog",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeB/Hedgehog/SK_Hedgehog",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Hedgehog.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Lemur",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeB/Lemur/SK_Lemur",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Lemur.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Poodle",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeB/SharpayPoodle/SK_Sharpay",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Poodle.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Bee",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeC/FoamBee/SK_FoamSwingBee",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Prototype Bee.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype (Foam) Mushroom",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeC/FoamMushroom/SK_FoamMushroom",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Foam Mushroom.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jester",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeC/Jester/SK_JesterMascot",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Jester.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mushroom",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeC/Mushrooms/SK_MushroomMascot",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Mushroom.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Bee",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeC/SwingBee/SK_SwingBeeSuit",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Bee.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Moon",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/NightLight/SK_Nightlight",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Moon.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Bub (Springlock)",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/Springlocks/Bub/SK_BubSpringlock",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Bub.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Captain (Springlock)",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/Springlocks/CaptainSpringlock/SK_CaptainSpringlock",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Captain.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype Monty (Springlock)",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/Springlocks/Monty/SK_MontySpringlock",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Springlock Monty.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype Springbonnie (Springlock)",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/Springlocks/ProtoBonnie/SK_ProtoBonnieSpringlock",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Springlock Bonnie.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype Fredbear (Springlock)",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/Springlocks/ProtoFredBear/SK_ProtoFredBearSpringlock",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Springlock Freddy.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "White Tiger",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Secondary/WhiteTiger/SK_WhiteTiger",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/White Tiger.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Birthday Hats",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/BirthdayHats/SK_BirthdayHats",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Birthday Hats.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Sitting Birthday Puppy",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/BirthdayPuppy/SK_BirthdayPuppy",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Birthday Puppy.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Bosun Puppet",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/CaptainFoxyAndCrew/SK_BosunPuppet",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Bosun Puppet.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Foxy Puppet",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/CaptainFoxyAndCrew/SK_CaptainFoxyPuppet",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Foxy Puppet.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Kit Puppet",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/CaptainFoxyAndCrew/SK_KitPuppet",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Kit Puppet.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Renard Puppet",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/CaptainFoxyAndCrew/SK_RenardPuppet",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Renard.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Roxy Puppet",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/CaptainFoxyAndCrew/SK_RoxyPuppet",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Roxy.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Cupcake Pal",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/CupcakePal/SK_CupCakePal",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/CupCakePal.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Diving Seal",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/DivingSeal/SK_DivingSeal",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Diving Seal.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jugband Male Frog",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/JugBandFrogs/SK_BoyFrog",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Male Frog.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jugband Female Frog",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/JugBandFrogs/SK_GirlFrog",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Female Frog.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jugband Hippo",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/JugbandHippo/SK_JugBandHippo",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Jugbang Hippo.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Jugband Monty",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/JugBandMonty/SK_JugBandMonty",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Jugband Monty.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Juggling Duck",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/JugglingDuck/SK_JugglingDuck",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Juggling Duck.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mannequin",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Mannequin/SK_Mannequin",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Mannequin.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mr. Helpful",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/MrHelpy/SK_MrHelpful",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/MrHelpful.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mrs. Helpful",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/MrHelpy/SK_MrsHelpful",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/MrsHelpful.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Mailbot (Office Animatronic)",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/OfficeAnimatronic/SK_Office_Animatronic",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Mailbot (OfficeAnimatronic).png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic 1",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_ProtoMimic_B",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Protomimic 1.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic 2",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_Protomimic_B2",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Protomimic 2.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic 3",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_Protomimic_B3",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Protomimic 3.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic 4",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_Protomimic_B4",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Protomimic 4.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic 5",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_Protomimic_B5",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Protomimic 5.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic Legs 1",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_ProtomimicLegs_A",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/ProtomimicLegs.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic Legs 2",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_ProtomimicLegs_C",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/ProtomimicLegs1.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic Legs 3",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_ProtomimicLegs_D",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/ProtomimicLegs2.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic Legs 4",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_ProtomimicLegs_D2",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/ProtomimicLegs3.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Protomimic Legs 5",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Protomimics/SK_ProtomimicLegs_E",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/ProtomimicLegs4.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype Bonnie",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Prototypes/SK_ProtoBonnie",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/PrototypeBonnie.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype Chica",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Prototypes/SK_ProtoChica",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/PrototypeChica.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype Foxy",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Prototypes/SK_ProtoFoxy",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/PrototypeFoxy.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Prototype Freddy",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Prototypes/SK_ProtoFreddy",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/PrototypeFreddy.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Ringmaster Rat",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/RingmasterRat/SK_RingmasterRat",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Ringmaster Rat.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Star 1",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Stars/SK_Star_A",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Star1.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Star 2",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Stars/SK_Star_B",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Star2.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Star 3",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Stars/SK_Star_C",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Star3.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Star 4",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/Stars/SK_Star_D",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Star4.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Swinging Bee",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/SwingBee/SK_SwingBee",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Swinging Bee.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Vacbot",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/VacuumBot/SK_VacuumBot",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Vacbot.png",
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Rocktopus",
+                            AssetPath = "FNAF_SOTM/Content/Characters/Tertiary/WelcomeShowOctopus/SK_WelcomeShowOctopus",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SotM/Rocktopus.png",
+                            
+                        },
+
                     ]),
                 },
                 new AssetLoader(EExportType.Emoticon)
