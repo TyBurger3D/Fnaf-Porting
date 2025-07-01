@@ -24,6 +24,9 @@ public enum EFortniteVersion
     [Description("Secret of the Mimic"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.SOTM_AES)]
     SOTM,
     
+    [Description("Dead By Daylight"), UEVersion(EGame.GAME_DeadByDaylight), AESKey(Globals.DBD_AES), MappingsFile("FortnitePorting/Assets/Mappings/DBD_8.6.0.usmap")]
+    DBD,
+    
     [Description("Custom")]
     Custom
     

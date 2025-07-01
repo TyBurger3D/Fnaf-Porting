@@ -14,6 +14,10 @@ public class AESKeyAttribute(string key) : Attribute
     public string AesKey = key;
 }
 
+public class MappingsFileAttribute(string path) : Attribute
+{
+    public string Mappings = path;
+}
 public static class GameVersionExtensions
 {
     public static EGame GetUEVersion(this Enum value)
@@ -34,5 +38,14 @@ public static class GameVersionExtensions
             .GetCustomAttributes(typeof(AESKeyAttribute), false)
             .SingleOrDefault() as AESKeyAttribute;
         return attribute.AesKey;
+    }
+    public static string GetMappings(this Enum value)
+    {
+        var attribute = value
+            .GetType()
+            .GetField(value.ToString())?
+            .GetCustomAttributes(typeof(MappingsFileAttribute), false)
+            .SingleOrDefault() as MappingsFileAttribute;
+        return attribute.Mappings;
     }
 }

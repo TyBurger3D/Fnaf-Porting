@@ -74,6 +74,7 @@ public partial class FilesViewModel : ViewModelBase
         new("fnaf9"),
         new("flaf"),
         new("FNAF_SOTM"),
+        new("DeadByDaylight"),
         new("Engine"),
     ];
 
