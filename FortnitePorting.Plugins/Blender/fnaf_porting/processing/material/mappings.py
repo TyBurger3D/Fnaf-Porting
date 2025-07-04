@@ -384,3 +384,35 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("Em_Color", "Custom Color"),
     ]
 )
+
+dbd_mappings = MappingCollection(
+    textures=[
+        SlotMapping("Diffuse", "Base Color"),
+        SlotMapping("BaseColor Map", "Base Color"),
+        SlotMapping("Main_BaseColor", "Base Color"),
+
+        SlotMapping("AORoughnessMetallic", "ORM Mask"),
+        SlotMapping("HRM\\ORM Map", "ORM Mask"),
+        SlotMapping("Main_ORM", "ORM Mask"),
+
+        SlotMapping("Normal Map", "Normal Map"),
+        SlotMapping("NormalMap Texture", "Normal Map"),
+        SlotMapping("Main_Normal", "Normal Map"),
+        
+        SlotMapping("Emission"),
+        SlotMapping("Emissive", "Emission"),
+
+        SlotMapping("Opacity Mask Texture", "Alpha"),
+    ],
+    vectors=[
+        SlotMapping("TrimColor"),
+        SlotMapping("Trim_EmissiveColor")
+    ],
+    scalars=[
+        SlotMapping("Trim_EmissiveBrightness")
+    ],
+    switches=[
+        SlotMapping("ApplyTrim"),
+        SlotMapping("ApplyTrimEmissive")
+    ]
+)

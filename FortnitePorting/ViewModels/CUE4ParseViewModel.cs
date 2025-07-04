@@ -95,7 +95,7 @@ public class CUE4ParseViewModel : ViewModelBase
         
         await LoadKeys();
         Provider.LoadVirtualPaths();
-        // await LoadMappings();
+        await LoadMappings();
         
         Provider.PostMount();
         
@@ -186,13 +186,13 @@ public class CUE4ParseViewModel : ViewModelBase
     
     private async Task LoadMappings()
     {
-        var mappingsPath = !AppSettings.Current.Installation.CurrentProfile.IsCustom ?
-            null
-            : File.Exists(AppSettings.Current.Installation.CurrentProfile.MappingsFile)
+        var mappingsPath = AppSettings.Current.Installation.CurrentProfile.IsCustom 
             ? AppSettings.Current.Installation.CurrentProfile.MappingsFile
+            : AppSettings.Current.Installation.CurrentProfile.FortniteVersion.HasMappings() 
+            ? AppSettings.Current.Installation.CurrentProfile.FortniteVersion.GetMappings()
             : null;
         
-        if (string.IsNullOrEmpty(mappingsPath)) return;
+        if (string.IsNullOrEmpty(mappingsPath) || !File.Exists(mappingsPath)) return;
         
         Provider.MappingsContainer = new FileUsmapTypeMappingsProvider(mappingsPath);
         Log.Information("Loaded Mappings: {Path}", mappingsPath);

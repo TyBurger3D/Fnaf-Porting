@@ -76,6 +76,7 @@ public partial class FilesViewModel : ViewModelBase
         new("FNAF_SOTM"),
         new("DeadByDaylight"),
         new("Engine"),
+        new("All", ""),
     ];
 
     [ObservableProperty] private ObservableCollection<string> _selectedGameNames = [];

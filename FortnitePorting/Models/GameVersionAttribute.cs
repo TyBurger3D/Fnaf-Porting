@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using CUE4Parse.UE4.Versions;
 
@@ -14,9 +15,9 @@ public class AESKeyAttribute(string key) : Attribute
     public string AesKey = key;
 }
 
-public class MappingsFileAttribute(string path) : Attribute
+public class MappingsFileAttribute(string mappingsFile) : Attribute
 {
-    public string Mappings = path;
+    public string Mappings = mappingsFile;
 }
 public static class GameVersionExtensions
 {
@@ -46,6 +47,15 @@ public static class GameVersionExtensions
             .GetField(value.ToString())?
             .GetCustomAttributes(typeof(MappingsFileAttribute), false)
             .SingleOrDefault() as MappingsFileAttribute;
-        return attribute.Mappings;
+        return Path.Combine(DataFolder.FullName, attribute.Mappings);
+    }
+
+    public static bool HasMappings(this Enum value)
+    {
+        var attribute = value
+            .GetType()
+            .GetField(value.ToString())?
+            .GetCustomAttributes(typeof(MappingsFileAttribute), false);
+        return attribute?.Length > 0;
     }
 }

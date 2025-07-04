@@ -733,6 +733,10 @@ class ImportContext:
         if "Char_Master_Mat_Characters" in base_material_path:
             replace_shader_node("Fnaf Shader")
             socket_mappings = fnaf_character_mappings
+
+        if "Slasher" in base_material_path or "Camper" in base_material_path:
+            replace_shader_node("DBD Shader")
+            socket_mappings = dbd_mappings
         
         setup_params(socket_mappings, shader_node, True)
 
@@ -747,6 +751,12 @@ class ImportContext:
         match shader_node.node_tree.name: 
             case "Fnaf Shader":
                 set_param("AO", self.options.get("AmbientOcclusion"))
+                    
+                if diffuse_node := get_node(shader_node, "Base Color"):
+                    nodes.active = diffuse_node
+
+            case "DBD Shader":
+                set_param("AO Intensity", self.options.get("AmbientOcclusion"))
                     
                 if diffuse_node := get_node(shader_node, "Base Color"):
                     nodes.active = diffuse_node
