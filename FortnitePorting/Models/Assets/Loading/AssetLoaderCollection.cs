@@ -1221,7 +1221,7 @@ public partial class AssetLoaderCollection : ObservableObject
                             Name = "Prototype (Foam) Sharpay",
                             AssetPath = "FNAF_SOTM/Content/Characters/Secondary/BodyTypeB/FoamSharpay/SK_FoamSharpay",
                             LocalIconPath = "avares://FNAFPorting/Assets/SotM/FoamSharpay.png",
-                            Description = "no desc- nah jk im just done with the foam.
+                            Description = "no desc- nah jk im just done with the foam."
                         },
                         new ManuallyDefinedAsset
                         {
