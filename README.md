@@ -10,7 +10,8 @@ FNAFPorting - Automation of the FNAF Porting Process
 [![Downloads](https://img.shields.io/github/downloads/TyBurger3D/Fnaf-Porting/total?color=green)]()
 ***
 
-![RivalsPorting_Preview](https://github.com/user-attachments/assets/b484bd1a-785b-4d83-ba35-93065888aafb)
+![image](https://github.com/user-attachments/assets/9c07291f-1779-499a-892d-a3aca7a86ae3)
+
 
 ## Add to Portle
 Add the following URL in the Repositories tab of Portle
