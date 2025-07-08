@@ -13,9 +13,9 @@ public static class DependencyService
     public static readonly FileInfo DBDMappingsFile = new(Path.Combine(DataFolder.FullName, Globals.DBD_MAPPINGS));
     public static readonly FileInfo BinkaDecoderFile = new(Path.Combine(DataFolder.FullName, "binka", "binkadec.exe"));
     // public static readonly FileInfo RadaDecoderFile = new(Path.Combine(DataFolder.FullName, "rada", "radadec.exe"));
-    public static readonly FileInfo VgmStreamFile = new(Path.Combine(DataFolder.FullName, "vgmstream-cli.exe"));
-    
     public static readonly DirectoryInfo VgmStreamFolder = new(Path.Combine(DataFolder.FullName, "vgmstream"));
+    public static readonly FileInfo VgmStreamFile = new(Path.Combine(VgmStreamFolder.ToString(), "vgmstream-cli.exe"));
+    
 
     public static void EnsureDependencies()
     {
