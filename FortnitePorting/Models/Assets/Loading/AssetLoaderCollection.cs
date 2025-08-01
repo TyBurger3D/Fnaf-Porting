@@ -71,8 +71,8 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "FNAF 1 Mr. Cupcake",
                             AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Cupcake/RIG_Cupcake",
-                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ICO_Cupcake",
-                            Description = "His alias is unknown. Watch out. You never know."
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/CPCK.png",
+                            Description = "Perfect size for chomping faces off."
                         },
                         new ManuallyDefinedAsset
                         {
@@ -106,14 +106,14 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "FNAF 2 Toy Chica Beak",
                             AssetPath = "freddys/Content/ProductionAssets/Character_Assets/ToyChica/ToyChicaBeak",
-                            IconPath = "freddys/Content/ProductionAssets/UI_Assets/Sprites/StaticIcons/helpy_office2",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/TCB.png",
                             Description = "Where's my beak? Lodged in your forehead of course."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "FNAF 2 Toy Cupcake",
                             AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Cupcake/ToyChicaCupcake",
-                            IconPath = "freddys/Content/ProductionAssets/UI_Assets/Sprites/StaticIcons/helpy_office2",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/TCCC.png",
                             Description = "Let's go somewhere more private... so I can eat you."
                         },
                         new ManuallyDefinedAsset
@@ -183,7 +183,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "FNAF 4 Freddle",
                             AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/NMFreddy/RIG_FreddleScaled",
-                            IconPath = "freddys/Content/ProductionAssets/UI_Assets/Sprites/StaticIcons/helpy_anim_nightmare0017",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/FDLE.png",
                             Description = "*Insert Freddle Noises Here*"
                         },
                         new ManuallyDefinedAsset
@@ -204,7 +204,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "FNAF 4 Nightmare Cupcake",
                             AssetPath = "freddys/Content/ProductionAssets/Models/MOD_NightmareCupcake",
-                            IconPath = "freddys/Content/ProductionAssets/UI_Assets/Sprites/StaticIcons/helpy_anim_nightmare0017",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/NMCP.png",
                             Description = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH"
                         },
                         new ManuallyDefinedAsset
@@ -274,21 +274,21 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "Sister Location Bon-Bon",
                             AssetPath = "freddys/Content/ProductionAssets/Character_Assets/BonBon/RIG_BonBon",
-                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ICO_BONBON_AF",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/BB.png",
                             Description = "Shhh nobody is here. Go back to your stage."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted Roach :3",
                             AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Roach/RIG_Roach",
-                            IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ICO_Roach",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/RCH.png",
                             Description = "How does this fit in with the fnaf timeline?"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted Glitchtrap",
                             AssetPath = "freddys/Content/ProductionAssets/Character_Assets/SpringBonnieMAN/RIG_SpringBonnieMan",
-                            IconPath = "freddys/Content/ProductionAssets/Textures/HiddenImages/IMG_BackToFinale",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/SBM.png",
                             Description = ".. / .- .-.. .-- .- -.-- ... / -.-. --- -- . / -... .- -.-. -.- .-.-.- / - .-. -.-- / - .... . / -.- --- -. .- -- .. / -.-. --- -.. . .-.-.-"
                         },
                         new ManuallyDefinedAsset
@@ -323,7 +323,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "DLC Pirate Foxy",
                             AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/PirateFoxy/RIG_PirateFoxy",
-                            IconPath = "freddys/Plugins/HalloweenDLC/Content/Textures/Foxy_Dark_Ride/Prop_Images/TEMP/Foxy_foxyspyglass_Prop",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW/PRFY.png",
                             Description = "A fun ride for all."
                         },
                         new ManuallyDefinedAsset
