@@ -343,42 +343,42 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "The Blob",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Blob/RIG_Blob",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Blob.png",
                             Description = "A little bit of everyone."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Burntrap",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Burntrap/RIG_Burntrap",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Afton.png",
                             Description = "I will always. always come back."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Glamrock Chica",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Chica/RIG_Glamrock_Chica",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_ChicaVogue",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/CHICA.png",
                             Description = "Greeeeeggooorrryyyyy"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "DJ Music Man",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DJ_MusicMan/RIG_DJ_Music_Man",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/DJMM.png",
                             Description = "IT'S MUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUSIC MAN!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Endo",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Endo/RIG_Endo",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Endo_Poster_03",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Endo.png",
                             Description = "*endo activation noise* (ps the endo warehouse is bottom 10 gaming moments in any game)"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Glamrock Freddy",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Freddy/RIG_Glamrock_Freddy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_FreddyPop",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/GRFred.png",
                             Description = "You're my superstar."
                         },
                         new ManuallyDefinedAsset
@@ -392,56 +392,56 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "Lil DJ Music Man",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Lil_DJ_Music_Man/RIG_Little_DJ_Music_Man",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/LDJMM.png",
                             Description = "Mini!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Montgomery Gator (Monty)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Monty/RIG_Montgomery_Gator",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_MontyPop",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/mont.png",
                             Description = "ROCK AND ROLL!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Sun (Daycare Attendant)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/MoonMan/RIG_Sunman",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_Sunnydrop",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Sun.png",
                             Description = "GLITTER GLUE! I HAVE TOOOOOONS OF GLITTER GLUE!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Moon (Daycare Attendant)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/MoonMan/RIG_MoonMan",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_Poster_MoonDrop",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Moon.png",
                             Description = "Nighty Night..."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Roxane Wolf (Roxy)",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Roxy/RIG_Glamrock_Roxy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/Poster_RoxyNegal",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Roxy.png",
                             Description = "I'm the best. The BEST."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Shattered Chica",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Chica/RIG_Shattered_Chica",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/SHATICA.png",
                             Description = "She may be shattered, but her anger (and gluttony) still survive."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Shattered Monty",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Monty/RIG_Shattered_Montgomery",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Shattered Monty.png",
                             Description = "No legs, no problem"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Shattered Roxy",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Shattered_Roxy/RIG_Shattered_Roxy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Shatxy.png",
                             Description = "Am.. Am I still the best..?"
                         },
                         new ManuallyDefinedAsset
@@ -462,77 +462,77 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "Vanny",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanny/RIG_Vanny",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_VannyGraffiti_Decal",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Vanny.png",
                             Description = "I see you..."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Chica",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Chica/SK_DLC_Chica",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Chuin.png",
                             Description = "We all know who caused what"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Monty",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Monty/SK_Monty_DLC",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/ruin monty.png",
                             Description = "Even more legless!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Scrapped Rabbit",
                             AssetPath = "fnaf9/Content/Model_Assets/Chars/DLC_Chars/DLC_Rabbit/SK_DLC_Rabbit",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/scrap.png",
                             Description = "Never meant to be seen..."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Roxy",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Roxy/SK_Roxy_DLC",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/RRoxy.png",
                             Description = "Wait... Cassie?"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Candy Cadet",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_CandyCadet/SK_DLC_CandyCadet",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Candy.png",
                             Description = "Come get your candy. Candy. Candy."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Freddy (Prototype)",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Freddy/SK_DLC_Freddy",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Reddy.png",
                             Description = "*Headless Shreaks*"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Mascot Mimic",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Mascot/SK_Mascot4",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/mascot.png",
                             Description = "In order to go forward, we need to take a step into the past."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Maskbot",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Maskbot/SK_Maskbot",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Bot.png",
                             Description = "Take a... Mask?"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Scooper",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Scooper/SK_DLC_Scooper",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/scoop.png",
                             Description = "It won't hurt for long..."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "MXES",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Rabbit_6x/SK_DLC_Rabbit_6x",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/MXES.png",
                             Description = "Fiona..."
                         },
                         new ManuallyDefinedAsset
@@ -546,14 +546,14 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "The Mimic",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_OldEndo/SK_DLC_Old_Endo",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/Mimi.png",
                             Description = "MY NAME IS THE FUCKING MIMIC OH YEAH!!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Eclipse",
                             AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_MoonSun/SK_Moonman_DLC",
-                            IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                            LocalIconPath = "avares://FNAFPorting/Assets/SB/eclipse.png",
                             Description = "Merged, finally."
                         },
                         
@@ -628,7 +628,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "FNAF 1 Mr Cupcake",
                             AssetPath = "Thumper/Content/Characters/Cupcake/SK_MrCupcake",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/CC.png",
                             Description = "Hey they modeled his mouth this time!"
                         },
                         new ManuallyDefinedAsset
@@ -644,7 +644,7 @@ public partial class AssetLoaderCollection : ObservableObject
                             Name = "Help Wanted 2 Ruined DJ Music Man",
                             AssetPath = "Thumper/Content/Characters/DJ_MusicMan_Ruined/SK_DJMusicManRuined",
                             IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_RuinedDJMM",
-                            Description = "Is this the death of slim shady?!"
+                            Description = "Is this the death of slim shady?! (Edit: I'm back to this and idk wtf this was in reference to??)"
                         },
                         new ManuallyDefinedAsset
                         {
@@ -692,7 +692,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "Sister Location Funtime Foxy",
                             AssetPath = "Thumper/Content/Characters/Funtime_Foxy/SK_FTFoxy",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/FTFY.png",
                             Description = "Still.. no gender..."
                         },
                         new ManuallyDefinedAsset
@@ -711,7 +711,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         },
                         new ManuallyDefinedAsset
                         {
-                            Name = "Help Wanted 2Headchef Bot",
+                            Name = "Help Wanted 2 Headchef Bot",
                             AssetPath = "Thumper/Content/Characters/HeadChefBot/SK_HeadChefBot",
                             IconPath = "Thumper/Content/Shading_Assets/Textures/Icons/GalleryIcons/T_GalleryBust_HeadChefBot",
                             Description = "Welcome human. Prepare food!"
@@ -741,63 +741,63 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "FNAF 6 Lemonade Clown",
                             AssetPath = "Thumper/Content/Characters/LemonadeClown/SM_LemonadeClown",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/Lemon Clown.png",
                             Description = "Astral Spiff was here"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Security Breach Lil' DJ Music Man",
                             AssetPath = "Thumper/Content/Characters/LittleMusicMan/SK_LMM",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/LDJMM.png",
                             Description = "awww just a wittwe gwuy agwain"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Ruined Lil' DJ Music Man",
                             AssetPath = "Thumper/Content/Characters/LittleMusicMan_Ruined/SK_LMM_01",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/RLDJMM.png",
                             Description = "Oh damn, just a fucked up little guy again"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Masked Bonnie Doll",
                             AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Bonnie",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/BP.png",
                             Description = "Jeremy."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Masked Chica Doll",
                             AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Chica",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/CP.png",
                             Description = "Susie."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Masked Foxy Doll",
                             AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Foxy",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/FP.png",
                             Description = "Fritz"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Masked Freddy Doll",
                             AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Freddy",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/FRP.png",
                             Description = "Gabriel"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Masked Golden Freddy Doll",
                             AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_GoldenFreddy",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/GP.png",
                             Description = "Cassidy."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Masked Puppet",
                             AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_Puppet",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/PP.png",
                             Description = "Charlotte Emily."
                         },
                         new ManuallyDefinedAsset
@@ -818,15 +818,15 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "RUIN MXES",
                             AssetPath = "Thumper/Content/Characters/MXES_Rabbit/SK_DLC_Rabbit",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/MXES.png",
                             Description = "Fiona."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Mystic Hippo",
                             AssetPath = "Thumper/Content/Characters/MysticHippo/SK_MysticHippo",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
-                            Description = "I wil read your fortune."
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/MH.png",
+                            Description = "I will read your fortune."
                         },
                         new ManuallyDefinedAsset
                         {
@@ -839,42 +839,42 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "RUIN -Plush Glamrock Bonnie",
                             AssetPath = "Thumper/Content/Characters/Plush_GlamBonnie/SK_Plush_GlamBonnie",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/GB.png",
                             Description = "Poor guy."
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Security Breach Plush Glamrock Chica",
                             AssetPath = "Thumper/Content/Characters/Plush_GlamChica/SK_Plush_GlamChica",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/GCP.png",
                             Description = "The glutton, but as a plushie!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Security Breach Plush Glamrock Freddy",
                             AssetPath = "Thumper/Content/Characters/Plush_GlamFreddy/SK_Plush_GlamFreddy",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/CFP.png",
                             Description = "The Savior, but as a plushie!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Security Breach Plush Monty",
                             AssetPath = "Thumper/Content/Characters/Plush_GlamMonty/SK_Plush_GlamMonty",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/GRM.png",
                             Description = "The Angry, but as a plushie!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Security Breach Plush Roxy",
                             AssetPath = "Thumper/Content/Characters/Plush_GlamRoxy/SK_Plush_GlamRoxy",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/ROP.png",
                             Description = "The Insecure, but as a plushie!"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Security Breach Plush Moon",
                             AssetPath = "Thumper/Content/Characters/Plush_SunMoon/SK_Plush_MoonMan",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/MOOP.png",
                             Description = "The Broken, but as a plushie!"
                         },
                         new ManuallyDefinedAsset
@@ -937,14 +937,14 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "RUIN Eclipse",
                             AssetPath = "Thumper/Content/Characters/SunMoonRuin/SK_Moonman_Ruin",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/RE.png",
                             Description = "Harmony"
                         },
                         new ManuallyDefinedAsset
                         {
                             Name = "Help Wanted 2 Glitchtrap puppet",
                             AssetPath = "Thumper/Content/Characters/Tilt/SK_Tilt_Puppet",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/GTP.png",
                             Description = "Uif rctwb lt KVUV ihwwjoh uvcuwhe. Fbv aqxu fblf."
                         },
                         new ManuallyDefinedAsset
@@ -958,7 +958,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         {
                             Name = "Secret of the Mimic White Tiger",
                             AssetPath = "Thumper/Content/Characters/WhiteTiger/SK_WhiteTiger",
-                            IconPath = "Thumper/Content/UI/Art/Test/T_LoadingIcon_132x132",
+                            LocalIconPath = "avares://FNAFPorting/Assets/HW2/whitetiger.png",
                             Description = "David's favorite."
                         },
                         new ManuallyDefinedAsset
