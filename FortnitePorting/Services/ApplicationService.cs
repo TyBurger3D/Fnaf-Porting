@@ -68,10 +68,14 @@ public static class ApplicationService
 
         ViewModelRegistry.New<ConsoleViewModel>();
         LogFilePath = Path.Combine(LogsFolder.FullName, $"FNAFPorting-{DateTime.Now:yyyy-MM-dd-hh-mm-ss}.log");
+        
         Log.Logger = new LoggerConfiguration()
             .WriteTo.Console(theme: AnsiConsoleTheme.Literate)
             .WriteTo.Sink(ConsoleVM)
             .WriteTo.File(LogFilePath)
+#if DEBUG
+            .MinimumLevel.Debug()
+#endif
             .CreateLogger();
         
         AssetsFolder.Create();

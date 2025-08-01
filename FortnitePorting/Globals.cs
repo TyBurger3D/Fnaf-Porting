@@ -34,7 +34,7 @@ public static class Globals
     public const string SOTM_AES = "0x38CE9CDC970FF5A18F5980CB0CE729495ED103A5388A81A58C32E9CA8AD776E1";
     public const string DBD_AES = "0x22B1639B548124925CF7B9CBAA09F9AC295FCF0324586D6B37EE1D42670B39B3";
 
-    public const string DBD_MAPPINGS = "DBD_8.6.0.usmap";
+    public const string DBD_MAPPINGS = "5.4.4-2538502+++DeadByDaylight+Lasagna_PTB-DeadByDaylight.usmap";
     
     public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([]);
     
