@@ -1668,7 +1668,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         
                         new ManuallyDefinedAsset
                         {
-                            Name = "Springtrap Body (The Animatronic)",
+                            Name = "Springtrap",
                             AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Bodies/SKM_K40_Body01",
                             IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Body01",
                             Description = "The Base skin for The Animatronic."
@@ -1676,31 +1676,71 @@ public partial class AssetLoaderCollection : ObservableObject
                         },
                         new ManuallyDefinedAsset
                         {
-                            Name = "Toxic Springtrap Body (The Animatronic)",
+                            Name = "Toxic Springtrap Body",
                             AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Bodies/SKM_K40_Body009",
                             IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Body009",
                             Description = "The child killer but in acid form."
                         },
                         new ManuallyDefinedAsset
                         {
-                            Name = "Clown Springtrap Body (The Animatronic)",
+                            Name = "Clown Springtrap Body",
                             AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Bodies/SKM_K40_Body008",
                             IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Body008",
                             Description = "Welcome to the circus."
                         },
                         new ManuallyDefinedAsset
                         {
-                            Name = "The Yellow Rabbit Body (The Animatronic)",
+                            Name = "The Yellow Rabbit Body",
                             AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Bodies/SKM_K40_Body007",
                             IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Body007",
                             Description = "Straight from the movie!"
                         },
                         new ManuallyDefinedAsset
                         {
-                            Name = "Glitchtrap Body (The Animatronic)",
+                            Name = "Glitchtrap Body",
                             AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Bodies/SKM_K40_Body006",
                             IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Body006",
                             Description = "I always come back... let me out."
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Springtrap Head",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Heads/SKM_K40_Head01",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Head01",
+                            Description = "The Base skin for The Animatronic."
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Toxic Springtrap Head",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Heads/SKM_K40_Head009",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Head009",
+                            Description = "The child killer but in acid form."
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Clown Springtrap Head",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Heads/SKM_K40_Head008",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Head008",
+                            Description = "Welcome to the circus."
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Yellow Rabbit Head",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Heads/SKM_K40_Head007",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Head007",
+                            Description = "Straight from the movie!"
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Glitchtrap head",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Heads/SKM_K40_Head006",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Head006",
+                            Description = "I always come back... let me out."
+                            
                         },
 
                     ]),
