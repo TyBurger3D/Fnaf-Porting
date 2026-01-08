@@ -5,8 +5,8 @@ from .logger import Log
 from .processing.importer import Importer
 
 bl_info = {
-    "name": "FNAF Porting",
-    "description": "Import Server for FNAF Porting",
+    "name": "Daylight Porting",
+    "description": "Import Server for Daylight Porting",
     "author": "Half, DeveloperChipmunk, TyBurger3D",
     "blender": (4, 2, 0),
     "version": (0, 2, 0),

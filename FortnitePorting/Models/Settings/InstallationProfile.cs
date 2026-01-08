@@ -25,11 +25,11 @@ public partial class InstallationProfile : ObservableValidator
     [NotifyPropertyChangedFor(nameof(EncryptionKeyEnabled))]
     [NotifyPropertyChangedFor(nameof(MappingsFileEnabled))]
     [NotifyPropertyChangedFor(nameof(IsCustom))]
-    private EFortniteVersion _fortniteVersion = EFortniteVersion.HelpWanted;
+    private EFortniteVersion _fortniteVersion = EFortniteVersion.DBD;
     
     [ObservableProperty] private string _archiveDirectory;
     
-    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_UE4_28;
+    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_DeadByDaylight;
     
     [NotifyDataErrorInfo]
     [EncryptionKey(canValidateProperty: nameof(EncryptionKeyEnabled))]

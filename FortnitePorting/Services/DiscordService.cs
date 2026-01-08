@@ -34,7 +34,7 @@ public static class DiscordService
         [
             new Button
             {
-                Label = "Join FNAFPorting",
+                Label = "Join Daylight Porting",
                 Url = Globals.DISCORD_URL
             }
         ]

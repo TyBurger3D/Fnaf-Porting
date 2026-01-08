@@ -45,7 +45,7 @@ public partial class BlenderInstallation(string blenderExecutablePath) : Observa
     {
         if (!File.Exists(ManifestPath))
         {
-            AppWM.Message("Blender Extension", $"Plugin manifest does not exist at path {ManifestPath}, installation may have gone wrong.\nPlease remove the installation from Blender and FNAF Porting and try again.");
+            AppWM.Message("Blender Extension", $"Plugin manifest does not exist at path {ManifestPath}, installation may have gone wrong.\nPlease remove the installation from Blender and Daylight Porting and try again.");
             return false;
         }
         
@@ -71,13 +71,13 @@ public partial class BlenderInstallation(string blenderExecutablePath) : Observa
             if (didSyncProperly)
             {
                 AppWM.Dialog("Plugin Installation Succeeded", 
-                    "Successfully installed the plugin, please enable the UEFormat plugin and then the FNAF Porting plugin in Blender if this is your first time using it. (Thank you UN0 for pointing the mistake out. Couldn't do it without you.)",
+                    "Successfully installed the plugin, please enable the UEFormat plugin and then the Daylight Porting plugin in Blender if this is your first time using it.",
                     "Open Blender", () => Launch(BlenderPath));
             }
             else
             {
                 AppWM.Dialog("Plugin Installation Failed", 
-                    "Failed to install the plugin, please install it manually by dragging and dropping the UEFormat plugin and then the FNAF Porting plugin in Blender.", 
+                    "Failed to install the plugin, please install it manually by dragging and dropping the UEFormat plugin and then the Daylight Porting plugin in Blender.", 
                     "Plugins Folder", () => Launch(PluginsFolder.FullName));
 
             }

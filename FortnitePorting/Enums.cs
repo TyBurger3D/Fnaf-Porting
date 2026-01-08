@@ -8,20 +8,6 @@ namespace FortnitePorting;
 
 public enum EFortniteVersion
 {
-    [Description("Help Wanted 1"), UEVersion(EGame.GAME_UE4_23), AESKey(Globals.HELP_WANTED_AES)]
-    HelpWanted,
-    
-    [Description("Help Wanted 2"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.SECURITY_BREACH_AES)]
-    HelpWanted2,
-    
-    [Description("Security Breach"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.SECURITY_BREACH_AES)]
-    SecurityBreach,
-    
-    [Description("Five Laps at Freddy's"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.ZERO_CHAR)]
-    FLAF,
-    
-    [Description("Secret of the Mimic"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.SOTM_AES)]
-    SOTM,
     
     [Description("Dead By Daylight"), UEVersion(EGame.GAME_DeadByDaylight), AESKey(Globals.DBD_AES), MappingsFile(Globals.DBD_MAPPINGS)]
     DBD,
@@ -84,7 +70,7 @@ public enum EExportType
     
     // COSMETIC
     
-    [Description("Animatronics"), Export(EPrimitiveExportType.Mesh)]
+    [Description("Killers"), Export(EPrimitiveExportType.Mesh)]
     Outfit,
     
     [Description("Character Parts"), Export(EPrimitiveExportType.Mesh)]

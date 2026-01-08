@@ -33,7 +33,7 @@ public static class DependencyService
 
     private static void EnsureResourceBased(string path, FileInfo targetFile)
     {
-        var assetStream = AssetLoader.Open(new Uri($"avares://FNAFPorting/{path}"));
+        var assetStream = AssetLoader.Open(new Uri($"avares://Daylight Porting/{path}"));
         if (targetFile is { Exists: true, Length: > 0 } && targetFile.GetHash() == assetStream.GetHash()) return;
 
         targetFile.Directory?.Create();
