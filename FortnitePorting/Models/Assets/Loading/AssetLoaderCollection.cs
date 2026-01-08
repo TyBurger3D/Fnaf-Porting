@@ -132,6 +132,13 @@ public partial class AssetLoaderCollection : ObservableObject
                         },
                         new ManuallyDefinedAsset
                         {
+                            Name = "Blighted Springtrap (The Animatronic) (Body)",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Bodies/SKM_K40_Body010",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Body010",
+                            Description = "Burnt to a crisp!"
+                        },
+                        new ManuallyDefinedAsset
+                        {
                             Name = "The Animatronic (Head)",
                             AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Heads/SKM_K40_Head01",
                             IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Head01",
@@ -170,6 +177,15 @@ public partial class AssetLoaderCollection : ObservableObject
                             Description = "I always come back... let me out."
                             
                         },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "Blighted Springtrap (The Animatronic) (head)",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K40/Content/ArtAssets/Models/Heads/SKM_K40_Head010",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K40/K40_Head010",
+                            Description = "Burnt to a crisp!"
+                            
+                        },
+
 
                     ]),
                 },
