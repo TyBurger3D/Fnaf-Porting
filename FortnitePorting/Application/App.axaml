@@ -34,8 +34,8 @@
              <Brush x:Key="CheckBoxCheckGlyphForegroundCheckedDisabled">#5DFFFFFF</Brush>
              <Brush x:Key="ScrollViewerScrollBarsSeparatorBackground">#00000000</Brush>
              <x:Double x:Key="NavigationViewItemOnLeftIconBoxHeight">14</x:Double>
-             <FontFamily x:Key="SymbolThemeFontFamily">avares://Daylight Porting/Assets/Fonts/Segoe Fluent Icons.ttf#Segoe Fluent Icons</FontFamily>
-             <FontFamily x:Key="TimeWasterFontFamily">avares://Daylight Porting/Assets/TimeWaster/Fonts/BurbankBigRegular-Bold.ttf#Burbank Big</FontFamily>
+             <FontFamily x:Key="SymbolThemeFontFamily">avares://DaylightPorting/Assets/Fonts/Segoe Fluent Icons.ttf#Segoe Fluent Icons</FontFamily>
+             <FontFamily x:Key="TimeWasterFontFamily">avares://DaylightPorting/Assets/TimeWaster/Fonts/BurbankBigRegular-Bold.ttf#Burbank Big</FontFamily>
              <Brush x:Key="TabViewItemHeaderBackgroundSelected">#FF1A1A1C</Brush>
              <Brush x:Key="TabViewItemHeaderBackgroundPointerOver">#343438</Brush>
              <Brush x:Key="TabViewItemHeaderBackground">#28282b</Brush>

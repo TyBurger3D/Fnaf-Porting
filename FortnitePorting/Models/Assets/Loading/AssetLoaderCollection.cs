@@ -252,7 +252,7 @@ public partial class AssetLoaderCollection : ObservableObject
                     SelectsOnInvoked = false,
                     IconSource = new ImageIconSource
                     {
-                        Source = ImageExtensions.AvaresBitmap($"avares://Daylight Porting/Assets/FN/{category.Category.ToString()}.png")
+                        Source = ImageExtensions.AvaresBitmap($"avares://DaylightPorting/Assets/FN/{category.Category.ToString()}.png")
                     },
                     MenuItemsSource = category.Loaders.Select(loader => new NavigationViewItem
                     {
@@ -260,7 +260,7 @@ public partial class AssetLoaderCollection : ObservableObject
                         Content = loader.Type.GetDescription(), 
                         IconSource = new ImageIconSource
                         {
-                            Source = ImageExtensions.AvaresBitmap($"avares://Daylight Porting/Assets/FN/{loader.Type.ToString()}.png")
+                            Source = ImageExtensions.AvaresBitmap($"avares://DaylightPorting/Assets/FN/{loader.Type.ToString()}.png")
                         },
                     })
                 });

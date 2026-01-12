@@ -25,7 +25,7 @@ public partial class RadioPlaylist : ObservableObject
     public RadioPlaylist(bool isDefault)
     {
         IsDefault = isDefault;
-        PlaylistCover = ImageExtensions.AvaresBitmap("avares://Daylight Porting/Assets/FN/DefaultPlaylistImage.png");
+        PlaylistCover = ImageExtensions.AvaresBitmap("avares://DaylightPorting/Assets/FN/DefaultPlaylistImage.png");
         PlaylistName = isDefault ? "Default Playlist" : "New Playlist";
     }
     
@@ -47,7 +47,7 @@ public partial class RadioPlaylist : ObservableObject
         }
         else
         {
-            playlist.PlaylistCover = ImageExtensions.AvaresBitmap("avares://Daylight Porting/Assets/FN/DefaultPlaylistImage.png");
+            playlist.PlaylistCover = ImageExtensions.AvaresBitmap("avares://DaylightPorting/Assets/FN/DefaultPlaylistImage.png");
         }
 
         return playlist;

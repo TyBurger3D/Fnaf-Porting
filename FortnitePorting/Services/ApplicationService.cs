@@ -98,7 +98,7 @@ public static class ApplicationService
         
         TaskService.Exception += HandleException;
         
-        Log.Information($"Rivals Porting {Globals.VersionString}");
+        Log.Information($"Daylight Porting {Globals.VersionString}");
         Log.Information($".NET Version: {RuntimeInformation.FrameworkDescription}");
         
         if (AppSettings.Current.Installation.CurrentProfile is not null)

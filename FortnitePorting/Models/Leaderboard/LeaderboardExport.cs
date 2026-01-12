@@ -101,7 +101,7 @@ public partial class LeaderboardExport : ObservableObject
             _ => obj.GetType().Name[1..]
         };
         
-        var filePath = $"avares://Daylight Porting/Assets/Unreal/{typeName}_64x.png";
+        var filePath = $"avares://DaylightPorting/Assets/Unreal/{typeName}_64x.png";
         if (!AssetLoader.Exists(new Uri(filePath))) return null;
         
         return ImageExtensions.AvaresBitmap(filePath);

@@ -67,7 +67,7 @@ public class MeshExport : BaseExport
     {
         string ExportCustom(string path)
         {
-            var stream = Avalonia.Platform.AssetLoader.Open(new Uri($"avares://Daylight Porting/{path}"));
+            var stream = Avalonia.Platform.AssetLoader.Open(new Uri($"avares://DaylightPorting/{path}"));
             
             var outPathPortion = path.SubstringAfter("Assets/");
             var outPath = Path.Combine(metaData.AssetsRoot, outPathPortion);
