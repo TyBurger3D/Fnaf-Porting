@@ -128,9 +128,10 @@ public class CUE4ParseViewModel : ViewModelBase
     
     private async Task InitializeOodle()
     {
-        var oodlePath = Path.Combine(DataFolder.FullName, OodleHelper.OODLE_DLL_NAME);
-        if (!File.Exists(oodlePath)) await OodleHelper.DownloadOodleDllAsync(oodlePath);
-        OodleHelper.Initialize(oodlePath);
+        if (!File.Exists(DependencyService.NoodleFile.FullName)) 
+            await OodleHelper.DownloadOodleDllAsync(DependencyService.NoodleFile.FullName);
+        
+        OodleHelper.Initialize(DependencyService.NoodleFile.FullName);
     }
     
     private async Task InitializeZlib()
