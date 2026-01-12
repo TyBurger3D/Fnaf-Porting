@@ -79,7 +79,7 @@ public enum EExportType
     [Description("Character Parts"), Export(EPrimitiveExportType.Mesh)]
     CharacterPart,
 
-    [Description("Backpacks"), Export(EPrimitiveExportType.Mesh)]
+    [Description("Survivors"), Export(EPrimitiveExportType.Mesh)]
     Backpack,
 
     [Description("Pickaxes"), Export(EPrimitiveExportType.Mesh)]
@@ -94,7 +94,7 @@ public enum EExportType
     [Description("Toys"), Export(EPrimitiveExportType.Mesh)]
     Toy,
 
-    [Description("Emoticons"), Export(EPrimitiveExportType.Texture)]
+    [Description("Emoticons"), Export(EPrimitiveExportType.Mesh)]
     Emoticon,
 
     [Description("Sprays"), Export(EPrimitiveExportType.Texture)]

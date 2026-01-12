@@ -9,7 +9,7 @@ namespace FortnitePorting;
 public static class Globals
 {
     public static string VersionString => Version.GetDisplayString(EVersionStringType.IdentifierPrefix);
-    public static readonly FPVersion Version = new(0, 3, 0, identifier: "Beta");
+    public static readonly FPVersion Version = new(0, 0, 1, identifier: "Beta");
     public const string OnlineTag = "Daylight Porting";
     
     public static readonly FilePickerFileType MappingsFileType = new("Unreal Mappings") { Patterns = [ "*.usmap" ] };

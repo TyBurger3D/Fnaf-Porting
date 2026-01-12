@@ -110,6 +110,7 @@ public class MeshExport : BaseExport
         switch (exportType)
         {
             case EExportType.Outfit:
+            case EExportType.Backpack:
             {
                 Meshes.AddIfNotNull(Exporter.Mesh(asset));
                 break;
@@ -117,16 +118,6 @@ public class MeshExport : BaseExport
             case EExportType.CharacterPart:
             {
                 Meshes.AddIfNotNull(Exporter.CharacterPart(asset));
-                
-                break;
-            }
-            case EExportType.Backpack:
-            {
-                var parts = asset.GetOrDefault("CharacterParts", Array.Empty<UObject>());
-                foreach (var part in parts)
-                {
-                    Meshes.AddIfNotNull(Exporter.CharacterPart(part));
-                }
                 
                 break;
             }

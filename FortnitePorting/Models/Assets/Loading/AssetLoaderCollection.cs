@@ -94,6 +94,36 @@ public partial class AssetLoaderCollection : ObservableObject
                             Description = "When he first arrived."
                             
                         },
+                        
+                        
+                        
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Krasue (Face ACC)",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K41/Content/ArtAssets/Models/Heads/ACC/Models/SKM_K41_Head_ACC01",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K41/K41_Head01_01",
+                            Description = "Beauty by day"
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Krasue (Head)",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K41/Content/ArtAssets/Models/Heads/SKM_K41_Head00",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K41/K41_Head01_01",
+                            Description = "Beauty by day"
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Krasue (Body)",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K41/Content/ArtAssets/Models/Bodies/SKM_K41_Body01",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K41/K41_Body01_01",
+                            Description = "Beauty by day"
+                            
+                        },
+                        
+                        
+                        
                         new ManuallyDefinedAsset
                         {
                             Name = "The Animatronic (Body)",
@@ -185,14 +215,70 @@ public partial class AssetLoaderCollection : ObservableObject
                             Description = "Burnt to a crisp!"
                             
                         },
+                        
+                        
+                        
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Ghoul (head)",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K39/Content/ArtAssets/Models/Head/SKM_K39_Head01",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K39/K39_Head01",
+                            Description = "Straight Toking my ghoul yo"
+                            
+                        },
+                        new ManuallyDefinedAsset
+                        {
+                            Name = "The Ghoul (Body)",
+                            AssetPath = "DeadByDaylight/Plugins/DBDCharacters/K39/Content/ArtAssets/Models/Bodies/SKM_K39_Body01",
+                            IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/K39/K39_Head01",
+                            Description = "BLEHHGHHH!"
+                            
+                        },
 
 
                     ]),
                 },
-                new AssetLoader(EExportType.Emoticon)
-                    
+                new AssetLoader(EExportType.Backpack)
+                
                 {
-
+                        ManuallyDefinedAssets = new Lazy<ManuallyDefinedAsset[]>(
+                            [
+                                new ManuallyDefinedAsset
+                                {
+                                    Name = "Eleven (head)",
+                                    AssetPath = "DeadByDaylight/Plugins/DBDCharacters/S51/Content/ArtAssets/Models/Heads/SKM_S51_Head00",
+                                    IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/S51/S51_Head006",
+                                    Description = "Former Test Subject"
+                            
+                                },
+                                new ManuallyDefinedAsset
+                                {
+                                    Name = "Eleven (Torso)",
+                                    AssetPath = "DeadByDaylight/Plugins/DBDCharacters/S51/Content/ArtAssets/Models/Torsos/SKM_S51_Torso01",
+                                    IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/S51/S51_Torso01",
+                                    Description = "Former Test Subject"
+                            
+                                },
+                                new ManuallyDefinedAsset
+                                {
+                                    Name = "Eleven (Legs)",
+                                    AssetPath = "DeadByDaylight/Plugins/DBDCharacters/S51/Content/ArtAssets/Models/Legs/SKM_S51_Legs01",
+                                    IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/S51/S51_Legs01",
+                                    Description = "Former Test Subject"
+                            
+                                },
+                                new ManuallyDefinedAsset
+                                {
+                                    Name = "Eleven (Head ACC)",
+                                    AssetPath = "DeadByDaylight/Plugins/DBDCharacters/S51/Content/ArtAssets/Models/Heads/ACC/Meshes/SKM_S51_Head_ACC01",
+                                    IconPath = "DeadByDaylight/Content/UI/UMGAssets/Icons/Customization/S51/S51_Head006",
+                                    Description = "Former Test Subject"
+                            
+                                },
+                                
+                                
+                                
+                            ]),
                 },
                 new AssetLoader(EExportType.Spray)
                 {

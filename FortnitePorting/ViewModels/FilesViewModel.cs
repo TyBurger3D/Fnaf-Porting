@@ -70,14 +70,9 @@ public partial class FilesViewModel : ViewModelBase
 
     [ObservableProperty] private ObservableCollection<FileGameFilter> _gameNames = 
     [
-        new("freddys"),
-        new("Thumper"),
-        new("fnaf9"),
-        new("flaf"),
-        new("FNAF_SOTM"),
+
         new("DeadByDaylight"),
         new("Engine"),
-        new("All", ""),
     ];
 
     [ObservableProperty] private ObservableCollection<string> _selectedGameNames = [];

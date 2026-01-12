@@ -48,7 +48,7 @@ public partial class HomeViewModel : ViewModelBase
                 var dialog = new ContentDialog
                 {
                     Title = "Enjoying Daylight Porting?",
-                    Content = "Consider donating to half's Ko-Fi to support the development of Fortnite Porting and FNAF Porting!!",
+                    Content = "Consider donating to half's Ko-Fi to support the development of Fortnite Porting and other Porting Apps!!",
                     CloseButtonText = "No",
                     PrimaryButtonText = "Donate",
                     PrimaryButtonCommand = new RelayCommand(LaunchKoFi),

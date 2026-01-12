@@ -55,7 +55,7 @@
                 </ui:SettingsExpander.Footer>
             </ui:SettingsExpander>
             
-            <ui:SettingsExpander Header="Installation Version" Description="The type of game installation that FNAF Porting will be loading.">
+            <ui:SettingsExpander Header="Installation Version" Description="The type of game installation that Daylight Porting will be loading.">
                 <ui:SettingsExpander.Footer>
                     <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type fortnitePorting:EFortniteVersion}}"
                               SelectedItem="{Binding CurrentProfile.FortniteVersion, Converter={StaticResource EnumToRecord}}">
