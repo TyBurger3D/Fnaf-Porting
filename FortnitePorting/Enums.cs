@@ -9,8 +9,11 @@ namespace FortnitePorting;
 public enum EFortniteVersion
 {
     
-    [Description("Dead By Daylight"), UEVersion(EGame.GAME_DeadByDaylight), AESKey(Globals.DBD_AES), MappingsFile(Globals.DBD_MAPPINGS)]
+    [Description("Dead By Daylight (Release)"), UEVersion(EGame.GAME_DeadByDaylight), AESKey(Globals.DBD_AES), MappingsFile(Globals.DBD_MAPPINGS)]
     DBD,
+    
+    [Description("Dead By Daylight (PTB)"), UEVersion(EGame.GAME_DeadByDaylight), AESKey(Globals.DBD_AES), MappingsFile(Globals.DBD_PTB_MAPPINGS)]
+    DBD_PTB,
     
     [Description("Custom")]
     Custom
