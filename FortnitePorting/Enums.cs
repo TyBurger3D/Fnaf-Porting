@@ -23,8 +23,6 @@ public enum EFortniteVersion
     [Description("Secret of the Mimic"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.SOTM_AES)]
     SOTM,
     
-    [Description("Dead By Daylight"), UEVersion(EGame.GAME_DeadByDaylight), AESKey(Globals.DBD_AES), MappingsFile(Globals.DBD_MAPPINGS)]
-    DBD,
     
     [Description("Custom")]
     Custom
@@ -58,9 +56,6 @@ public enum EAssetCategory
     [Description("Creative")]
     Creative,
     
-    [Description("Gameplay")]
-    Gameplay,
-    
     [Description("Festival")]
     Festival,
     
@@ -90,7 +85,7 @@ public enum EExportType
     [Description("Character Parts"), Export(EPrimitiveExportType.Mesh)]
     CharacterPart,
 
-    [Description("Backpacks"), Export(EPrimitiveExportType.Mesh)]
+    [Description("Items"), Export(EPrimitiveExportType.Mesh)]
     Backpack,
 
     [Description("Pickaxes"), Export(EPrimitiveExportType.Mesh)]

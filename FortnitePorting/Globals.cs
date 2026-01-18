@@ -9,8 +9,8 @@ namespace FortnitePorting;
 public static class Globals
 {
     public static string VersionString => Version.GetDisplayString(EVersionStringType.IdentifierPrefix);
-    public static readonly FPVersion Version = new(0, 3, 0, identifier: "Beta");
-    public const string OnlineTag = "FNAFPorting";
+    public static readonly FPVersion Version = new(0, 3, 1, identifier: "Beta");
+    public const string OnlineTag = "FNAF Porting";
     
     public static readonly FilePickerFileType MappingsFileType = new("Unreal Mappings") { Patterns = [ "*.usmap" ] };
     public static readonly FilePickerFileType JSONFileType = new("JSON") { Patterns = [ "*.json" ] };
@@ -33,8 +33,7 @@ public static class Globals
     public const string SECURITY_BREACH_AES = "0x85F7D4007015493ED0359C9007266038F8F7B1F96988F19A610103874CC95286";
     public const string SOTM_AES = "0x38CE9CDC970FF5A18F5980CB0CE729495ED103A5388A81A58C32E9CA8AD776E1";
     public const string DBD_AES = "0x22B1639B548124925CF7B9CBAA09F9AC295FCF0324586D6B37EE1D42670B39B3";
-
-    public const string DBD_MAPPINGS = "5.4.4-2538502+++DeadByDaylight+Lasagna_PTB-DeadByDaylight.usmap";
+    
     
     public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([]);
     

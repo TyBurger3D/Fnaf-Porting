@@ -21,8 +21,8 @@ public partial class ThemeSettingsViewModel : ViewModelBase
     private bool _useMica = false;
     public ObservableCollection<WindowTransparencyLevel> TransparencyHints => UseMica ? [WindowTransparencyLevel.Mica, WindowTransparencyLevel.AcrylicBlur] : [WindowTransparencyLevel.AcrylicBlur];
     
-    [ObservableProperty] private Color _backgroundColor = Color.Parse("#060037");
-    [ObservableProperty] private Color _accentColor = Color.Parse("#C900FF");
+    [ObservableProperty] private Color _backgroundColor = Color.Parse("#000000");
+    [ObservableProperty] private Color _accentColor = Color.Parse("#FFA500");
     
     public bool IsWindows11 => Environment.OSVersion.Platform == PlatformID.Win32NT && Environment.OSVersion.Version.Build >= 22000;
 

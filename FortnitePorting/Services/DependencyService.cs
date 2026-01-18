@@ -10,7 +10,7 @@ namespace FortnitePorting.Services;
 public static class DependencyService
 {
     public static bool Finished;
-    public static readonly FileInfo DBDMappingsFile = new(Path.Combine(DataFolder.FullName, Globals.DBD_MAPPINGS));
+
     public static readonly FileInfo BinkaDecoderFile = new(Path.Combine(DataFolder.FullName, "binka", "binkadec.exe"));
     public static readonly FileInfo NoodleFile = new(Path.Combine(DataFolder.FullName, "noodle.dll"));
     // public static readonly FileInfo RadaDecoderFile = new(Path.Combine(DataFolder.FullName, "rada", "radadec.exe"));
@@ -22,7 +22,6 @@ public static class DependencyService
     {
         TaskService.Run(() =>
         {
-            EnsureResourceBased($"Assets/Mappings/{Globals.DBD_MAPPINGS}" , DBDMappingsFile);
             EnsureResourceBased("Assets/Dependencies/binkadec.exe", BinkaDecoderFile);
             EnsureResourceBased("Assets/Dependencies/noodle.dll", NoodleFile);
             // EnsureResourceBased("Assets/Dependencies/radadec.exe", RadaDecoderFile);
