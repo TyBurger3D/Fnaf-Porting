@@ -31,7 +31,7 @@ public static class Globals
     
     public const string DBD_AES = "0x22B1639B548124925CF7B9CBAA09F9AC295FCF0324586D6B37EE1D42670B39B3";
 
-    public const string DBD_MAPPINGS = "DBD-9.3.2.usmap";
+    public const string DBD_MAPPINGS = "DBD-9.4.0.usmap";
     public const string DBD_PTB_MAPPINGS = "9.4.0-PTB-Mapping.usmap";
     
     public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([]);
