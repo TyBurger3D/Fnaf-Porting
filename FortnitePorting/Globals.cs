@@ -10,7 +10,7 @@ public static class Globals
 {
     public static string VersionString => Version.GetDisplayString(EVersionStringType.IdentifierPrefix);
     public static readonly FPVersion Version = new(0, 3, 1, identifier: "Beta");
-    public const string OnlineTag = "FNAF Porting";
+    public const string OnlineTag = "Playtime Porting";
     
     public static readonly FilePickerFileType MappingsFileType = new("Unreal Mappings") { Patterns = [ "*.usmap" ] };
     public static readonly FilePickerFileType JSONFileType = new("JSON") { Patterns = [ "*.json" ] };
@@ -29,7 +29,7 @@ public static class Globals
     public static readonly FGuid ZERO_GUID = new();
     public const string ZERO_CHAR = "0x0000000000000000000000000000000000000000000000000000000000000000";
     
-    public const string HELP_WANTED_AES = "0x710891DF17EAFFCA17CB0620F0F0DCA90A00C657F49BC131D4110B265EC2E41E";
+    public const string CHAPTER_1_AES = "0xD4BCF215F3B33A4BAA8D52139F1F49E92DF5BF8C7262C823E846AA6D79331FBC";
     public const string SECURITY_BREACH_AES = "0x85F7D4007015493ED0359C9007266038F8F7B1F96988F19A610103874CC95286";
     public const string SOTM_AES = "0x38CE9CDC970FF5A18F5980CB0CE729495ED103A5388A81A58C32E9CA8AD776E1";
     public const string DBD_AES = "0x22B1639B548124925CF7B9CBAA09F9AC295FCF0324586D6B37EE1D42670B39B3";
