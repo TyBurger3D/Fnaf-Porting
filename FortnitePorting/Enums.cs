@@ -8,7 +8,7 @@ namespace FortnitePorting;
 
 public enum EFortniteVersion
 {
-    [Description("Chapter 1"), UEVersion(EGame.GAME_UE5_2), AESKey(Globals.CHAPTER_1_AES)]
+    [Description("Chapter 1"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.CHAPTER_1_AES)]
     Chapter1,
     
     [Description("Help Wanted 2"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.SECURITY_BREACH_AES)]
