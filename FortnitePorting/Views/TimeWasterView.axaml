@@ -267,7 +267,7 @@
                             <ScaleTransform ScaleX="2.25" ScaleY="2"/>
                         </Border.RenderTransform>
                     </Border>
-                    <TextBlock Text="VICDURRRY" Foreground="#0fd7f2" FontSize="125" LetterSpacing="1.5">
+                    <TextBlock Text="MERCILESS KILLER" Foreground="#0fd7f2" FontSize="125" LetterSpacing="1.5">
                         <TextBlock.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform ScaleX="0.95" ScaleY="0.85"/>
