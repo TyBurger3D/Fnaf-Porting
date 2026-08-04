@@ -1,0 +1,30 @@
+using System;
+using FNAFPorting.Controls.Navigation.Sidebar;
+using FNAFPorting.Framework;
+using FNAFPorting.ViewModels;
+
+namespace FNAFPorting.Views;
+
+public partial class PluginView : ViewBase<PluginViewModel>
+{
+    public PluginView() : base(AppSettings.Plugin)
+    {
+        InitializeComponent();
+        Navigation.Plugin.Initialize(Sidebar, ContentFrame);
+        Navigation.Plugin.AddTypeResolver<EExportLocation>(location =>
+        {
+            var name = location.ToString();
+            var viewName = $"FNAFPorting.Views.Plugin.{name}PluginView";
+        
+            var type = Type.GetType(viewName);
+            return type;
+        });
+    }
+    
+    private void OnItemSelected(object? sender, SidebarItemSelectedArgs e)
+    {
+        if (e.Tag is not EExportLocation exportLocation) return;
+
+        Navigation.Plugin.Open(exportLocation);
+    }
+}

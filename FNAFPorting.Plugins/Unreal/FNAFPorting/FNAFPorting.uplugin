@@ -1,0 +1,38 @@
+{
+	"FileVersion": 3,
+	"Version": 4,
+	"VersionName": "4.0.0",
+	"FriendlyName": "FNAFPorting",
+	"Description": "Import Server for FNAF Porting",
+	"Category": "Importers",
+	"CreatedBy": "Half",
+	"CreatedByURL": "https://github.com/TyBurger3D/Fnaf-Porting",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "FNAFPorting",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "UEFormat",
+			"Enabled": true
+		},
+		{
+			"Name": "PluginUtils",
+			"Enabled": true
+		},
+		{
+			"Name": "EditorScriptingUtilities",
+			"Enabled": true
+		}
+	]
+}

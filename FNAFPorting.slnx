@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Dependencies/">
+    <Project Path="Dependencies/CUE4Parse/CUE4Parse-Conversion/CUE4Parse-Conversion.csproj" />
+    <Project Path="Dependencies/CUE4Parse/CUE4Parse/CUE4Parse.csproj" />
+    <Project Path="Dependencies/FluentAvalonia.BreadcrumbBar/FluentAvalonia.BreadcrumbBar/FluentAvalonia.BreadcrumbBar.csproj" />
+  </Folder>
+  <Folder Name="/Libraries/">
+    <Project Path="FNAFPorting.Rendering/FNAFPorting.Rendering.csproj" />
+    <Project Path="FNAFPorting.Shared/FNAFPorting.Shared.csproj" />
+  </Folder>
+  <Folder Name="/Application/">
+    <Project Path="FNAFPorting.Plugins/FNAFPorting.Plugins.csproj" />
+    <Project Path="FNAFPorting/FNAFPorting.csproj" />
+  </Folder>
+</Solution>

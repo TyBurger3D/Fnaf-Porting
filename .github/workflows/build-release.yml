@@ -4,7 +4,7 @@ run-name: Release ${{ github.ref_name }}
 on:
   push:
     tags:
-      - 'MR-1.*'
+      - '5P-1.*'
 
 jobs:
   build:
@@ -29,25 +29,25 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: .NET Restore
-        run: dotnet restore RivalsPorting
+        run: dotnet restore FNAFPorting
 
       - name: Get Version
         id: version
         shell: pwsh
         run: |
           $tag = "${{ github.ref_name }}"
-          $current = $tag -replace '^MR-', ''
+          $current = $tag -replace '^5P-', ''
           echo "current=$current" >> $env:GITHUB_OUTPUT
-          echo "RP_VERSION=$current" >> $env:GITHUB_ENV
+          echo "5P_VERSION=$current" >> $env:GITHUB_ENV
 
       - name: .NET Publish
         run: |
-          dotnet publish RivalsPorting -c Release --self-contained -r win-x64 -o "./Release" `
+          dotnet publish FNAFPorting -c Release --self-contained -r win-x64 -o "./Release" `
             -p:PublishSingleFile=true `
             -p:DebugType=None `
             -p:DebugSymbols=false `
             -p:IncludeNativeLibrariesForSelfExtract=true `
-            -p:Version=${{ env.RP_VERSION }}
+            -p:Version=${{ env.5P_VERSION }}
 
       - name: Generate release notes with commit links
         id: release_notes
@@ -56,11 +56,11 @@ jobs:
           git fetch origin --tags --force
 
           $currentTag = "${{ github.ref_name }}"
-          $prevTag = git describe --tags --match "MR-*" --abbrev=0 "$currentTag^" 2>$null
+          $prevTag = git describe --tags --match "5P-*" --abbrev=0 "$currentTag^" 2>$null
 
           if (-not $prevTag) {
             $range = $currentTag
-            Write-Host "No previous MR-* tag found; listing commits reachable from $currentTag"
+            Write-Host "No previous 5P-* tag found; listing commits reachable from $currentTag"
           } else {
             $range = "$prevTag..$currentTag"
             Write-Host "Listing commits in range $range"
@@ -98,9 +98,9 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "Rivals Porting ${{ steps.version.outputs.current }}"
+          name: "FNAF Porting ${{ steps.version.outputs.current }}"
           body: ${{ steps.release_notes.outputs.notes }}
-          files: ./Release/RivalsPorting.exe
+          files: ./Release/FNAFPorting.exe
           draft: false
           prerelease: true
           generate_release_notes: false
@@ -116,7 +116,7 @@ jobs:
           $currentDate = Get-Date -Format "MM-dd-yyyy"
           $newEntry = [pscustomobject]@{
             Version = "v${{ steps.version.outputs.current }}-alpha"
-            ExecutableURL = "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/RivalsPorting.exe"
+            ExecutableURL = "https://github.com/${{ github.repository }}/releases/download/${{ github.ref_name }}/FNAFPorting.exe"
             UploadTime = $currentDate
           }
 
