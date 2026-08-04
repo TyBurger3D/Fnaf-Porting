@@ -39,19 +39,18 @@ public static class Globals
     
     public static readonly FGuid ZERO_GUID = new();
     public const string ZERO_CHAR = "0x0000000000000000000000000000000000000000000000000000000000000000";
-    
-    public const string LATEST_AES = "0x0C263D8C22DCB085894899C3A3796383E9BF9DE0CBFB08C9BF2DEF2E84F29D74";
-    
-    public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([
-        "0xF959B39D10C93808116F4D0C5583E1D11CBCCD428E737A48B75D40EC87FBF9D8",
-        "0xFCFC4D709BC395492703482C50DC423744B5931272587ACCD78B0E57D7215BDD",
-        "0x9F3F11DA58B6DD43266CE124F60E955C4A6BE7D5E4B23B69E63EFB0718DA952B",
-        "0xD7BA72F24C18357A2384399D98ACF9DB40DD03A55ED4128A396D3D7697930FB5"
-    ]);
-    
-    public const string DISCORD_URL = "https://discord.gg/FNAFPorting";
-    public const string TWITTER_URL = "https://twitter.com/FNAFPorting";
-    public const string GITHUB_URL = "https://github.com/Bmarquez1997/FNAFPorting";
-    public const string KOFI_URL = "https://ko-fi.com/h4lfheart";
+
+    public const string HELP_WANTED_AES = "0x710891DF17EAFFCA17CB0620F0F0DCA90A00C657F49BC131D4110B265EC2E41E";
+    public const string CHAPTER_1_AES = "0xD4BCF215F3B33A4BAA8D52139F1F49E92DF5BF8C7262C823E846AA6D79331FBC";
+    public const string SECURITY_BREACH_AES = "0x85F7D4007015493ED0359C9007266038F8F7B1F96988F19A610103874CC95286";
+    public const string SOTM_AES = "0x38CE9CDC970FF5A18F5980CB0CE729495ED103A5388A81A58C32E9CA8AD776E1";
+    public const string DBD_AES = "0x22B1639B548124925CF7B9CBAA09F9AC295FCF0324586D6B37EE1D42670B39B3";
+
+    public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([]);
+
+    public const string DISCORD_URL = "https://discord.gg/E9krSwRWZH";
+    public const string TWITTER_URL = "https://x.com/FNAFPORTING";
+    public const string GITHUB_URL = "https://github.com/TyBurger3D/Fnaf-Porting";
+    public const string KOFI_URL = "https://ko-fi.com/halfuwu";
     public const string WEBSITE_URL = "https://fortniteporting.app";
 }

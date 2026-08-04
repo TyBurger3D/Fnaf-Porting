@@ -84,7 +84,7 @@ public class HybridFileProvider : AbstractVfsFileProvider
         
         foreach (var file in manifest.Files)
         {
-            if (!file.FileName.Contains("Marvel/Content/Paks")) continue;
+            if (!file.FileName.Contains("Content/Paks", StringComparison.OrdinalIgnoreCase)) continue;
             
             UEParse.UpdateStatus($"Registering On-Demand Archive {file.FileName.SubstringAfterLast("/")}");
             

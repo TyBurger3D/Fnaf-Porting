@@ -63,7 +63,7 @@
                                      Description="The directory that contains all of the required game files. (*.pak, *.sig, *.ucas, *.utoc)" >
                     <controls:SettingsItem.Footer>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Profile.ArchiveDirectory}" Watermark="Ex. C:/Program Files/Epic Games/FNAFGame/Content/Paks/"/>
+                            <TextBox Text="{Binding Profile.ArchiveDirectory}" Watermark="Ex. C:/Program Files (x86)/Steam/steamapps/common/FNAFVRHelpWanted/freddys/Content/Paks/"/>
                             <Button Margin="4 0 0 0" Command="{Binding Profile.BrowseArchivePath}">
                                 <avalonia:MaterialIcon Kind="Folder"/>
                             </Button>

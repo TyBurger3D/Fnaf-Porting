@@ -37,6 +37,7 @@ using EpicManifestParser.UE;
 using FNAFPorting.Exporting;
 using FNAFPorting.Extensions;
 using FNAFPorting.Framework;
+using FNAFPorting.Models;
 using FNAFPorting.Models.CUE4Parse;
 using FNAFPorting.Models.Fortnite;
 using FNAFPorting.Models.Information;
@@ -84,7 +85,7 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
         "FortniteGame/Plugins/GameFeatures/BRCosmetics/Content/Animation/Game/MainPlayer/Menu/BR/Female_Commando_Idle_02_Rebirth_Montage"
     ];
 
-    private const EGame LATEST_GAME_VERSION = EGame.GAME_MarvelRivals;
+    private const EGame LATEST_GAME_VERSION = EGame.GAME_UE5_2;
     
     public DirectoryInfo CacheFolder => new(Path.Combine(App.ApplicationDataFolder.FullName, ".cache"));
 
@@ -97,7 +98,7 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
     {
         if (!HasValidArchivePath())
         {
-            Info.Dialog("Invalid Installation Settings", "The archive directory set in Installation Settings does not exist or is empty. Please set it to your FNAF installation's archive directory (generally located at FNAFGame/Content/Paks).", buttons:
+            Info.Dialog("Invalid Installation Settings", "The archive directory set in Installation Settings does not exist or is empty. Please set it to your FNAF installation's archive directory (e.g. .../freddys/Content/Paks).", buttons:
             [
                 new DialogButton
                 {
@@ -187,32 +188,28 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
 
     private bool HasValidArchivePath()
     {
-        return AppSettings.Installation.CurrentProfile.FnafVersion switch
-        {
-            EFNAFVersion.LatestInstalled or EFNAFVersion.Custom => Directory.Exists(AppSettings.Installation.CurrentProfile.ArchiveDirectory),
-            _ => true
-        };
+        return Directory.Exists(AppSettings.Installation.CurrentProfile.ArchiveDirectory);
     }
 
     [LoadingStage("Initializing CUE4Parse", stage: 0, weight: 5)]
     private async Task InitializeProviderSetup()
     {
-        Provider = AppSettings.Installation.CurrentProfile.FnafVersion switch
-        {
-            EFNAFVersion.LatestInstalled => new HybridFileProvider(AppSettings.Installation.CurrentProfile.ArchiveDirectory, [], new VersionContainer(LATEST_GAME_VERSION)),
-            _ => new HybridFileProvider(AppSettings.Installation.CurrentProfile.ArchiveDirectory, [], new VersionContainer(AppSettings.Installation.CurrentProfile.UnrealVersion)),
-        };
-        
-        Log.Information("Installation Type: {Type}", AppSettings.Installation.CurrentProfile.FnafVersion);
-        Log.Information("Archive Path: {Path}", AppSettings.Installation.CurrentProfile.ArchiveDirectory);
+        var profile = AppSettings.Installation.CurrentProfile;
+        var unrealVersion = profile.IsCustom
+            ? profile.UnrealVersion
+            : profile.FnafVersion.GetUEVersion();
+
+        Provider = new HybridFileProvider(profile.ArchiveDirectory, [], new VersionContainer(unrealVersion));
+
+        Log.Information("Installation Type: {Type}", profile.FnafVersion);
+        Log.Information("Archive Path: {Path}", profile.ArchiveDirectory);
         Log.Information("Unreal Version: {Version}", Provider.Versions.Game.ToString());
-        Log.Information("Texture Streaming: {UseTextureStreaming}", AppSettings.Installation.CurrentProfile.UseTextureStreaming);
-        
+
         ObjectTypeRegistry.RegisterEngine(Assembly.Load("FNAFPorting"));
 
-        Provider.LoadOnDemandTocs = AppSettings.Installation.CurrentProfile is { TextureStreamingEnabled: true, UseTextureStreaming: true };
-        Provider.LoadExtraDirectories = AppSettings.Installation.CurrentProfile.LoadInstalledBundles;
-        Provider.ReadNaniteData = AppSettings.Installation.CurrentProfile.LoadNaniteData;
+        Provider.LoadOnDemandTocs = false;
+        Provider.LoadExtraDirectories = false;
+        Provider.ReadNaniteData = profile.LoadNaniteData;
 
         Provider.VfsMounted += (sender, _) =>
         {
@@ -227,20 +224,8 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
     [LoadingStage("Checking for Valid Keys", stage: 1, weight: 1)]
     private async Task CheckBlackHole()
     {
-        if (AppSettings.Installation.CurrentProfile.FnafVersion is not EFNAFVersion.LatestInstalled) return;
-        
-        var mainPakPath = Path.Combine(AppSettings.Installation.CurrentProfile.ArchiveDirectory,
-            "pakchunk0-WindowsClient.pak");
-        if (!File.Exists(mainPakPath)) return;
-
-        var mainPakReader = new PakFileReader(mainPakPath);
-        if (mainPakReader.TestAesKey(new FAesKey(Globals.LATEST_AES)))
-        {
-            Log.Information("Main key {Key} succeeded on pak {PakName}", Globals.LATEST_AES, mainPakPath);
-            return;
-        }
-        
-        BlackHole.Open(isMinigame: false);
+        // Marvel Rivals black-hole easter egg does not apply to FNAF title installs.
+        await Task.CompletedTask;
     }
     
     [LoadingStage("Removing Outdated Cache Files", stage: 2, weight: 1)]
@@ -325,23 +310,19 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
     [LoadingStage("Submitting Keys", stage: 8, weight: 20)]
     private async Task LoadKeys()
     {
-        switch (AppSettings.Installation.CurrentProfile.FnafVersion)
-        {
-            case EFNAFVersion.LatestInstalled:
-            {
-                Log.Information("Submitting Main Key {Key}", Globals.LATEST_AES);
-                await Provider.SubmitKeyAsync(Globals.ZERO_GUID, new FAesKey(Globals.LATEST_AES));
+        var profile = AppSettings.Installation.CurrentProfile;
+        var mainKey = profile.IsCustom
+            ? profile.MainKey
+            : new FileEncryptionKey(profile.FnafVersion.GetAESKey());
+        if (mainKey.IsEmpty) mainKey = FileEncryptionKey.Empty;
 
-                await SubmitExtraKeys(Globals.LATEST_EXTRA_AES.Select(key => new FileEncryptionKey(key)));
-                
-                break;
-            }
-            default:
-            {
-                await LoadLocalKeys();
-                break;
-            }
-        }
+        Log.Information("Submitting Main Key {Key}", mainKey.KeyString);
+        await Provider.SubmitKeyAsync(Globals.ZERO_GUID, mainKey.EncryptionKey);
+
+        var extraKeys = profile.IsCustom
+            ? profile.ExtraKeys.AsEnumerable()
+            : Globals.LATEST_EXTRA_AES.Select(key => new FileEncryptionKey(key));
+        await SubmitExtraKeys(extraKeys);
     }
     
     [LoadingStage("Loading Virtual Paths", stage: 9, weight: 15)]
@@ -359,19 +340,23 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
     [LoadingStage("Loading Mappings", stage: 10, weight: 1)]
     private async Task LoadMappings()
     {
-        var mappingsPath = AppSettings.Installation.CurrentProfile.FnafVersion switch
+        var profile = AppSettings.Installation.CurrentProfile;
+        string? mappingsPath = null;
+        if (profile.IsCustom)
         {
-            EFNAFVersion.LatestInstalled => await GetEndpointMappings() ?? GetLocalMappings(),
-            _ when AppSettings.Installation.CurrentProfile.UseMappingsFile && File.Exists(AppSettings.Installation.CurrentProfile.MappingsFile) => AppSettings.Installation.CurrentProfile.MappingsFile,
-            _ => string.Empty
-        };
+            mappingsPath = profile.MappingsFile;
+        }
+        else if (profile.FnafVersion.HasMappings())
+        {
+            mappingsPath = profile.FnafVersion.GetMappings();
+        }
 
-        if (string.IsNullOrEmpty(mappingsPath))
+        if (string.IsNullOrEmpty(mappingsPath) || !File.Exists(mappingsPath))
         {
-            Log.Information("Failed to load mappings, path is empty");
+            Log.Information("Skipping mappings (none configured for this install type)");
             return;
         }
-        
+
         Provider.MappingsContainer = new FileUsmapTypeMappingsProvider(mappingsPath, StringComparer.Ordinal);
         Log.Information("Loaded Mappings: {Path}", mappingsPath);
     }

@@ -91,6 +91,13 @@ public class AssetItem : Base.BaseAssetItem
 
     public async Task LoadBitmapAsync()
     {
+        if (CreationData.ManualIcon is { } manualIcon)
+        {
+            IconDisplayImage = manualIcon.ToWriteableBitmap();
+            BackgroundImage ??= CreateBackgroundImage();
+            return;
+        }
+
         UTexture2D? texture = null;
         if (CreationData.LowResIconPath is { } lowResPath)
             texture = await UEParse.Provider!.SafeLoadPackageObjectAsync<UTexture2D>(lowResPath);

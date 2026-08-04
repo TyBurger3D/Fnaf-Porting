@@ -32,21 +32,8 @@ public partial class InstallationSetupViewModel : ViewModelBase
 
     private async Task CheckForInstallation()
     {
-        LauncherInstalled? launcherInstalled = null;
-        foreach (var drive in DriveInfo.GetDrives())
-        {
-            var launcherInstalledPath = $@"{drive.Name}ProgramData\Epic\UnrealEngineLauncher\LauncherInstalled.dat";
-            if (!File.Exists(launcherInstalledPath)) continue;
-
-            launcherInstalled = JsonConvert.DeserializeObject<LauncherInstalled>(await File.ReadAllTextAsync(launcherInstalledPath));
-        }
-
-        var fortniteInfo = launcherInstalled?.InstallationList.FirstOrDefault(x => x.AppName.Equals("Fortnite",  StringComparison.OrdinalIgnoreCase));
-        if (fortniteInfo is null) return;
-
-        Profile.ArchiveDirectory = fortniteInfo.InstallLocation + @"\FortniteGame\Content\Paks\";
-        OnPropertyChanged(nameof(Profile));
-        Log.Information("Found FNAF Installation at {ArchivePath}", Profile.ArchiveDirectory);
+        // Steam/Epic auto-detect for FNAF titles is not wired; user sets archive path manually.
+        await Task.CompletedTask;
     }
     
     [RelayCommand]

@@ -2,6 +2,7 @@ using CUE4Parse.UE4.Assets.Exports;
 using CUE4Parse.UE4.Objects.Core.Math;
 using CUE4Parse.UE4.Objects.GameplayTags;
 using FNAFPorting.Models.Assets.Base;
+using SkiaSharp;
 
 namespace FNAFPorting.Models.Assets.Asset;
 
@@ -13,6 +14,7 @@ public class AssetItemCreationArgs : BaseAssetItemCreationArgs
     public string? LowResIconPath { get; set; }
     public string? HighResIconPath { get; set; }
     public string? IconPath => LowResIconPath ?? HighResIconPath;
+    public SKBitmap? ManualIcon { get; set; }
     public FGameplayTagContainer? GameplayTags { get; set; }
     
     public bool HideRarity { get; set; } = false;

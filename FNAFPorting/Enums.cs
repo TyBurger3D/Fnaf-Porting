@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using CUE4Parse.UE4.Versions;
 using FNAFPorting.Extensions;
 using FNAFPorting.Models;
 using Material.Icons;
@@ -8,18 +9,33 @@ namespace FNAFPorting;
 
 public enum EFNAFVersion
 {
-    [Description("Latest (Installed)")]
-    [Icon(MaterialIconKind.Folder)]
-    LatestInstalled,
+    [Description("Help Wanted 1"), UEVersion(EGame.GAME_UE4_23), AESKey(Globals.HELP_WANTED_AES)]
+    [Icon(MaterialIconKind.HelpCircleOutline)]
+    HelpWanted,
+
+    [Description("Help Wanted 2"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.SECURITY_BREACH_AES)]
+    [Icon(MaterialIconKind.HelpBoxOutline)]
+    HelpWanted2,
+
+    [Description("Security Breach"), UEVersion(EGame.GAME_UE4_28), AESKey(Globals.SECURITY_BREACH_AES)]
+    [Icon(MaterialIconKind.Warning)]
+    SecurityBreach,
+
+    [Description("Five Laps at Freddy's"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.ZERO_CHAR)]
+    [Icon(MaterialIconKind.CarConvertible)]
+    FLAF,
+
+    [Description("Secret of the Mimic"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.SOTM_AES)]
+    [Icon(MaterialIconKind.AccountLock)]
+    SOTM,
     
-    [Description("Latest (On-Demand)")]
-    [Icon(MaterialIconKind.Download)]
-    LatestOnDemand,
-    
+    [Description("Poppy Playtime Chapter 1"), UEVersion(EGame.GAME_UE5_2), AESKey(Globals.CHAPTER_1_AES)]
+    [Icon(MaterialIconKind.Comedy)]
+    Chapter1,
+
     [Description("Custom")]
     [Icon(MaterialIconKind.Edit)]
     Custom
-    
 }
 
 public enum EExportLocation
@@ -103,7 +119,7 @@ public enum EExportType
 
     // COSMETIC
 
-    [Description("Outfits"), Export(EPrimitiveExportType.Mesh)]
+    [Description("Animatronics"), Export(EPrimitiveExportType.Mesh)]
     [CosmeticAsset]
     Outfit = ExportCategory.Cosmetic + 1,
 
@@ -111,7 +127,7 @@ public enum EExportType
     [NonAsset]
     CharacterPart = ExportCategory.Cosmetic + 2,
 
-    [Description("Accessories"), Export(EPrimitiveExportType.Mesh)]
+    [Description("Items"), Export(EPrimitiveExportType.Mesh)]
     [CosmeticAsset]
     Backpack = ExportCategory.Cosmetic + 3,
 

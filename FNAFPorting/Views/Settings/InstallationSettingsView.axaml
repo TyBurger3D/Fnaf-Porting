@@ -88,7 +88,7 @@
                     <controls:SettingsItem.Footer>
                         <StackPanel Orientation="Horizontal">
                             <TextBox Text="{Binding ArchiveDirectory}"
-                                     Watermark="Ex. C:/EpicGames/FNAFGame/Content/Paks" />
+                                     Watermark="Ex. C:/Program Files (x86)/Steam/steamapps/common/FNAFVRHelpWanted/freddys/Content/Paks" />
                             <Button Margin="4 0 0 0" Command="{Binding BrowseArchivePath}">
                                 <material:MaterialIcon Kind="Folder"/>
                             </Button>
@@ -111,7 +111,8 @@
                     </controls:SettingsItem.Footer>
                 </controls:SettingsItem>
                 <controls:SettingsItem Title="Encryption Key"
-                                       Description="The encryption key required to decrypt FNAF's game files.">
+                                       Description="The encryption key required to decrypt FNAF's game files."
+                                       IsVisible="{Binding EncryptionKeyEnabled}">
                     <controls:SettingsItem.Footer>
                         <TextBox Text="{Binding MainKey.KeyString}"
                                  Watermark="Ex. 0x0000000000000000000000000000000000000000000000000000000000000000"

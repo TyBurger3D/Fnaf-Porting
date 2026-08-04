@@ -26,6 +26,7 @@ using FNAFPorting.Extensions;
 using Material.Icons;
 using ReactiveUI;
 using Serilog;
+using SkiaSharp;
 
 namespace FNAFPorting.Models.Assets.Loading;
 
@@ -361,10 +362,21 @@ public partial class AssetLoader : ObservableObject
         var asset = await UEParse.Provider.SafeLoadPackageObjectAsync(manualAsset.AssetPath);
         if (asset is null) return;
 
+        SKBitmap? manualIcon = null;
+        if (!string.IsNullOrWhiteSpace(manualAsset.LocalIconPath))
+        {
+            await using var stream = Avalonia.Platform.AssetLoader.Open(new Uri(manualAsset.LocalIconPath));
+            manualIcon = SKBitmap.Decode(stream);
+        }
+
+        var hasPakIcon = !string.IsNullOrWhiteSpace(manualAsset.IconPath);
+        if (manualIcon is null && !hasPakIcon) return;
+
         var args = new AssetItemCreationArgs
         {
             Object = asset,
             LowResIconPath = manualAsset.IconPath,
+            ManualIcon = manualIcon,
             ID = asset.Name,
             DisplayName = manualAsset.Name,
             Description = manualAsset.Description,
