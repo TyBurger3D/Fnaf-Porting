@@ -15,7 +15,7 @@ bool FListenServer::Init()
 {
 	FIPv4Endpoint::Parse(TEXT("127.0.0.1:41001"), Endpoint);
 	
-	Socket = FTcpSocketBuilder(TEXT("RPV4 Listen Socket"))
+	Socket = FTcpSocketBuilder(TEXT("5PV4 Listen Socket"))
 		.AsBlocking()
 		.AsReusable()
 		.BoundToEndpoint(Endpoint)

@@ -96,7 +96,7 @@ public partial class BlenderInstallation(string blenderExecutablePath) : Observa
             return true;
         }
 
-        var metaVersion = new RPVersion(meta.Version);
+        var metaVersion = new FNAFVersion(meta.Version);
         ExtensionVersion = new Version(metaVersion.Release, metaVersion.Major, metaVersion.Minor);
         Status = !Globals.IsDevBuild && !metaVersion.Equals(Globals.Version)
             ? EPluginStatusType.UpdateAvailable

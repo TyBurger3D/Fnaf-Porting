@@ -24,8 +24,8 @@ public:
 			CreationParams.Descriptor.FriendlyName = RootName;
 			CreationParams.Descriptor.VersionName = "3.0.0";
 			CreationParams.Descriptor.Version = 3;
-			CreationParams.Descriptor.Category = "Rivals Porting";
-			CreationParams.Descriptor.CreatedBy = "Rivals Porting";
+			CreationParams.Descriptor.Category = "FNAF Porting";
+			CreationParams.Descriptor.CreatedBy = "FNAF Porting";
 			CreationParams.Descriptor.CreatedByURL = "https://github.com/TyBurger3D/FNAFPorting";
 			CreationParams.Descriptor.Description = RootName + " Content Plugin";
 			CreationParams.Descriptor.bCanContainContent = true;

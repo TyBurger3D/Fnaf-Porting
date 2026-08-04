@@ -97,7 +97,7 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
     {
         if (!HasValidArchivePath())
         {
-            Info.Dialog("Invalid Installation Settings", "The archive directory set in Installation Settings does not exist or is empty. Please set it to your Rivals installation's archive directory (generally located at RivalsGame/Content/Paks).", buttons:
+            Info.Dialog("Invalid Installation Settings", "The archive directory set in Installation Settings does not exist or is empty. Please set it to your FNAF installation's archive directory (generally located at FNAFGame/Content/Paks).", buttons:
             [
                 new DialogButton
                 {
@@ -318,7 +318,7 @@ public partial class CUE4ParseService : ObservableObject, IService, IResettable
     //     catch (Exception e)
     //     {
     //         Info.Message("Failed to Initialize Texture Streaming", 
-    //             $"Please enable the \"Pre-Download Streamed Assets\" option for Rivals in the Epic Games Launcher and disable texture streaming in installation settings to remove this popup.");
+    //             $"Please enable the \"Pre-Download Streamed Assets\" option for FNAF in the Epic Games Launcher and disable texture streaming in installation settings to remove this popup.");
     //     }
     // }
     

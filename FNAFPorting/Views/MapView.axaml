@@ -266,14 +266,14 @@
                             <StackPanel Spacing="{ext:Space 1}">
                                 <TextBlock Text="Map Path" Classes="BodyStrongTextBlockStyle" />
                                 <TextBox Text="{Binding SelectedMap.MapInfo.MapPath, Mode=TwoWay}" 
-                                         Watermark="Ex. RivalsGame/Content/Athena/Maps/Athena_Terrain"/>
+                                         Watermark="Ex. FNAFGame/Content/Athena/Maps/Athena_Terrain"/>
                             </StackPanel>
                             
                             <StackPanel Spacing="{ext:Space 2}" IsVisible="{Binding !SelectedMap.MapInfo.IsNonDisplay}">
                                 <StackPanel Spacing="{ext:Space 1}">
                                     <TextBlock Text="Minimap Path" Classes="BodyStrongTextBlockStyle"/>
                                     <TextBox Text="{Binding SelectedMap.MapInfo.MinimapPath, Mode=TwoWay}" 
-                                             Watermark="Ex. RivalsGame/Content/Athena/UI/Minimap_Athena_Terrain"/>
+                                             Watermark="Ex. FNAFGame/Content/Athena/UI/Minimap_Athena_Terrain"/>
                                 </StackPanel>
                                 
                                 <CheckBox Content="Use Mask" 
@@ -282,7 +282,7 @@
                                 <StackPanel Spacing="{ext:Space 1}" IsVisible="{Binding SelectedMap.MapInfo.UseMask}">
                                     <TextBlock Text="Mask Path" Classes="BodyStrongTextBlockStyle"/>
                                     <TextBox Text="{Binding SelectedMap.MapInfo.MaskPath, Mode=TwoWay}" 
-                                             Watermark="Ex. RivalsGame/Content/Athena/UI/PostMask_Athena_Terrain"/>
+                                             Watermark="Ex. FNAFGame/Content/Athena/UI/PostMask_Athena_Terrain"/>
                                 </StackPanel>
                                 
                                 <Separator HorizontalAlignment="Stretch" Margin="0"/>

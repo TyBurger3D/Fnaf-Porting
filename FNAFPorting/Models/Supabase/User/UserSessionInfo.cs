@@ -13,7 +13,7 @@ public class UserSessionInfo(string accessToken, string refreshToken)
         .Create("FortnitePorting")
         .CreateProtector("SessionTokens");
 
-    // Earlier Rivals builds used a separate purpose; keep decrypting those once.
+    // Earlier FNAF builds used a separate purpose; keep decrypting those once.
     private static readonly IDataProtector LegacyProtector = DataProtectionProvider
         .Create("FNAFPorting")
         .CreateProtector("SessionTokens");

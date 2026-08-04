@@ -51,7 +51,7 @@ public static class Exporter
             if (!await ExportClient.IsRunning(serverType))
             {
                 var serverName = serverType.Description;
-                Info.Message($"{serverName} Server", $"The {serverName} Plugin for Rivals Porting is not currently installed or running.", 
+                Info.Message($"{serverName} Server", $"The {serverName} Plugin for FNAF Porting is not currently installed or running.", 
                     severity: InfoBarSeverity.Error, closeTime: 3.0f,
                     useButton: true, buttonTitle: "Install Plugin", buttonCommand: () =>
                     {
@@ -92,7 +92,7 @@ public static class Exporter
                 if (!await ExportClient.IsRunning(serverType))
                 {
                     var serverName = serverType.Description;
-                    Info.Message($"{serverName} Server", $"The {serverName} Plugin for Rivals Porting is not currently installed or running.", 
+                    Info.Message($"{serverName} Server", $"The {serverName} Plugin for FNAF Porting is not currently installed or running.", 
                         severity: InfoBarSeverity.Error, closeTime: 3.0f,
                         useButton: true, buttonTitle: "Install Plugin", buttonCommand: () =>
                         {

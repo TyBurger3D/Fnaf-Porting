@@ -15,7 +15,7 @@ using FNAFPorting.Models.Assets;
 
 namespace FNAFPorting.Exporting;
 
-public static class RivalsEmoteWeaponProps
+public static class FNAFEmoteWeaponProps
 {
     private const string EmoteTablePath = "Marvel/Content/Marvel/Data/DataTable/UI/HeroSkin/UIHeroEmoteTable";
     private const string SkinTablePath = "Marvel/Content/Marvel/Data/DataTable/HeroGallery/UISkinTable";

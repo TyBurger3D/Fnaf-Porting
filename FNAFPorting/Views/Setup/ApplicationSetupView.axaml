@@ -38,7 +38,7 @@
                 </TextBlock.Effect>
             </TextBlock>
             
-            <TextBlock Text="Modify a few application settings to tailor your Rivals Porting experience." HorizontalAlignment="Center"
+            <TextBlock Text="Modify a few application settings to tailor your FNAF Porting experience." HorizontalAlignment="Center"
                        VerticalAlignment="Center" Classes="BodyTextBlockStyle TextFillColorSecondaryBrush"
                        Margin="{ext:Space 0, 0, 0, 2}">
                 <TextBlock.Effect>
@@ -54,7 +54,7 @@
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Hidden" Margin="{ext:Space 4, 0, 4, 4}">
             <StackPanel VerticalAlignment="Bottom" Margin="{ext:Space 1, 0}" Spacing="{ext:Space 0, 0, 0, 1}">
                 <controls:SettingsItem Title="Theme"
-                                       Description="The theme that should be used for Rivals Porting.">
+                                       Description="The theme that should be used for FNAF Porting.">
                     <controls:SettingsItem.Footer>
                         <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type fnafPorting:EThemeType}}"
                                   SelectedItem="{Binding Settings.Application.Theme, Converter={StaticResource EnumToRecord}}" >

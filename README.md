@@ -1,17 +1,17 @@
 <div align="center">
 
-# RivalsPorting
-### The quickest and most efficient way to extract assets from Fortnite
+# FNAFPorting
+### The quickest and most efficient way to extract assets from FNAF
 
 #### Powered by [Avalonia UI](https://avaloniaui.net/) and [CUE4Parse](https://github.com/FabianFG/CUE4Parse)
 
 [![Discord](https://discord.com/api/guilds/866821077769781249/widget.png?style=shield)](https://discord.gg/DZ5YFXdBA6)
 [![Blender](https://img.shields.io/badge/Blender-5.0+-blue?logo=blender&logoColor=white&color=orange)](https://www.blender.org/download/)
 [![Unreal](https://img.shields.io/badge/Unreal-5.8-blue?logo=unreal-engine&logoColor=white&color=white)](https://www.unrealengine.com/en-US/download)
-[![Release](https://img.shields.io/github/release/Bmarquez1997/RivalsPorting)]()
-[![Downloads](https://img.shields.io/github/downloads/Bmarquez1997/RivalsPorting/total?color=green)]()
+[![Release](https://img.shields.io/github/release/TyBurger3D/Fnaf-Porting)]()
+[![Downloads](https://img.shields.io/github/downloads/TyBurger3D/Fnaf-Porting/total?color=green)]()
 
-<img alt="RivalsPorting" src=".github/cover.png" />
+<img alt="FNAFPorting" src=".github/cover.png" />
 
 </div>
 
@@ -19,10 +19,10 @@
 
 ## Installation
 
-Download the latest release from [Releases](../../releases/latest), the [Discord Server](https://discord.gg/RivalsPorting), or the [Website](https://fortniteporting.app).
+Download the latest release from [Releases](../../releases/latest), the [Discord Server](https://discord.gg/DZ5YFXdBA6), or the [Website](https://fortniteporting.app).
 
 > [!IMPORTANT]
-> RivalsPorting requires separate plugins to be installed for **Blender** and **Unreal Engine**. Plugin installation is managed directly within the app in the **Plugin** page.
+> FNAFPorting requires separate plugins to be installed for **Blender** and **Unreal Engine**. Plugin installation is managed directly within the app in the **Plugin** page.
 
 ---
 
@@ -31,23 +31,23 @@ Download the latest release from [Releases](../../releases/latest), the [Discord
 Clone the repository along with all submodules:
 
 ```
-git clone https://github.com/Bmarquez1997/RivalsPorting --recursive
+git clone https://github.com/TyBurger3D/Fnaf-Porting --recursive
 ```
 
 Then publish from the project directory:
 
 ```
-dotnet publish RivalsPorting -c Release --self-contained -r win-x64 -o "./Release" -p:PublishSingleFile=true -p:DebugType=None -p:DebugSymbols=false -p:IncludeNativeLibrariesForSelfExtract=true
+dotnet publish FNAFPorting -c Release --self-contained -r win-x64 -o "./Release" -p:PublishSingleFile=true -p:DebugType=None -p:DebugSymbols=false -p:IncludeNativeLibrariesForSelfExtract=true
 ```
 
 > [!NOTE]
-> RivalsPorting currently only targets Windows x64. Ensure you have the [.NET SDK](https://dotnet.microsoft.com/en-us/download) installed before building.
+> FNAFPorting currently only targets Windows x64. Ensure you have the [.NET SDK](https://dotnet.microsoft.com/en-us/download) installed before building.
 
 ---
 
 ## Contributors
 
-[Half](https://github.com/h4lfheart) - Created Fortnite Porting, the original application that Rivals Porting was built off of.
+[Half](https://github.com/h4lfheart) - Created Fortnite Porting, the original application that FNAF Porting was built off of.
 
 [Ghost](https://github.com/GhostScissors) - Super helpful with implementing the two built-in RADA and BINKA audio decoders along with fixing tons of asset deserialization issues caused by engine changes.
 

@@ -42,11 +42,12 @@ public partial class BlackHoleService : ObservableObject, IService
     }
     
     public void Open(bool isMinigame)
-    { 
-        TimeWasterVM.LoadResources();
-        
+    {
+        // TimeWasterViewModel constructs Avalonia transforms; resolve it on the UI thread.
+        // CheckBlackHole can call Open from a background TaskService.Run worker.
         TaskService.RunDispatcher(() =>
         {
+            TimeWasterVM.LoadResources();
             Content = new TimeWasterView(isMinigame);
         });
     }

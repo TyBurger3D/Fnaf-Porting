@@ -1,8 +1,8 @@
 {
-  "Id": "RivalsPorting",
-  "Title": "Rivals Porting",
-  "Description": "The repository for Rivals Porting builds",
-  "Icon": "https://github.com/Bmarquez1997/RivalsPorting/raw/refs/heads/main/FortnitePorting/Assets/LogoV3.png",
+  "Id": "FNAFPorting",
+  "Title": "FNAF Porting",
+  "Description": "The repository for FNAF Porting builds",
+  "Icon": "https://github.com/TyBurger3D/Fnaf-Porting/raw/refs/heads/main/FNAFPorting/Assets/LogoV3.png",
   "Versions": [
     {
       "Version": "v0.1.5-alpha",

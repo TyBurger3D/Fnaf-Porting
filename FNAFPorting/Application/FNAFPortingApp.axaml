@@ -916,7 +916,7 @@
                     <LinearGradientBrush StartPoint="0%, 0%" EndPoint="0%, 100%">
                         <GradientStops>
                             <GradientStop Color="#8141db" Offset="0" />
-                            <GradientStop Color="#953bf8" Offset="1" />
+                            <GradientStop Color="{DynamicResource FPAccentColor}" Offset="1" />
                         </GradientStops>
                     </LinearGradientBrush>
                 </Setter>
@@ -927,7 +927,7 @@
                     <LinearGradientBrush StartPoint="0%, 0%" EndPoint="0%, 100%">
                         <GradientStops>
                             <GradientStop Color="#954cfc" Offset="0" />
-                            <GradientStop Color="#953bf8" Offset="1" />
+                            <GradientStop Color="{DynamicResource FPAccentColor}" Offset="1" />
                         </GradientStops>
                     </LinearGradientBrush>
                 </Setter>

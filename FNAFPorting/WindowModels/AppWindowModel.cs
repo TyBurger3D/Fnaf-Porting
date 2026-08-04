@@ -93,12 +93,12 @@ public partial class AppWindowModel(
             "--silent",
             "--skip-setup",
             $"--add-repository {RepositoryAPI.REPOSITORY_URL}",
-            $"--import-profile \"Rivals Porting\" \"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AppDomain.CurrentDomain.FriendlyName + ".exe")}\" \"FNAFPorting\"",
-            "--update-profile \"Rivals Porting\" -force",
-            "--launch-profile \"Rivals Porting\"",
+            $"--import-profile \"FNAF Porting\" \"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, AppDomain.CurrentDomain.FriendlyName + ".exe")}\" \"FNAFPorting\"",
+            "--update-profile \"FNAF Porting\" -force",
+            "--launch-profile \"FNAF Porting\"",
         };
         
-        Info.Message("Portle", $"Rivals Porting {UpdateVersion!.Version} is currently being downloaded.");
+        Info.Message("Portle", $"FNAF Porting {UpdateVersion!.Version} is currently being downloaded.");
 
         await Task.Delay(2500);
         
@@ -125,7 +125,7 @@ public partial class AppWindowModel(
         {
             if (!isAutomatic)
             {
-                Info.Dialog("No Update Available", "Rivals Porting is up to date.");
+                Info.Dialog("No Update Available", "FNAF Porting is up to date.");
             }
             return;
         }
@@ -135,7 +135,7 @@ public partial class AppWindowModel(
         if (!isAutomatic)
         {
             Info.Dialog($"Update {newestVersion.Version}",
-                $"Rivals Porting {newestVersion.Version} is now available. Would you like to update?",
+                $"FNAF Porting {newestVersion.Version} is now available. Would you like to update?",
                 buttons:
                 [
                     new DialogButton
@@ -150,7 +150,7 @@ public partial class AppWindowModel(
         if (DateTime.Today > newestVersion.UploadTime.AddDays(6))
         {
             var outOfDateDays = DateTime.Today - newestVersion.UploadTime;
-            Info.Dialog($"Update {newestVersion.Version}", $"Your Rivals Porting is {outOfDateDays.Days} days out of date, please consider updating.", buttons: [
+            Info.Dialog($"Update {newestVersion.Version}", $"Your FNAF Porting is {outOfDateDays.Days} days out of date, please consider updating.", buttons: [
                 new DialogButton
                 {
                     Text = "Update",

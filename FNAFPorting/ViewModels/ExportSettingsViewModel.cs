@@ -22,7 +22,7 @@ public partial class ExportSettingsViewModel : ViewModelBase
     
     public ExportDataMeta CreateExportMeta(EExportLocation exportLocation = EExportLocation.Blender, string? customPath = null)
     {
-        // Kept on BlenderSettings for upstream merge compatibility, but never enable for Rivals.
+        // Kept on BlenderSettings for upstream merge compatibility, but never enable for FNAF.
         Blender.MergeArmatures = false;
 
         return new ExportDataMeta

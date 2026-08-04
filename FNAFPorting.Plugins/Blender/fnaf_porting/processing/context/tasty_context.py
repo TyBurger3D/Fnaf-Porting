@@ -121,7 +121,7 @@ class TastyImportContext:
         base_collection.is_visible = False
         extra_collection.is_visible = False
 
-        # Expect IK bones already present on the imported Rivals skeleton
+        # Expect IK bones already present on the imported FNAF skeleton
         # (unlike Fortnite, there is no master skeleton to graft from).
 
         target_skeleton["use_ik_hand_r"] = True

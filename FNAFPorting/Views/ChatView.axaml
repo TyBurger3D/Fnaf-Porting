@@ -274,7 +274,7 @@
 
 
             <Border IsVisible="{Binding ShowNewMessageIndicator}"
-                    Background="#953BF8"
+                    Background="{DynamicResource FPAccentBrush}"
                     CornerRadius="16"
                     Padding="{ext:Space 1.5, 0.75}"
                     HorizontalAlignment="Center"

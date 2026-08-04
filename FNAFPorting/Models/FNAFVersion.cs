@@ -4,8 +4,8 @@ using Newtonsoft.Json;
 
 namespace FNAFPorting.Models;
 
-[JsonConverter(typeof(RPVersionConverter))]
-public class RPVersion : IComparable<RPVersion>, IParsable<RPVersion>
+[JsonConverter(typeof(FNAFVersionConverter))]
+public class FNAFVersion : IComparable<FNAFVersion>, IParsable<FNAFVersion>
 {
     public readonly int Release = 0;
     public readonly int Major = 0;
@@ -13,7 +13,7 @@ public class RPVersion : IComparable<RPVersion>, IParsable<RPVersion>
     public readonly int Patch = 0;
     public readonly string Identifier = string.Empty;
     
-    public RPVersion(string inVersion)
+    public FNAFVersion(string inVersion)
     {
         if (inVersion[0] == 'v') inVersion = inVersion[1..];
         var dashSplit = inVersion.Split("-");
@@ -26,7 +26,7 @@ public class RPVersion : IComparable<RPVersion>, IParsable<RPVersion>
         if (mainVersioning.Length > 3) Patch = int.Parse(mainVersioning[3]);
     }
     
-    public RPVersion(int release = 2, int major = 0, int minor = 0, int patch = 0, string identifier = "")
+    public FNAFVersion(int release = 2, int major = 0, int minor = 0, int patch = 0, string identifier = "")
     {
         Release = release;
         Major = major;
@@ -75,42 +75,42 @@ public class RPVersion : IComparable<RPVersion>, IParsable<RPVersion>
     }
     
 
-    public static bool operator >(RPVersion a, RPVersion b)
+    public static bool operator >(FNAFVersion a, FNAFVersion b)
     {
         return a.CompareTo(b) > 0;
     }
     
-    public static bool operator <(RPVersion a, RPVersion b)
+    public static bool operator <(FNAFVersion a, FNAFVersion b)
     {
         return a.CompareTo(b) < 0;
     }
     
-    public static bool operator >=(RPVersion a, RPVersion b)
+    public static bool operator >=(FNAFVersion a, FNAFVersion b)
     {
         return a.CompareTo(b) >= 0;
     }
     
-    public static bool operator <=(RPVersion a, RPVersion b)
+    public static bool operator <=(FNAFVersion a, FNAFVersion b)
     {
         return a.CompareTo(b) <= 0;
     }
     
-    public static bool operator ==(RPVersion a, RPVersion b)
+    public static bool operator ==(FNAFVersion a, FNAFVersion b)
     {
         return a.CompareTo(b) == 0;
     }
 
-    public static bool operator !=(RPVersion a, RPVersion b)
+    public static bool operator !=(FNAFVersion a, FNAFVersion b)
     {
         return a.CompareTo(b) != 0;
     }
     
     public override bool Equals(object? obj)
     {
-        return Equals((RPVersion) obj!);
+        return Equals((FNAFVersion) obj!);
     }
 
-    protected bool Equals(RPVersion other)
+    protected bool Equals(FNAFVersion other)
     {
         return Release == other.Release && Major == other.Major && Minor == other.Minor && Patch == other.Patch && Identifier == other.Identifier;
     }
@@ -120,7 +120,7 @@ public class RPVersion : IComparable<RPVersion>, IParsable<RPVersion>
         return HashCode.Combine(Release, Major, Minor, Patch, Identifier);
     }
 
-    public int CompareTo(RPVersion? other)
+    public int CompareTo(FNAFVersion? other)
     {
         if (ReferenceEquals(this, other)) return 0;
         if (ReferenceEquals(null, other)) return 1;
@@ -145,12 +145,12 @@ public class RPVersion : IComparable<RPVersion>, IParsable<RPVersion>
         return GetDisplayString();
     }
 
-    public static RPVersion Parse(string s, IFormatProvider? provider)
+    public static FNAFVersion Parse(string s, IFormatProvider? provider)
     {
-        return new RPVersion(s);
+        return new FNAFVersion(s);
     }
 
-    public static bool TryParse(string? s, IFormatProvider? provider, out RPVersion result)
+    public static bool TryParse(string? s, IFormatProvider? provider, out FNAFVersion result)
     {
         try
         {
@@ -171,11 +171,11 @@ public enum EVersionStringType
     IdentifierPrefix
 }
 
-public class RPVersionConverter : JsonConverter
+public class FNAFVersionConverter : JsonConverter
 {
     public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
     {
-        if (value is not RPVersion version) return;
+        if (value is not FNAFVersion version) return;
         
         serializer.Serialize(writer, version.ToString());
     }
@@ -185,7 +185,7 @@ public class RPVersionConverter : JsonConverter
         var value = reader.Value?.ToString();
         if (string.IsNullOrWhiteSpace(value)) return null;
 
-        return new RPVersion(value);
+        return new FNAFVersion(value);
     }
 
     public override bool CanConvert(Type objectType)

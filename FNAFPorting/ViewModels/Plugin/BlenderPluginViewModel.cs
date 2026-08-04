@@ -80,7 +80,7 @@ public partial class BlenderPluginViewModel : ViewModelBase
 
             if (!CompletedFirstInstall)
             {
-                Info.Message("Blender Plugin", "In Rivals Porting V4, you no longer need to enable the plugin in Blender. The plugin should now be working as is and you are free to continue!", autoClose: false);
+                Info.Message("Blender Plugin", "In FNAF Porting V4, you no longer need to enable the plugin in Blender. The plugin should now be working as is and you are free to continue!", autoClose: false);
                 CompletedFirstInstall = true;
             }
         });

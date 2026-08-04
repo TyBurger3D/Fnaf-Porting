@@ -10,7 +10,7 @@ namespace FNAFPorting;
 
 public static class Globals
 {
-    public static readonly RPVersion Version = new(
+    public static readonly FNAFVersion Version = new(
         Assembly.GetEntryAssembly()!
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()!
             .InformationalVersion
@@ -32,7 +32,7 @@ public static class Globals
     public static readonly FilePickerFileType PNGFileType = new("PNG Image") { Patterns = [ "*.png" ] };
     public static readonly FilePickerFileType GIFFileType = new("GIF Image") { Patterns = [ "*.gif" ] };
     
-    public static readonly FilePickerFileType PlaylistFileType = new("Rivals Porting Playlist") { Patterns = [ "*.fp.playlist" ] };
+    public static readonly FilePickerFileType PlaylistFileType = new("FNAF Porting Playlist") { Patterns = [ "*.fp.playlist" ] };
     public static readonly FilePickerFileType ChatAttachmentFileType = new("Image") { Patterns = [ "*.png", "*.jpg", "*.jpeg" ] };
     public static readonly FilePickerFileType BlenderFileType = new("Blender") { Patterns = ["blender.exe"] };
     public static readonly FilePickerFileType UnrealProjectFileType = new("Unreal Project") { Patterns = ["*.uproject"] };

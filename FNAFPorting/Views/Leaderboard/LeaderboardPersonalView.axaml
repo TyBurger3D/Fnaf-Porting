@@ -176,7 +176,7 @@
                                 <avalonia:MaterialIcon.Foreground>
                                     <LinearGradientBrush StartPoint="0%,0%" EndPoint="0%,100%">
                                         <GradientStop Color="#b565ff" Offset="0"/>
-                                        <GradientStop Color="#953bf8" Offset="1"/>
+                                        <GradientStop Color="{DynamicResource FPAccentColor}" Offset="1"/>
                                     </LinearGradientBrush>
                                 </avalonia:MaterialIcon.Foreground>
                             </avalonia:MaterialIcon>

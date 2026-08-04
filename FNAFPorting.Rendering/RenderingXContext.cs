@@ -24,7 +24,7 @@ public class RenderingXContext : GameWindow
     
     private static readonly NativeWindowSettings NativeSettings = new()
     {
-        Title = "Rivals Porting RenderingX",
+        Title = "FNAF Porting RenderingX",
         ClientSize = new Vector2i(1280, 720),
         APIVersion = new Version(4, 6),
         StartVisible = false,

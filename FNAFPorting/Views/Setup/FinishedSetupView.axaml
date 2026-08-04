@@ -15,7 +15,7 @@
             </TextBlock.Effect>
         </TextBlock>
         
-        <TextBlock Text="Press continue to begin using Rivals Porting!" 
+        <TextBlock Text="Press continue to begin using FNAF Porting!" 
                    HorizontalAlignment="Center" VerticalAlignment="Center" 
                    Margin="{ext:Space 0, 0, 0, 2}"
                    Classes="BodyTextBlockStyle TextFillColorSecondaryBrush">

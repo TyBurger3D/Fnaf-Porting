@@ -91,7 +91,7 @@ public class AnimExport : BaseExport
                         AnimMontage(montage);
                 }
 
-                RivalsEmoteWeaponProps.AppendForExportedAnim(Exporter, Props, asset, styles);
+                FNAFEmoteWeaponProps.AppendForExportedAnim(Exporter, Props, asset, styles);
                 break;
             }
             case EExportType.MVP:
@@ -99,7 +99,7 @@ public class AnimExport : BaseExport
                 foreach (var levelSequence in ResolveMvpLevelSequences(asset, styles))
                 {
                     var skeleton = Skeleton;
-                    RivalsMvpExport.AppendFromLevelSequence(Exporter, levelSequence, ref skeleton, Sections, Props);
+                    FNAFMvpExport.AppendFromLevelSequence(Exporter, levelSequence, ref skeleton, Sections, Props);
                     Skeleton = skeleton;
                 }
 

@@ -6,8 +6,8 @@ license = ["SPDX:GPL-3.0-or-later"]
 id = "fnaf_porting"
 version = "0.5.0"
 blender_version_min = "4.2.0"
-name = "Rivals Porting"
-tagline = "Import Server for Rivals Porting"
+name = "FNAF Porting"
+tagline = "Import Server for FNAF Porting"
 maintainer = "https://github.com/Bmarquez1997"
 
 tags = ["Import-Export"]

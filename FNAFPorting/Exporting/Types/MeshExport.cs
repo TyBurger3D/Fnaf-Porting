@@ -148,7 +148,7 @@ public class MeshExport : BaseExport
 
                 if (Exporter.Meta.Settings.ImportLobbyPoses)
                 {
-                    TryImportRivalsLobbyPose(styles ?? []);
+                    TryImportFNAFLobbyPose(styles ?? []);
                 }
                 
                 break;
@@ -625,7 +625,7 @@ public class MeshExport : BaseExport
         }
     }
 
-    private void TryImportRivalsLobbyPose(BaseStyleData[] styles)
+    private void TryImportFNAFLobbyPose(BaseStyleData[] styles)
     {
         string? heroId = null;
         string? shapeId = null;
@@ -675,7 +675,7 @@ public class MeshExport : BaseExport
             if (identifier.GetOrDefault("ShapeID", "0") != shapeId)
                 continue;
 
-            var animPath = RivalsEmoteWeaponProps.GetEmoteAnimationPath(emote);
+            var animPath = FNAFEmoteWeaponProps.GetEmoteAnimationPath(emote);
             if (animPath is null)
                 return;
 
@@ -683,8 +683,8 @@ public class MeshExport : BaseExport
                 return;
 
             Animation = new AnimExport(animAsset.Name, animAsset, [], EExportType.Animation, Exporter.Meta, null);
-            if (RivalsEmoteWeaponProps.ResolveShowActorFromStyles(styles) is { } showBp)
-                RivalsEmoteWeaponProps.AppendFromEmote(Exporter, Animation.Props, emote, showBp);
+            if (FNAFEmoteWeaponProps.ResolveShowActorFromStyles(styles) is { } showBp)
+                FNAFEmoteWeaponProps.AppendFromEmote(Exporter, Animation.Props, emote, showBp);
             return;
         }
     }

@@ -29,7 +29,7 @@ public partial class InstallationProfile : ObservableValidator
     [ArchiveDirectory]
     [ObservableProperty] private string _archiveDirectory = string.Empty;
     
-    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_MarvelRivals;
+    [ObservableProperty] private EGame _unrealVersion = EGame.GAME_UE5_2;
     
     [NotifyDataErrorInfo]
     [EncryptionKey(canValidateProperty: nameof(EncryptionKeyEnabled))]

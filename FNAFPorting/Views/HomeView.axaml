@@ -32,7 +32,7 @@
             <TextBlock Grid.Row="0"
                        FontFamily="{StaticResource SFDisplaySemibold}" FontSize="40"
                        HorizontalAlignment="Center">
-                <Run Text="Rivals" Foreground="{DynamicResource FPTitleTextBrush}"/>
+                <Run Text="FNAF" Foreground="{DynamicResource FPTitleTextBrush}"/>
                 <Run Text="Porting" Foreground="{DynamicResource FPAccentBrush}" />
             </TextBlock>
             
@@ -121,7 +121,7 @@
                                             <LinearGradientBrush StartPoint="0%, 0%" EndPoint="0%, 100%">
                                                 <GradientStops>
                                                     <GradientStop Color="#8141db" Offset="0"/>
-                                                    <GradientStop Color="#953bf8" Offset="1"/>
+                                                    <GradientStop Color="{DynamicResource FPAccentColor}" Offset="1"/>
                                                 </GradientStops>
                                             </LinearGradientBrush>
                                         </Border.Background>

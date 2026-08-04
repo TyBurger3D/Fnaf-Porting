@@ -17,7 +17,7 @@
     <ScrollViewer>
         <StackPanel VerticalAlignment="Top" Margin="{ext:Space 1}" Spacing="{ext:Space 0, 0, 0, 1}">
             <controls:SettingsItem Title="Theme"
-                                   Description="The theme that should be used for Rivals Porting.">
+                                   Description="The theme that should be used for FNAF Porting.">
                 <controls:SettingsItem.Footer>
                     <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type fnafPorting:EThemeType}}"
                               SelectedItem="{Binding Theme, Converter={StaticResource EnumToRecord}}" >

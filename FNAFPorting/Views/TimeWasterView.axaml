@@ -285,7 +285,7 @@
                                 <ScaleTransform ScaleX="2" ScaleY="2"/>
                             </Border.RenderTransform>
                         </Border>
-                        <TextBlock Text="Rivals Porting IS CURRENTLY &quot;DOWN&quot;" Foreground="#0fd7f2" LetterSpacing="1.5" FontSize="28" 
+                        <TextBlock Text="FNAF Porting IS CURRENTLY &quot;DOWN&quot;" Foreground="#0fd7f2" LetterSpacing="1.5" FontSize="28" 
                                    HorizontalAlignment="Center">
                             <TextBlock.RenderTransform>
                                 <TransformGroup>

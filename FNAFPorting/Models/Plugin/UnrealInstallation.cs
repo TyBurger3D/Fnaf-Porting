@@ -80,7 +80,7 @@ public partial class UnrealInstallation : ObservableObject
             return true;
         }
 
-        var metaVersion = new RPVersion(meta.Version);
+        var metaVersion = new FNAFVersion(meta.Version);
         Version = new Version(metaVersion.Release, metaVersion.Major, metaVersion.Minor);
         Status = !Globals.IsDevBuild && !metaVersion.Equals(Globals.Version)
             ? EPluginStatusType.UpdateAvailable

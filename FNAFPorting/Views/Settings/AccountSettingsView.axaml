@@ -31,7 +31,7 @@
                 </controls:SettingsItem.Footer>
             </controls:SettingsItem>
             
-            <controls:SettingsItem Title="Discord Rich Presence" Description="Displays Rivals Porting runtime information in your discord profile.">
+            <controls:SettingsItem Title="Discord Rich Presence" Description="Displays FNAF Porting runtime information in your discord profile.">
                 <controls:SettingsItem.Footer>
                     <ToggleSwitch IsChecked="{Binding UseDiscordRichPresence}"/>
                 </controls:SettingsItem.Footer>

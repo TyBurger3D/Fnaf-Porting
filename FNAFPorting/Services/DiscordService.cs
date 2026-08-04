@@ -18,7 +18,7 @@ public class DiscordService : IService
         },
         Assets = new Assets
         {
-            LargeImageText = $"Rivals Porting {Globals.VersionString}",
+            LargeImageText = $"FNAF Porting {Globals.VersionString}",
             LargeImageKey = "logo"
         },
         Buttons = 

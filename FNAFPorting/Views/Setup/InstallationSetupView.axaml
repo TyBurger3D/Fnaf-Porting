@@ -37,7 +37,7 @@
                 </TextBlock.Effect>
             </TextBlock>
             
-            <TextBlock Text="Create your Rivals installation profile to begin loading assets." HorizontalAlignment="Center"
+            <TextBlock Text="Create your FNAF installation profile to begin loading assets." HorizontalAlignment="Center"
                        VerticalAlignment="Center" Classes="BodyTextBlockStyle TextFillColorSecondaryBrush"
                        Margin="{ext:Space 0, 0, 0, 2}">
                 <TextBlock.Effect>
@@ -52,8 +52,8 @@
         
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Hidden" Margin="{ext:Space 4, 0, 4, 4}">
             <StackPanel VerticalAlignment="Bottom" Margin="{ext:Space 1, 0}" Spacing="{ext:Space 0, 0, 0, 1}">
-                <controls:SettingsItem Title="Rivals Version" 
-                                     Description="The version of Rivals that Rivals Porting will be loading.">
+                <controls:SettingsItem Title="FNAF Version" 
+                                     Description="The version of FNAF that FNAF Porting will be loading.">
                     <controls:SettingsItem.Footer>
                         <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type fnafPorting:EFNAFVersion}}"
                                   SelectedItem="{Binding Profile.FnafVersion, Converter={StaticResource EnumToRecord}}" />
@@ -63,7 +63,7 @@
                                      Description="The directory that contains all of the required game files. (*.pak, *.sig, *.ucas, *.utoc)" >
                     <controls:SettingsItem.Footer>
                         <StackPanel Orientation="Horizontal">
-                            <TextBox Text="{Binding Profile.ArchiveDirectory}" Watermark="Ex. C:/Program Files/Epic Games/MarvelRivals/MarvelGame/Marvel/Content/Paks/"/>
+                            <TextBox Text="{Binding Profile.ArchiveDirectory}" Watermark="Ex. C:/Program Files/Epic Games/FNAFGame/Content/Paks/"/>
                             <Button Margin="4 0 0 0" Command="{Binding Profile.BrowseArchivePath}">
                                 <avalonia:MaterialIcon Kind="Folder"/>
                             </Button>
@@ -78,7 +78,7 @@
                     </controls:SettingsItem.Footer>
                 </controls:SettingsItem>
                 <controls:SettingsItem Title="Unreal Version" 
-                                     Description="The Unreal Version that aligns with your Rivals installation." 
+                                     Description="The Unreal Version that aligns with your FNAF installation." 
                                      IsVisible="{Binding Profile.UnrealVersionEnabled}">
                     <controls:SettingsItem.Footer>
                         <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type versions:EGame}}"
@@ -87,14 +87,14 @@
                 </controls:SettingsItem>
                 <!-- TODO add fetch back when archive is finished -->
                 <controls:SettingsItem Title="Encryption Key" 
-                                     Description="The encryption key required to decrypt Rivals's game files." 
+                                     Description="The encryption key required to decrypt FNAF's game files." 
                                      IsVisible="{Binding Profile.EncryptionKeyEnabled}">
                     <controls:SettingsItem.Footer>
                         <TextBox Text="{Binding Profile.MainKey.KeyString}" Watermark="Ex. 0x0000000000000000000000000000000000000000000000000000000000000000"/>
                     </controls:SettingsItem.Footer>
                 </controls:SettingsItem>
                 <controls:SettingsItem Title="Mappings File" 
-                                     Description="The mappings file required for asset parsing to work properly. Required for Rivals v14.40+" 
+                                     Description="The mappings file required for asset parsing to work properly. Required for newer FNAF versions." 
                                      IsVisible="{Binding Profile.MappingsFileEnabled}">
                     <controls:SettingsItem.Footer>
                         <StackPanel Orientation="Horizontal">

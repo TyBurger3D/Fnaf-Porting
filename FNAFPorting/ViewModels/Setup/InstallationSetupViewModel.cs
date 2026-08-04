@@ -46,7 +46,7 @@ public partial class InstallationSetupViewModel : ViewModelBase
 
         Profile.ArchiveDirectory = fortniteInfo.InstallLocation + @"\FortniteGame\Content\Paks\";
         OnPropertyChanged(nameof(Profile));
-        Log.Information("Found Rivals Installation at {ArchivePath}", Profile.ArchiveDirectory);
+        Log.Information("Found FNAF Installation at {ArchivePath}", Profile.ArchiveDirectory);
     }
     
     [RelayCommand]

@@ -46,7 +46,7 @@ public partial class ApplicationSettingsViewModel : SettingsViewModelBase
     [ObservableProperty] private RadioPlaylistSerializeData[] _playlists = [];
     [ObservableProperty] private float _volume = 1.0f;
 
-    [ObservableProperty] private RPVersion _lastOnlineVersion = Globals.Version;
+    [ObservableProperty] private FNAFVersion _lastOnlineVersion = Globals.Version;
 
     [ObservableProperty] private ObservableCollection<MapInfo> _localMapInfos = [];
     [ObservableProperty] private bool _useTabTransitions = true;

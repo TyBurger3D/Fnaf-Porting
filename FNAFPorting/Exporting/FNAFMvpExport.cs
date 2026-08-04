@@ -15,7 +15,7 @@ using FNAFPorting.Shared.Extensions;
 
 namespace FNAFPorting.Exporting;
 
-public static class RivalsMvpExport
+public static class FNAFMvpExport
 {
     private static readonly Regex SkinItemIdFromPath = new(
         @"/Characters/\d+/(\d+)/",
@@ -71,7 +71,7 @@ public static class RivalsMvpExport
 
         foreach (var (bindingName, anims) in propBindings)
         {
-            var component = RivalsEmoteWeaponProps.FindComponentByVariableName(showBp, bindingName);
+            var component = FNAFEmoteWeaponProps.FindComponentByVariableName(showBp, bindingName);
             if (component is null) continue;
 
             var mesh = exporter.MeshComponent(component);
@@ -85,7 +85,7 @@ public static class RivalsMvpExport
             {
                 Mesh = mesh,
                 AnimSections = animSections,
-                SocketName = RivalsEmoteWeaponProps.FindAttachSocket(showBp, bindingName) ?? string.Empty,
+                SocketName = FNAFEmoteWeaponProps.FindAttachSocket(showBp, bindingName) ?? string.Empty,
                 LocationOffset = FVector.ZeroVector,
                 RotationOffset = FRotator.ZeroRotator,
                 Scale = FVector.OneVector
@@ -117,7 +117,7 @@ public static class RivalsMvpExport
     {
         var skinItemId = ExtractSkinItemId(levelSequenceAsset);
         if (string.IsNullOrEmpty(skinItemId)) return null;
-        return RivalsEmoteWeaponProps.ResolveShowActorBySkinItemId(skinItemId);
+        return FNAFEmoteWeaponProps.ResolveShowActorBySkinItemId(skinItemId);
     }
 
     private static string? ExtractSkinItemId(UObject levelSequenceAsset)

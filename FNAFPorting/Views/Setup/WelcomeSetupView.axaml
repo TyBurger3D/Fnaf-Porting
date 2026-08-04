@@ -14,10 +14,10 @@
                 <DropShadowEffect BlurRadius="15" Color="#8F000000" OffsetX="0" OffsetY="0" />
             </TextBlock.Effect>
             <Run Text="Welcome to"/>
-            <Run Text="Rivals"/>
-            <Run Text="Porting" Foreground="#953bf8"/>
+            <Run Text="FNAF"/>
+            <Run Text="Porting" Foreground="{DynamicResource FPAccentBrush}"/>
         </TextBlock>
-        <TextBlock Text="The quickest and most efficient way to extract assets from Rivals." 
+        <TextBlock Text="The quickest and most efficient way to extract assets from FNAF." 
                    HorizontalAlignment="Center" VerticalAlignment="Center" 
                    Margin="{ext:Space 0, 0, 0, 2}"
                    Classes="BodyTextBlockStyle TextFillColorSecondaryBrush">

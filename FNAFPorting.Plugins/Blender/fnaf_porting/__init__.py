@@ -17,8 +17,8 @@ from bpy.app.handlers import persistent
 
 
 bl_info = {
-    "name": "Rivals Porting",
-    "description": "Import Server for Rivals Porting",
+    "name": "FNAF Porting",
+    "description": "Import Server for FNAF Porting",
     "author": "DeveloperChipmunk",
     "blender": (4, 2, 0),
     "version": (0, 5, 0),

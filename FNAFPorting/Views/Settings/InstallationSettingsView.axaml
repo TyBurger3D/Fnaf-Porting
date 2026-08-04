@@ -69,8 +69,8 @@
                     </controls:SettingsItem.Footer>
                 </controls:SettingsItem>
 
-                <controls:SettingsItem Title="Rivals Version"
-                                       Description="The version of Rivals that Rivals Porting will be loading.">
+                <controls:SettingsItem Title="FNAF Version"
+                                       Description="The version of FNAF that FNAF Porting will be loading.">
                     <controls:SettingsItem.Footer>
                         <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type fnafPorting:EFNAFVersion}}"
                                   SelectedItem="{Binding FnafVersion, Converter={StaticResource EnumToRecord}}" >
@@ -88,7 +88,7 @@
                     <controls:SettingsItem.Footer>
                         <StackPanel Orientation="Horizontal">
                             <TextBox Text="{Binding ArchiveDirectory}"
-                                     Watermark="Ex. C:/EpicGames/MarvelRivals/MarvelGame/Marvel/Content/Paks" />
+                                     Watermark="Ex. C:/EpicGames/FNAFGame/Content/Paks" />
                             <Button Margin="4 0 0 0" Command="{Binding BrowseArchivePath}">
                                 <material:MaterialIcon Kind="Folder"/>
                             </Button>
@@ -103,7 +103,7 @@
                     </controls:SettingsItem.Footer>
                 </controls:SettingsItem>
                 <controls:SettingsItem Title="Unreal Version"
-                                       Description="The Unreal Version that aligns with your Rivals installation."
+                                       Description="The Unreal Version that aligns with your FNAF installation."
                                        IsVisible="{Binding UnrealVersionEnabled}">
                     <controls:SettingsItem.Footer>
                         <ComboBox ItemsSource="{ext:EnumToItemsSource {x:Type versions:EGame}}"
@@ -111,7 +111,7 @@
                     </controls:SettingsItem.Footer>
                 </controls:SettingsItem>
                 <controls:SettingsItem Title="Encryption Key"
-                                       Description="The encryption key required to decrypt Rivals's game files.">
+                                       Description="The encryption key required to decrypt FNAF's game files.">
                     <controls:SettingsItem.Footer>
                         <TextBox Text="{Binding MainKey.KeyString}"
                                  Watermark="Ex. 0x0000000000000000000000000000000000000000000000000000000000000000"
@@ -159,7 +159,7 @@
                     </controls:SettingsItem.Content>
                 </controls:SettingsItem>
                 <controls:SettingsItem Title="Mappings File"
-                                       Description="The mappings file required for asset parsing to work properly. Required for Rivals v14.40+"
+                                       Description="The mappings file required for asset parsing to work properly. Required for newer FNAF versions."
                                        IsVisible="{Binding MappingsFileEnabled}">
                     <controls:SettingsItem.Footer>
                         <StackPanel Orientation="Horizontal">
@@ -192,7 +192,7 @@
 
 
                 <controls:SettingsItem Title="Load Installed Bundles"
-                                       Description="Whether or not to load installed bundles from Rivals's AppData directory."
+                                       Description="Whether or not to load installed bundles from FNAF's AppData directory."
                                        IsVisible="{Binding LoadInstalledBundlesEnabled}">
                     <controls:SettingsItem.Footer>
                         <ToggleSwitch IsChecked="{Binding LoadInstalledBundles}" />
