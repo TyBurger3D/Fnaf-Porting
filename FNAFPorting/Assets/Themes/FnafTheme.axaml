@@ -66,6 +66,6 @@
         <Color x:Key="FPAccentColor">#FFA500</Color>
         <SolidColorBrush x:Key="FPAccentBrush" Color="{DynamicResource FPAccentColor}" />
 
-        <Bitmap x:Key="FPLogoBitmap">avares://FNAFPorting/Assets/LogoV3.png</Bitmap>
+        <Bitmap x:Key="FPLogoBitmap">avares://FNAFPorting/Assets/LogoRed.png</Bitmap>
     </controls:FPStyles.Resources>
 </controls:FPStyles>

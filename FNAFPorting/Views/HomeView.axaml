@@ -70,7 +70,7 @@
                         FontFamily="{StaticResource SFTextRegular}" Command="{Binding LaunchGitHub}"/>
                 <Button Content="{controls:ImageText 'KoFi', /Assets/Icons/KoFi.png}" Width="125"
                         FontFamily="{StaticResource SFTextRegular}" Command="{Binding LaunchKoFi}"/>
-                <Button Content="{controls:ImageText 'Website', /Assets/LogoV3.png}" Width="125"
+                <Button Content="{controls:ImageText 'Website', /Assets/LogoRed.png}" Width="125"
                         FontFamily="{StaticResource SFTextRegular}" Command="{Binding LaunchWebsite}"/>
             </StackPanel>
 

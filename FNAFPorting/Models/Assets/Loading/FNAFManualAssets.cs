@@ -1717,9 +1717,7 @@ public static class FNAFManualAssets
                 Description = "Such a cool guy"
             }
     ];
-        
-        
-
+    
     private static readonly ManuallyDefinedAsset[] Chapter1Animatronics = [];
 
     private static readonly ManuallyDefinedAsset[] AllAnimatronics = [

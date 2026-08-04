@@ -90,7 +90,14 @@ public partial class ApplicationSettingsViewModel : SettingsViewModelBase
         SoundBankPreviewWindow.Instance?.WindowModel.UpdateOutputDevice();
     }
     
-    partial void OnThemeChanged(EThemeType value)
+    partial void OnThemeChanged(EThemeType value) => ApplyTheme(value);
+
+    /// <summary>
+    /// Applies the current theme even when Theme did not change (e.g. startup load of the default value).
+    /// </summary>
+    public void ApplyTheme() => ApplyTheme(Theme);
+
+    private static void ApplyTheme(EThemeType value)
     {
         if (Avalonia.Application.Current is not { } app) return;
 

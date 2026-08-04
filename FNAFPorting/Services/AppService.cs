@@ -54,6 +54,7 @@ public class AppService : IService
     public void Initialize()
     {
         AppSettings.Load();
+        AppSettings.Application.ApplyTheme();
         
         Info.CreateLogger();
         Dependencies.Ensure();

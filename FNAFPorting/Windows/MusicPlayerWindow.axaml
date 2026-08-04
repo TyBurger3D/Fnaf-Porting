@@ -19,7 +19,7 @@
         Width="300"
         CanResize="False"
         Topmost="True"
-        Icon="/Assets/LogoMR.ico"
+        Icon="/Assets/AppIcon.ico"
         Title="FNAF Porting — Music Player">
 
     <Grid RowDefinitions="35, *" Margin="{Binding $parent[Window].OffScreenMargin}">

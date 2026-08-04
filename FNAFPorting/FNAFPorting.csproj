@@ -5,7 +5,7 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>Application/app.manifest</ApplicationManifest>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-        <ApplicationIcon>Assets/LogoMR.ico</ApplicationIcon>
+        <ApplicationIcon>Assets/AppIcon.ico</ApplicationIcon>
         <RuntimeIdentifier>win-x64</RuntimeIdentifier>
         <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
         <SelfContained>true</SelfContained>
