@@ -376,6 +376,10 @@ public enum EFileFilterType
 public enum EThemeType
 {
     
+    [Description("FNAF")]
+    [Icon(MaterialIconKind.TeddyBear)]
+    Fnaf,
+    
     [Description("Rose")]
     [Icon(MaterialIconKind.Flower)]
     Rose,
