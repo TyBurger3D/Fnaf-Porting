@@ -29,7 +29,7 @@ jobs:
 
       - name: Get Version
         shell: bash
-        run: echo "5P_VERSION=1.0.0-${GITHUB_SHA::7}" >> $GITHUB_ENV
+        run: echo "FNAF_VERSION=1.0.0-${GITHUB_SHA::7}" >> $GITHUB_ENV
 
       - name: .NET Publish
         run: |
@@ -38,7 +38,7 @@ jobs:
             -p:DebugType=None `
             -p:DebugSymbols=false `
             -p:IncludeNativeLibrariesForSelfExtract=true `
-            -p:Version=${{ env.5P_VERSION }}
+            -p:Version=${{ env.FNAF_VERSION }}
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4

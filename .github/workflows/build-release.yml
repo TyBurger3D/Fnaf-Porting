@@ -38,7 +38,7 @@ jobs:
           $tag = "${{ github.ref_name }}"
           $current = $tag -replace '^5P-', ''
           echo "current=$current" >> $env:GITHUB_OUTPUT
-          echo "5P_VERSION=$current" >> $env:GITHUB_ENV
+          echo "FNAF_VERSION=$current" >> $env:GITHUB_ENV
 
       - name: .NET Publish
         run: |
@@ -47,7 +47,7 @@ jobs:
             -p:DebugType=None `
             -p:DebugSymbols=false `
             -p:IncludeNativeLibrariesForSelfExtract=true `
-            -p:Version=${{ env.5P_VERSION }}
+            -p:Version=${{ env.FNAF_VERSION }}
 
       - name: Generate release notes with commit links
         id: release_notes
