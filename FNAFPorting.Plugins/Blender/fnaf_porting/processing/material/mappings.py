@@ -735,3 +735,143 @@ gmap_material_mappings = MappingCollection(
         SlotMapping("Uses ColorVariety/Scratch/Dirt Mask")
     ]
 )
+
+fnaf_character_mappings = MappingCollection(
+    textures=[
+        SlotMapping("Base Color"),
+        SlotMapping("D", "Base Color"),
+        SlotMapping("BC", "Base Color"),
+        SlotMapping("BaseColor Map", "Base Color"),
+        SlotMapping("Texture", "Base Color"),
+        SlotMapping("Base_Color", "Base Color"),
+        SlotMapping("BaseColor", "Base Color"),
+        SlotMapping("basecolor", "Base Color"),
+        SlotMapping("T_MangleEye_BaseColor", "Base Color"),
+        SlotMapping("T_BalloonBoyEye_BaseColor", "Base Color"),
+        SlotMapping("T_BonnieEye_BaseColor", "Base Color"),
+        SlotMapping("T_SpringtrapEye_BaseColor", "Base Color"),
+        SlotMapping("T_WoldEndoEye_BaseColor", "Base Color"),
+        SlotMapping("T_WolfEndoBody_BaseColor", "Base Color"),
+        SlotMapping("T_Eye_BaseColor", "Base Color"),
+        SlotMapping("MASK", "Base Color"),
+        SlotMapping("COLOR", "Base Color"),
+        SlotMapping("Albedo", "Base Color"),
+        SlotMapping("AlbedoTexture", "Base Color"),
+        SlotMapping("BaseMap", "Base Color"),
+        SlotMapping("Diffuse", "Base Color"),
+        SlotMapping("Color Texture", "Base Color"),
+        SlotMapping("DiffuseTexture", "Base Color"),
+        SlotMapping("T_Floor_BC", "Base Color", alpha_slot="Alpha"),
+
+        SlotMapping("Sprite", "Base Color"),  # TODO: Replace with proper Sprite material handling
+
+        SlotMapping("AO"),
+        SlotMapping("OcclusionMap", "AO"),
+
+        SlotMapping("ORM"),
+        SlotMapping("AORM", "ORM"),
+        SlotMapping("HRM\\ORM Map", "ORM"),
+        SlotMapping("HRM", "ORM"),
+        SlotMapping("Packed", "ORM"),
+        SlotMapping("ORM Texture", "ORM"),
+        SlotMapping("MergeMapInput", "ORM"),
+        SlotMapping("AO_Rough_Metal", "ORM"),
+        SlotMapping("XRM", "ORM"),
+        SlotMapping("T_WolfEndoBody_AORM", "ORM"),
+
+        SlotMapping("AmbientOcclusionTexture", "ORM"),
+        SlotMapping("AO(R) Rough(G) Metallic(B)", "ORM"),
+
+        SlotMapping("R", "Roughness"),
+        SlotMapping("Roughness", "Roughness"),
+        SlotMapping("Roughness Map", "Roughness"),
+        SlotMapping("T_EyeRoughness", "Roughness"),
+
+        SlotMapping("MT", "Metallic"),
+        SlotMapping("MetallicMap", "Metallic"),
+        SlotMapping("MetallicTexture", "Metallic"),
+
+        SlotMapping("Normal"),
+        SlotMapping("Normals", "Normal"),
+        SlotMapping("N", "Normal"),
+        SlotMapping("_N", "Normal"),
+        SlotMapping("Norm", "Normal"),
+        SlotMapping("Normal Map", "Normal"),
+        SlotMapping("NormalTexture", "Normal"),
+        SlotMapping("Normal Texture", "Normal"),
+        SlotMapping("MainNormalInput", "Normal"),
+        SlotMapping("NormalBase_Color_1", "Normal"),
+        SlotMapping("T_WolfEndoBody_Normal", "Normal"),
+
+        SlotMapping("Emissive", "Emission Color"),
+        SlotMapping("T_SpringtrapEye_Emissive", "Emission Color"),
+        SlotMapping("T_WolfEndoEye_Emissive", "Emission Color"),
+        SlotMapping("Emissive Map ....", "Emission Color"),
+        SlotMapping("EmissiveMap", "Emission Color"),
+
+        SlotMapping("Alpha"),
+        SlotMapping("Opacity", "Alpha"),
+        SlotMapping("OpacityMaskTexture", "Alpha"),
+    ],
+    scalars=[
+        SlotMapping("Rough", "Roughness"),
+        SlotMapping("Roughness", "Roughness"),
+        SlotMapping("Roughness Adjust", "Roughness"),
+
+        SlotMapping("NormalStrength", "Normal Strength"),
+
+        SlotMapping("Emission Strength"),
+        SlotMapping("EM_Amount", "Emission Strength"),
+
+        SlotMapping("Opacity", "Alpha"),
+    ],
+    vectors=[
+        SlotMapping("Color", "Base Color"),
+        SlotMapping("Base Color Value", "Base Color"),
+
+        SlotMapping("Tint", "Base Color Multiply"),
+        SlotMapping("Color1", "Base Color Multiply"),
+        SlotMapping("ColorA", "Base Color Multiply"),
+        SlotMapping("Color01", "Base Color Multiply"),
+        SlotMapping("ColorMult", "Base Color Multiply"),
+        SlotMapping("ColorSide2", "Base Color Multiply"),
+        SlotMapping("LightColor", "Base Color Multiply"),
+        SlotMapping("Color Overlay", "Base Color Multiply"),
+        SlotMapping("Color_Multiply", "Base Color Multiply"),
+        SlotMapping("Base_Color_Multiply", "Base Color Multiply"),
+        SlotMapping("EmissiveColor", "Emission Color"),
+        SlotMapping("Em_Color", "Custom Color"),
+    ]
+)
+
+dbd_mappings = MappingCollection(
+    textures=[
+        SlotMapping("Diffuse", "Base Color"),
+        SlotMapping("BaseColor Map", "Base Color"),
+        SlotMapping("Main_BaseColor", "Base Color"),
+
+        SlotMapping("AORoughnessMetallic", "ORM Mask"),
+        SlotMapping("HRM\\ORM Map", "ORM Mask"),
+        SlotMapping("Main_ORM", "ORM Mask"),
+
+        SlotMapping("Normal Map", "Normal Map"),
+        SlotMapping("NormalMap Texture", "Normal Map"),
+        SlotMapping("Main_Normal", "Normal Map"),
+
+        SlotMapping("Emission"),
+        SlotMapping("Emissive", "Emission"),
+
+        SlotMapping("Opacity Mask Texture", "Alpha"),
+    ],
+    vectors=[
+        SlotMapping("TrimColor"),
+        SlotMapping("Trim_EmissiveColor")
+    ],
+    scalars=[
+        SlotMapping("Trim_EmissiveBrightness")
+    ],
+    switches=[
+        SlotMapping("ApplyTrim"),
+        SlotMapping("ApplyTrimEmissive")
+    ]
+)

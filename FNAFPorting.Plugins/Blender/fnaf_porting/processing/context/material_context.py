@@ -108,7 +108,7 @@ class MaterialImportContext:
         output_node.location = (200, 0)
 
         shader_node = nodes.new(type="ShaderNodeGroup")
-        shader_node.node_tree = bpy.data.node_groups.get("MR Material Lite")
+        shader_node.node_tree = bpy.data.node_groups.get("Fnaf Shader")
 
         def replace_shader_node(name):
             nonlocal shader_node
@@ -356,56 +356,16 @@ class MaterialImportContext:
                 links.new(pre_node.outputs[pre_slot], default_texture_node.inputs[0])
 
         # decide which material type and mappings to use
-        socket_mappings = default_mappings
-        base_material_path = material_data.get("BaseMaterialPath")
+        socket_mappings = fnaf_character_mappings
+        base_material_path = material_data.get("BaseMaterialPath") or ""
 
-        if get_param_multiple(switches, layer_switch_names) and get_param_multiple(textures, extra_layer_names):
-            replace_shader_node("FP Layer")
-            socket_mappings = layer_mappings
+        if "Char_Master_Mat_Characters" in base_material_path:
+            replace_shader_node("Fnaf Shader")
+            socket_mappings = fnaf_character_mappings
 
-            set_param("Is Transparent", override_blend_mode is not EBlendMode.BLEND_Opaque)
-
-        is_glass = material_data.get("PhysMaterialName") == "Glass" or any(glass_master_names, lambda x: x in base_material_path) or (base_blend_mode is EBlendMode.BLEND_Translucent and translucency_lighting_mode in [ETranslucencyLightingMode.TLM_SurfacePerPixelLighting, ETranslucencyLightingMode.TLM_VolumetricPerVertexDirectional])
-        if is_glass:
-            replace_shader_node("FP Glass")
-            socket_mappings = glass_mappings
-
-            material.surface_render_method = "BLENDED"
-            material.show_transparent_back = False
-
-        # TODO: Proper cape/two sided material handling
-        if any(hero_master_names, lambda x: x in base_material_path):
-            replace_shader_node("MR Hero")
-            socket_mappings = hero_mappings
-
-        if "Hair" in base_material_path:
-            replace_shader_node("MR Hair")
-            socket_mappings = hair_mappings
-
-        # TODO: Come back to FakeEyeShadow, verify translucent coverage
-        if "Translucent" in base_material_path or "FakeEyeShadow" in base_material_path:
-            replace_shader_node("MR Translucent")
-            socket_mappings = translucent_mappings
-
-            material.surface_render_method = "BLENDED"
-            material.show_transparent_back = False
-
-        if "Common_Eye" in base_material_path or "Eye_Opt" in base_material_path:
-            replace_shader_node("MR Eye")
-            socket_mappings = eye_mappings
-
-        if any(eye_glass_master_names, lambda x: x in base_material_path) or (self.type == EExportType.OUTFIT and "SimpleGlass" in base_material_path):
-            replace_shader_node("MR Eye Glass")
-            socket_mappings = eye_glass_mappings
-
-            material.surface_render_method = "BLENDED"
-            material.show_transparent_back = False
-
-        if "RimOnly" in base_material_path:
-            replace_shader_node("MR Rim")
-        
-        # TODO: Common_Cape, Symbiote (1035)
-        # Cloak, Punisher
+        if "Slasher" in base_material_path or "Camper" in base_material_path:
+            replace_shader_node("DBD Shader")
+            socket_mappings = dbd_mappings
 
         setup_params(socket_mappings, shader_node, True)
 
@@ -421,93 +381,16 @@ class MaterialImportContext:
             return
 
         match shader_node.node_tree.name:
-            case "FP Material":
+            case "Fnaf Shader":
                 set_param("AO", self.options.get("AmbientOcclusion"))
-                set_param("Cavity", self.options.get("Cavity"))
-                set_param("Subsurface", self.options.get("Subsurface"))
-                    
-                if diffuse_node := get_node(shader_node, "BaseColor"):
+
+                if diffuse_node := get_node(shader_node, "Base Color"):
                     nodes.active = diffuse_node
 
-            case "FP Glass":
-                mask_slot = shader_node.inputs["Mask"]
-                if len(mask_slot.links) > 0 and get_param(switches, "Use Diffuse Texture for Color [ignores alpha channel]"):
-                    links.remove(mask_slot.links[0])
+            case "DBD Shader":
+                set_param("AO Intensity", self.options.get("AmbientOcclusion"))
 
-                if color_node := get_node(shader_node, "Color"):
-                    nodes.active = color_node
-                
-            case "FP Toon":
-                set_param("Brightness", self.options.get("ToonShadingBrightness"))
-                self.add_toon_outline = True
-            
-            case "MR Eye":
-                pre_eye_node = nodes.new(type="ShaderNodeGroup")
-                pre_eye_node.node_tree = bpy.data.node_groups.get("MR Pre Eye")
-                pre_eye_node.location = -600, -100
-                setup_params(pre_eye_mappings, pre_eye_node, False)
-
-                if node := get_node(shader_node, "ScleraBaseColor"):
-                    links.new(pre_eye_node.outputs["Sclera UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_EyeSclera_D", "sRGB", shader_node, "ScleraBaseColor", pre_eye_node, "Sclera UV")
-                    
-                if node := get_node(shader_node, "IrisBaseColor"):
-                    links.new(pre_eye_node.outputs["Iris UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Common_Eyes_03_D", "sRGB", shader_node, "IrisBaseColor", pre_eye_node, "Iris UV")
-
-                if node := get_node(shader_node, "IrisHeight"):
-                    links.new(pre_eye_node.outputs["Iris UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Iris001_01_H", "Non-Color", shader_node, "IrisHeight", pre_eye_node, "Iris UV")
-
-                if node := get_node(shader_node, "IrisBaseAO"):
-                    links.new(pre_eye_node.outputs["Iris UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Iris001_01_AO", "sRGB", shader_node, "IrisBaseAO", pre_eye_node, "Iris UV")
-
-                links.new(pre_eye_node.outputs["Sclera UV"], shader_node.inputs["Sclera UV"])
-                links.new(pre_eye_node.outputs["Iris UV"], shader_node.inputs["Iris UV"])
-
-                if diffuse_node := get_node(shader_node, "ScleraBaseColor"):
-                    nodes.active = diffuse_node
-            
-            case "MR Eye Glass":
-                pre_eye_glass_node = nodes.new(type="ShaderNodeGroup")
-                pre_eye_glass_node.node_tree = bpy.data.node_groups.get("MR Pre Eye Glass")
-                pre_eye_glass_node.location = -500, -75
-                setup_params(pre_eye_glass_mappings, pre_eye_glass_node, False)
-
-                if node := get_node(shader_node, "HighlightMask"):
-                    links.new(pre_eye_glass_node.outputs["Highlight UV"], node.inputs[0])
-                else:
-                    add_default_texture("T_Common_EyesHighLight_01_M", "sRGB", shader_node, "HighlightMask", pre_eye_glass_node, "Highlight UV")
-
-                if diffuse_node := get_node(shader_node, "HighlightMask"):
-                    nodes.active = diffuse_node
-            
-            case "FP Layer":
-                if diffuse_node := get_node(shader_node, "BaseColor"):
-                    nodes.active = diffuse_node
-            
-            case "MR Hero":
-                if diffuse_node := get_node(shader_node, "BaseColor"):
-                    nodes.active = diffuse_node
-                    
-                if get_param(switches, "UseDyeing"):
-                    dye_node = nodes.new(type="ShaderNodeGroup")
-                    dye_node.node_tree = bpy.data.node_groups.get("MR ColorID Dye")
-                    dye_node.location = -500, -75
-                    setup_params(dye_mat_mappings, dye_node, False)
-                    
-                    move_texture_node(dye_node, "BaseColor")
-                    
-                    if diffuse_node := get_node(dye_node, "BaseColor"):
-                        nodes.active = diffuse_node
-
-            case "FP Layer":
-                if diffuse_node := get_node(shader_node, "BaseColor"):
+                if diffuse_node := get_node(shader_node, "Base Color"):
                     nodes.active = diffuse_node
 
     def import_material_standalone(self, data):
