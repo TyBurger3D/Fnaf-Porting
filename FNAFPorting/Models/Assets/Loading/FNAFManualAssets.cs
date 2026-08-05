@@ -33,21 +33,24 @@ public static class FNAFManualAssets
             {
                 Name = "FNAF 1 Freddy",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Freddy/RIG_Freddy",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Freddy",
+                IconPath = "avares://FNAFPorting/Assets/HW/FRDY.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/FRDY.png",
                 Description = "My name is Freddy, I'm the singer in the band, got a hat and a big bowtie!"
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 1 Bonnie",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Bonnie/RIG_Bonnie",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Bonnie",
+                IconPath = "avares://FNAFPorting/Assets/HW/BNIE.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/BNIE.png",
                 Description = "Bonnie's my name, I'm hoppin' along, floppy ears and a cotton tail!"
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 1 Chica",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Chica/RIG_Chica",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Chica",
+                IconPath = "avares://FNAFPorting/Assets/HW/CHCA.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/CHCA.png",
                 Description = "Hey, I'm Chica! The lady of the group, my singing is a treat!"
             },
             new ManuallyDefinedAsset
@@ -62,28 +65,32 @@ public static class FNAFManualAssets
             {
                 Name = "FNAF 1 Foxy",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Foxy/RIG_Foxy_Clean",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Foxy",
+                IconPath = "avares://FNAFPorting/Assets/HW/FXY.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/FXY.png",
                 Description = "One eye and a hook for a hand!"
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Toy Freddy",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/ToyFreddy/RIG_ToyFreddy",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_ToyFreddy",
+                IconPath = "avares://FNAFPorting/Assets/HW/TFRD.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/TFRD.png",
                 Description = "He's just a gamer at heart."
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Toy Bonnie",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/ToyBonnie/RIG_ToyBonnie",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_ToyBonnie",
+                IconPath = "avares://FNAFPorting/Assets/HW/TBNE.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/TBNE.png",
                 Description = "Lets ROCK!"
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Toy Chica",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/ToyChica/RIG_ToyChica",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_ToyChica",
+                IconPath = "avares://FNAFPorting/Assets/HW/TCHC.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/TCHC.png",
                 Description = "You won't get tired of my voice... will you..."
             },
             new ManuallyDefinedAsset
@@ -106,56 +113,64 @@ public static class FNAFManualAssets
             {
                 Name = "FNAF 2 Mangle",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Mangle/RIG_Mangle2",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Mangle",
+                IconPath = "avares://FNAFPorting/Assets/HW/MNGL.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/MNGL.png",
                 Description = "Now I get to play take apart and put back together! You won't feel a thing."
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Balloon Boy",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/BalloonBoy/RIG_BalloonBoy",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_BalloonBoy",
+                IconPath = "avares://FNAFPorting/Assets/HW/BB.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/BB.png",
                 Description = "I asked BB what to put here and all he did was giggle so idek what that means."
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Marionette",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/Marionette/RIG_Marionette",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Puppet",
+                IconPath = "avares://FNAFPorting/Assets/HW/MANT.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/MANT.png",
                 Description = "i recognize you. but i am not afraid of you... not anymore!"
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Withered Freddy",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/WitheredFreddy/RIG_WitheredFreddy",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_WitheredFreddy",
+                IconPath = "avares://FNAFPorting/Assets/HW/WFRD.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/WFRD.png",
                 Description = "Scrap Metal"
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Withered Bonnie",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/WitheredBonnie/Rig_WitheredBonnie",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_WitheredBonnie",
+                IconPath = "avares://FNAFPorting/Assets/HW/WBNE.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/WBNE.png",
                 Description = "I am not a toilet bowl."
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Withered Chica",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/WitheredChica/RIG_WitheredChica",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_WitheredChica",
+                IconPath = "avares://FNAFPorting/Assets/HW/WCHK.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/WCHK.png",
                 Description = "I was the first. I have seen EVERYTHING."
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 2 Withered Foxy",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/WitheredFoxy/RIG_WitheredFoxy",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_WitheredFoxy",
+                IconPath = "avares://FNAFPorting/Assets/HW/WFXY.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/WFXY.png",
                 Description = "He hates the light."
             },
             new ManuallyDefinedAsset
             {
                 Name = "FNAF 3 Springtrap",
                 AssetPath = "freddys/Content/ProductionAssets/Character_Assets/SpringTrap/RIG_SpringTrap",
-                IconPath = "freddys/Content/ProductionAssets/Actors/Prize_Actors/BeingUsed/Icons/ForGallery/ICO_Springtrap",
+                IconPath = "avares://FNAFPorting/Assets/HW/FXY.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/SPTP.png",
                 Description = "I always come back."
             },
             new ManuallyDefinedAsset
