@@ -2,8 +2,8 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                   xmlns:controls="clr-namespace:FNAFPorting.Controls">
     <controls:FPStyles.Resources>
-        <Brush x:Key="FPSeparatorColorLayer1">#1F1D28</Brush>
-        <Brush x:Key="FPSeparatorColorLayer2">#2F2D3C</Brush>
+        <Brush x:Key="FPSeparatorColorLayer1">#704B95</Brush>
+        <Brush x:Key="FPSeparatorColorLayer2">#704B95</Brush>
 
         <Brush x:Key="FPButtonBackground">#1D1B24</Brush>
         <Brush x:Key="FPButtonBackgroundPointerOver">#252332</Brush>
