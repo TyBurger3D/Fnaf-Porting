@@ -759,6 +759,7 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("AlbedoTexture", "Base Color"),
         SlotMapping("BaseMap", "Base Color"),
         SlotMapping("Diffuse", "Base Color"),
+        SlotMapping("PM_Diffuse", "Base Color"),
         SlotMapping("Color Texture", "Base Color"),
         SlotMapping("DiffuseTexture", "Base Color"),
         SlotMapping("T_Floor_BC", "Base Color", alpha_slot="Alpha"),
@@ -778,6 +779,11 @@ fnaf_character_mappings = MappingCollection(
         SlotMapping("AO_Rough_Metal", "ORM"),
         SlotMapping("XRM", "ORM"),
         SlotMapping("T_WolfEndoBody_AORM", "ORM"),
+        SlotMapping("SpecularMasks", "ORM"),
+        SlotMapping("PM_SpecularMasks", "ORM"),
+        SlotMapping("Specular", "ORM"),
+        SlotMapping("SpecularMap", "ORM"),
+        SlotMapping("SpecMap", "ORM"),
 
         SlotMapping("AmbientOcclusionTexture", "ORM"),
         SlotMapping("AO(R) Rough(G) Metallic(B)", "ORM"),
@@ -793,6 +799,7 @@ fnaf_character_mappings = MappingCollection(
 
         SlotMapping("Normal"),
         SlotMapping("Normals", "Normal"),
+        SlotMapping("PM_Normals", "Normal"),
         SlotMapping("N", "Normal"),
         SlotMapping("_N", "Normal"),
         SlotMapping("Norm", "Normal"),

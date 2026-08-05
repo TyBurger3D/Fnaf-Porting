@@ -125,6 +125,9 @@ def create_or_get_collection(name):
     return new_collection
 
 def get_armature_mesh(obj):
+    if obj is None:
+        return None
+
     if obj.type == 'ARMATURE' and len(obj.children) > 0:
         return first(obj.children, lambda child: child.type == 'MESH')
 

@@ -29,15 +29,20 @@ class MeshImportContext:
         self.collection = create_or_get_collection(self.name) if self.options.get("ImportIntoCollection") else bpy.context.scene.collection
 
         if self.type in [EExportType.OUTFIT, EExportType.BACKPACK, EExportType.PICKAXE, EExportType.FALL_GUYS_OUTFIT]:
-            target_meshes = data.get("OverrideMeshes")
-            normal_meshes = data.get("Meshes")
+            target_meshes = data.get("OverrideMeshes") or []
+            normal_meshes = data.get("Meshes") or []
             for mesh in normal_meshes:
                 if not any(target_meshes, lambda target_mesh: target_mesh.get("Type") == mesh.get("Type")):
                     target_meshes.append(mesh)
         else:
-            target_meshes = data.get("Meshes")
+            target_meshes = data.get("Meshes") or []
 
         self.meshes = target_meshes
+        if not target_meshes:
+            Log.warn(f"No meshes to import for '{self.name}' ({self.type.name})")
+            self.import_light_data(data.get("Lights"))
+            return
+
         for mesh in target_meshes:
             self.import_model(mesh, can_spawn_at_3d_cursor=True)
 
@@ -52,35 +57,38 @@ class MeshImportContext:
         if self.type in [EExportType.OUTFIT, EExportType.FALL_GUYS_OUTFIT]: # and self.options.get("MergeArmatures"):
             master_skeleton = get_selected_armature()
             master_mesh = get_armature_mesh(master_skeleton)
-            # Update attribute to account for joined mesh
-            self.update_preskinned_bounds(master_mesh)
-            
-            for material, elements in self.partial_vertex_crunch_materials.items():
-                vertex_crunch_modifier = master_mesh.modifiers.new("FP Vertex Crunch", type="NODES")
-                vertex_crunch_modifier.node_group = bpy.data.node_groups.get("FP Vertex Crunch")
-
-                set_geo_nodes_param(vertex_crunch_modifier, "Material", material)
-                for name, value in elements.items():
-                    set_geo_nodes_param(vertex_crunch_modifier, name, value == 1)
-                    
-            for material in self.full_vertex_crunch_materials:
-                vertex_crunch_modifier = master_mesh.modifiers.new("FP Full Vertex Crunch", type="NODES")
-                vertex_crunch_modifier.node_group = bpy.data.node_groups.get("FP Full Vertex Crunch")
-                set_geo_nodes_param(vertex_crunch_modifier, "Material", material)
-
-            if self.add_toon_outline:
-                master_mesh.data.materials.append(bpy.data.materials.get("M_FP_Outline"))
-
-                solidify = master_mesh.modifiers.new(name="Outline", type='SOLIDIFY')
-                solidify.thickness = 0.001
-                solidify.offset = 1
-                solidify.thickness_clamp = 5.0
-                solidify.use_rim = False
-                solidify.use_flip_normals = True
-                solidify.material_offset = len(master_mesh.data.materials) - 1
+            if master_skeleton is None or master_mesh is None:
+                Log.warn(f"No armature/mesh available after import for '{self.name}' — skipping outfit post-processing")
+            else:
+                # Update attribute to account for joined mesh
+                self.update_preskinned_bounds(master_mesh)
                 
-            if rig_type == ERigType.TASTY:
-                self.create_tasty_rig(master_skeleton)
+                for material, elements in self.partial_vertex_crunch_materials.items():
+                    vertex_crunch_modifier = master_mesh.modifiers.new("FP Vertex Crunch", type="NODES")
+                    vertex_crunch_modifier.node_group = bpy.data.node_groups.get("FP Vertex Crunch")
+
+                    set_geo_nodes_param(vertex_crunch_modifier, "Material", material)
+                    for name, value in elements.items():
+                        set_geo_nodes_param(vertex_crunch_modifier, name, value == 1)
+                        
+                for material in self.full_vertex_crunch_materials:
+                    vertex_crunch_modifier = master_mesh.modifiers.new("FP Full Vertex Crunch", type="NODES")
+                    vertex_crunch_modifier.node_group = bpy.data.node_groups.get("FP Full Vertex Crunch")
+                    set_geo_nodes_param(vertex_crunch_modifier, "Material", material)
+
+                if self.add_toon_outline:
+                    master_mesh.data.materials.append(bpy.data.materials.get("M_FP_Outline"))
+
+                    solidify = master_mesh.modifiers.new(name="Outline", type='SOLIDIFY')
+                    solidify.thickness = 0.001
+                    solidify.offset = 1
+                    solidify.thickness_clamp = 5.0
+                    solidify.use_rim = False
+                    solidify.use_flip_normals = True
+                    solidify.material_offset = len(master_mesh.data.materials) - 1
+                    
+                if rig_type == ERigType.TASTY:
+                    self.create_tasty_rig(master_skeleton)
 
         # Lobby poses are nested on Outfit exports; apply even when MergeArmatures is off.
         if self.type in [EExportType.OUTFIT, EExportType.FALL_GUYS_OUTFIT]:
@@ -92,6 +100,9 @@ class MeshImportContext:
                     self.import_anim_data(anim_data, master_skeleton)
 
         if self.type in [EExportType.SIDEKICK]:
+            if not self.imported_meshes:
+                Log.warn(f"No meshes imported for sidekick '{self.name}' — skipping post-processing")
+                return
             master_mesh = self.imported_meshes[0]["Mesh"]
             for material in self.full_vertex_crunch_materials:
                 vertex_crunch_modifier = master_mesh.modifiers.new("FP Full Vertex Crunch", type="NODES")
@@ -114,6 +125,9 @@ class MeshImportContext:
         if self.type in [EExportType.KICKS]:
 
             kick_armature = get_selected_armature()
+            if kick_armature is None:
+                Log.warn(f"No armature available after kicks import for '{self.name}' — skipping post-processing")
+                return
             kick_armature["is_kicks"] = True
             
             if pre_import_selected_armature_active and "pelvis" in pre_import_selected_armature.data.bones and not pre_import_selected_armature.get("is_kicks"):

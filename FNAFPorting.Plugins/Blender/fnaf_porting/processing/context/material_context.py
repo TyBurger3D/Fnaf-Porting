@@ -140,6 +140,18 @@ class MaterialImportContext:
                     return mapping
             return None
 
+        def fnaf_suffix_mapping(name):
+            key = name.casefold()
+            if key.endswith(("_diff", "_diffuse", "_bc", "_albedo", "_basecolor", "_base_color")):
+                return SlotMapping(name, "Base Color")
+            if key.endswith(("_nrm", "_norm", "_normal", "_normals")):
+                return SlotMapping(name, "Normal")
+            if key.endswith(("_spec", "_specular", "_orm", "_aorm", "_mro", "_srm")):
+                return SlotMapping(name, "ORM")
+            if key.endswith(("_emis", "_emissive", "_emit")):
+                return SlotMapping(name, "Emission Color")
+            return None
+
         # parameter handlers
         def texture_param(data, target_mappings, target_node=shader_node, add_unused_params=False, mapped_lookup=None):
             node = None
@@ -153,10 +165,18 @@ class MaterialImportContext:
                 mappings = (mapped_lookup.get(name.casefold()) if mapped_lookup is not None
                             else mapping_lookup(target_mappings.textures, name))
 
-                # Unmapped / ignored textures: never build nodes or load images.
-                # Creating hundreds of empty TexImage nodes per hero material was
-                # expensive and blew up Blender's depsgraph after import.
-                if mappings is None or texture_name.casefold() in ignore_textures:
+                # Texture-asset-named params (e.g. ROACH_SPEC) used by Help Wanted props
+                if mappings is None and target_mappings is fnaf_character_mappings:
+                    mappings = fnaf_suffix_mapping(name)
+
+                if mappings is None or texture_name.casefold() in texture_ignore_names:
+                    if add_unused_params:
+                        nonlocal unused_parameter_height
+                        node.label = name
+                        node.location = 400, unused_parameter_height
+                        unused_parameter_height -= 50
+                    else:
+                        nodes.remove(node)
                     return
 
                 node = nodes.new(type="ShaderNodeTexImage")

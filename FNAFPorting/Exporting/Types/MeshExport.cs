@@ -125,47 +125,14 @@ public class MeshExport : BaseExport
         switch (exportType)
         {
             case EExportType.Outfit:
+            case EExportType.Backpack:    
             {
-                if (asset.TryGetValue(out UObject characterMesh, "Mesh1"))
-                {
-                    Meshes.AddIfNotNull(Exporter.MeshComponent(characterMesh));
-                }
-                else
-                {
-                    var parts = asset.GetOrDefault("BaseCharacterParts", Array.Empty<UObject>());
-                    if (parts.Length == 0
-                        && asset.TryGetValue(out UObject heroDefinition, "HeroDefinition")
-                        && heroDefinition.TryGetValue(out UObject[] specializations, "Specializations"))
-                    {
-                        parts = specializations.First().GetOrDefault("CharacterParts", Array.Empty<UObject>());
-                    }
-
-                    foreach (var part in parts)
-                    {
-                        Meshes.AddIfNotNull(Exporter.CharacterPart(part));
-                    }
-                }
-
-                if (Exporter.Meta.Settings.ImportLobbyPoses)
-                {
-                    TryImportFNAFLobbyPose(styles ?? []);
-                }
-                
+                Meshes.AddIfNotNull(Exporter.Mesh(asset));
                 break;
             }
             case EExportType.CharacterPart:
             {
                 Meshes.AddIfNotNull(Exporter.CharacterPart(asset));
-                
-                break;
-            }
-            case EExportType.Backpack:
-            {
-                var parts = asset.GetOrDefault("CharacterParts", Array.Empty<UObject>());
-                foreach (var part in parts)
-                {
-                    Meshes.AddIfNotNull(Exporter.CharacterPart(part));
-                }
                 
                 break;
             }
