@@ -845,7 +845,8 @@ public static class FNAFManualAssets
             {
                 Name = "Gregory",
                 AssetPath = "fnaf9/Content/Model_Assets/Chars/Gregory/RIG_Gregory_",
-                IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                IconPath = "avares://FNAFPorting/Assets/SB/Greg.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/SB/Greg.png",
                 Description = "I.. I'm gregory"
             },
             new ManuallyDefinedAsset
@@ -914,16 +915,18 @@ public static class FNAFManualAssets
             },
             new ManuallyDefinedAsset
             {
-                Name = "Staff Bot (Will have styles later)",
+                Name = "Staff Bot",
                 AssetPath = "fnaf9/Content/Model_Assets/Chars/Staffbot/RIG_Chefbot",
-                IconPath = "fnaf9/Content/ShadingAssets/Textures/TEX_FatalAccidents-poster",
+                IconPath = "avares://FNAFPorting/Assets/SB/StaffBot.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/SB/StaffBot.png",
                 Description = "take a map. take. a. map. take it. the map? Take it. (this is temporary)"
             },
             new ManuallyDefinedAsset
             {
                 Name = "Vanessa",
                 AssetPath = "fnaf9/Content/Model_Assets/Chars/Vanessa/RIG_Vanessa",
-                IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                IconPath = "avares://FNAFPorting/Assets/SB/Vanessa.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/SB/Vanessa.png",
                 Description = "Gregory... Come meet me at the front stage."
             },
             new ManuallyDefinedAsset
@@ -1018,7 +1021,8 @@ public static class FNAFManualAssets
             {
                 Name = "Cassie",
                 AssetPath = "fnaf9/Plugins/Chowda/Content/Characters/DLC_Player/SK_DLC_Player_Body",
-                IconPath = "fnaf9/Content/ShadingAssets/Textures/LoadingSprites/HelpyLoading/Helpy_Anim_pizza0021",
+                IconPath = "avares://FNAFPorting/Assets/SB/Cassie.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/SB/Cassie.png",
                 Description = "Gregory? What... are you?"
             },
             new ManuallyDefinedAsset
@@ -1767,7 +1771,8 @@ public static class FNAFManualAssets
             {
                 Name = "Faz Tokens",
                 AssetPath = "freddys/Content/ProductionAssets/Models/Environments/ENV_MOD_FreddyToken01",
-                IconPath = "freddys/Content/ProductionAssets/UI_Assets/Textures/FNAFVR_UI_CoinFull",
+                IconPath = "avares://FNAFPorting/Assets/HW/Items/Coin.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/Items/Coin.png",
                 Description = "Cha-Ching! YAYYY!!"
             }
     ];

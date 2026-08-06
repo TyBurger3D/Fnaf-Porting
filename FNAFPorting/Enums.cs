@@ -21,7 +21,7 @@ public enum EFNAFVersion
     [Icon(MaterialIconKind.Warning)]
     SecurityBreach,
 
-    [Description("Five Laps at Freddy's"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.ZERO_CHAR)]
+    [Description("Five Laps at Freddy's"), UEVersion(EGame.GAME_UE4_27), AESKey(Globals.FLAF_AES)]
     [Icon(MaterialIconKind.CarConvertible)]
     FLAF,
 
