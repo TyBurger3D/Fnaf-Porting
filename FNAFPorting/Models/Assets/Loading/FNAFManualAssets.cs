@@ -10,8 +10,8 @@ public static class FNAFManualAssets
         EFNAFVersion.SecurityBreach => SecurityBreachAnimatronics,
         EFNAFVersion.FLAF => FLAFAnimatronics,
         EFNAFVersion.SOTM => SotMAnimatronics,
-        EFNAFVersion.Chapter1 => Chapter1Animatronics,
         EFNAFVersion.Custom => AllAnimatronics,
+        EFNAFVersion.TJOC => TJOCAnimatronics,
         _ => []
     };
 
@@ -22,8 +22,8 @@ public static class FNAFManualAssets
         EFNAFVersion.SecurityBreach => SecurityBreachItems,
         EFNAFVersion.FLAF => FLAFItems,
         EFNAFVersion.SOTM => SotMItems,
-        EFNAFVersion.Chapter1 => Chapter1Items,
         EFNAFVersion.Custom => AllItems,
+        EFNAFVersion.TJOC => TJOCItems,
         _ => []
     };
 
@@ -1753,6 +1753,25 @@ public static class FNAFManualAssets
                 Description = "Such a cool guy"
             }
     ];
+        private static readonly ManuallyDefinedAsset[] TJOCAnimatronics =
+    [
+            new ManuallyDefinedAsset
+            {
+                Name = "DLC Pirate Foxy",
+                AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/PirateFoxy/RIG_PirateFoxy",
+                IconPath = "avares://FNAFPorting/Assets/HW/PRFY.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/PRFY.png",
+                Description = "A fun ride for all."
+            },
+            new ManuallyDefinedAsset
+            {
+                Name = "DLC Dreadbear",
+                AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/DLCFreddy/RIG_DLC1_Freddy",
+                IconPath = "avares://FNAFPorting/Assets/HW/DRDB.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW/DRDB.png",
+                Description = "Run from the curse. The curse? death. It is my curse. The curse, of Dreadbear."
+            }
+    ];
     
     private static readonly ManuallyDefinedAsset[] Chapter1Animatronics = [];
 
@@ -1785,7 +1804,7 @@ public static class FNAFManualAssets
 
     private static readonly ManuallyDefinedAsset[] SotMItems = [];
     
-    private static readonly ManuallyDefinedAsset[] Chapter1Items = [];
+    private static readonly ManuallyDefinedAsset[] TJOCItems = [];
 
     private static readonly ManuallyDefinedAsset[] AllItems = [
         ..HelpWantedItems, 
@@ -1793,7 +1812,7 @@ public static class FNAFManualAssets
         ..SecurityBreachItems, 
         ..FLAFItems, 
         ..SotMItems, 
-        ..Chapter1Items
+        ..TJOCItems
     ];
 
 }

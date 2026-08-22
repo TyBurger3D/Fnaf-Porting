@@ -29,9 +29,9 @@ public enum EFNAFVersion
     [Icon(MaterialIconKind.AccountLock)]
     SOTM,
     
-    [Description("Poppy Playtime Chapter 1"), UEVersion(EGame.GAME_UE5_2), AESKey(Globals.CHAPTER_1_AES)]
+    [Description("The Joy of Creation (Demo)"), UEVersion(EGame.GAME_UE5_4)]
     [Icon(MaterialIconKind.Comedy)]
-    Chapter1,
+    TJOC,
 
     [Description("Custom")]
     [Icon(MaterialIconKind.Edit)]

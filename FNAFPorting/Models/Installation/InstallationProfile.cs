@@ -21,7 +21,7 @@ public partial class InstallationProfile : ObservableValidator
     [NotifyPropertyChangedFor(nameof(TextureStreamingEnabled))]
     [NotifyPropertyChangedFor(nameof(LoadInstalledBundlesEnabled))]
     [NotifyPropertyChangedFor(nameof(IsCustom))]
-    private EFNAFVersion _fnafVersion = EFNAFVersion.Chapter1;
+    private EFNAFVersion _fnafVersion = EFNAFVersion.TJOC;
 
     [NotifyDataErrorInfo]
     [ArchiveDirectory]
