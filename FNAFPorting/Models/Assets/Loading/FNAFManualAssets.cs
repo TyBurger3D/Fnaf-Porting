@@ -598,8 +598,8 @@ public static class FNAFManualAssets
             {
                 Name = "Help Wanted 2 Masked Golden Freddy Doll",
                 AssetPath = "Thumper/Content/Characters/MaskedDolls/SK_MaskedDoll_GoldenFreddy",
-                IconPath = "avares://FNAFPorting/Assets/HW2/GP.png",
-                LocalIconPath = "avares://FNAFPorting/Assets/HW2/GP.png",
+                IconPath = "avares://FNAFPorting/Assets/HW2/GFP.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/HW2/GFP.png",
                 Description = "Cassidy."
             },
             new ManuallyDefinedAsset
