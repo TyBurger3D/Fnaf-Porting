@@ -2,23 +2,23 @@
                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                   xmlns:controls="clr-namespace:FNAFPorting.Controls">
     <controls:FPStyles.Resources>
-        <Brush x:Key="FPSeparatorColorLayer1">#261820</Brush>
-        <Brush x:Key="FPSeparatorColorLayer2">#33222C</Brush>
+        <Brush x:Key="FPSeparatorColorLayer1">#1A0010</Brush>
+        <Brush x:Key="FPSeparatorColorLayer2">#1A0010</Brush>
 
         <Brush x:Key="FPButtonBackground">#221519</Brush>
-        <Brush x:Key="FPButtonBackgroundPointerOver">#5C2038</Brush>
-        <Brush x:Key="FPButtonBackgroundPressed">#6E2844</Brush>
-        <Brush x:Key="FPButtonBorderBrush">#4C1E32</Brush>
+        <Brush x:Key="FPButtonBackgroundPointerOver">#A30067</Brush>
+        <Brush x:Key="FPButtonBackgroundPressed">#A30067</Brush>
+        <Brush x:Key="FPButtonBorderBrush">#75004A</Brush>
 
         <Brush x:Key="FPLayer2">#2C1A22</Brush>
-        <Brush x:Key="FPLayer2PointerOver">#4E1E38</Brush>
-        <Brush x:Key="FPLayer2Pressed">#842855</Brush>
+        <Brush x:Key="FPLayer2PointerOver">#A30067</Brush>
+        <Brush x:Key="FPLayer2Pressed">#A30067</Brush>
 
-        <Brush x:Key="FPButtonBackgroundSelected">#4C1E32</Brush>
+        <Brush x:Key="FPButtonBackgroundSelected">#75004A</Brush>
         <Brush x:Key="FPButtonBackgroundSelectedPointerOver">#903060</Brush>
 
-        <Brush x:Key="FPButtonBackgroundBright">#3C2030</Brush>
-        <Brush x:Key="FPButtonBackgroundBrightPointerOver">#C85080</Brush>
+        <Brush x:Key="FPButtonBackgroundBright">#47002D</Brush>
+        <Brush x:Key="FPButtonBackgroundBrightPointerOver">#FF00A1</Brush>
 
         <LinearGradientBrush x:Key="FPContentCardBackground" StartPoint="0%, 0%" EndPoint="0%, 100%">
             <GradientStops>
@@ -62,7 +62,7 @@
         
         <SolidColorBrush x:Key="FPTitleTextBrush" Color="#FFD6E8" /> 
         
-        <Color x:Key="FPAccentColor">#FF4040</Color>
+        <Color x:Key="FPAccentColor">#FF00A1</Color>
         <SolidColorBrush x:Key="FPAccentBrush" Color="{DynamicResource FPAccentColor}" />
         
         <Bitmap x:Key="FPLogoBitmap">avares://FNAFPorting/Assets/LogoRose.png</Bitmap>

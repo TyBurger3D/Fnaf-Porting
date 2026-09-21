@@ -18,10 +18,13 @@ public class DependencyService : IService
     
     public readonly DirectoryInfo VgmStreamFolder = new(Path.Combine(App.DataFolder.FullName, "vgmstream"));
 
+
+    public readonly FileInfo TJOCMappings = new(Path.Combine(App.DataFolder.FullName, Globals.TJOC_MAPPINGS));
     public void Ensure()
     {
         TaskService.Run(() =>
         {
+            EnsureResource("Assets/" + Globals.TJOC_MAPPINGS, TJOCMappings);
             EnsureResource("Assets/Dependencies/noodle.dll", NoodleFile);
             EnsureResource("Assets/Dependencies/binkadec.exe", BinkaDecoderFile);
             EnsureResource("Assets/Dependencies/radadec.exe", RadaDecoderFile);

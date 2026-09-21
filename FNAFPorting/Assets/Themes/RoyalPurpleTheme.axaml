@@ -2,69 +2,69 @@
                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                    xmlns:controls="clr-namespace:FNAFPorting.Controls">
     <controls:FPStyles.Resources>
-        <Brush x:Key="FPSeparatorColorLayer1">#1D1B2B</Brush>
-        <Brush x:Key="FPSeparatorColorLayer2">#2A2640</Brush>
+        <Brush x:Key="FPSeparatorColorLayer1">#FFC300</Brush>
+        <Brush x:Key="FPSeparatorColorLayer2">#FFC300</Brush>
 
-        <Brush x:Key="FPButtonBackground">#1B1A2A</Brush>
-        <Brush x:Key="FPButtonBackgroundPointerOver">#27234C</Brush>
-        <Brush x:Key="FPButtonBackgroundPressed">#2F2A55</Brush>
-        <Brush x:Key="FPButtonBorderBrush">#2C2850</Brush>
+        <Brush x:Key="FPButtonBackground">#473700</Brush>
+        <Brush x:Key="FPButtonBackgroundPointerOver">#755A00</Brush>
+        <Brush x:Key="FPButtonBackgroundPressed">#6F5706</Brush>
+        <Brush x:Key="FPButtonBorderBrush">#443504</Brush>
 
-        <Brush x:Key="FPLayer2">#24203A</Brush>
-        <Brush x:Key="FPLayer2PointerOver">#35305C</Brush>
-        <Brush x:Key="FPLayer2Pressed">#3C3595</Brush>
+        <Brush x:Key="FPLayer2">#443504</Brush>
+        <Brush x:Key="FPLayer2PointerOver">#524823</Brush>
+        <Brush x:Key="FPLayer2Pressed">#FFC300</Brush>
 
-        <Brush x:Key="FPButtonBackgroundSelected">#2C2850</Brush>
-        <Brush x:Key="FPButtonBackgroundSelectedPointerOver">#3A33A0</Brush>
+        <Brush x:Key="FPButtonBackgroundSelected">#524823</Brush>
+        <Brush x:Key="FPButtonBackgroundSelectedPointerOver">#FFC300</Brush>
 
-        <Brush x:Key="FPButtonBackgroundBright">#322E5B</Brush>
-        <Brush x:Key="FPButtonBackgroundBrightPointerOver">#433FA3</Brush>
+        <Brush x:Key="FPButtonBackgroundBright">#443504</Brush>
+        <Brush x:Key="FPButtonBackgroundBrightPointerOver">#FFC300</Brush>
 
         <LinearGradientBrush x:Key="FPContentCardBackground" StartPoint="0%, 0%" EndPoint="0%, 100%">
             <GradientStops>
-                <GradientStop Color="#241F48" Offset="0"/>
-                <GradientStop Color="#1F1C38" Offset="1"/>
+                <GradientStop Color="#755A00" Offset="0"/>
+                <GradientStop Color="#1A1400" Offset="1"/>
             </GradientStops>
         </LinearGradientBrush>
         
         <LinearGradientBrush x:Key="FPPopupContentCardBackground" StartPoint="0%, 0%" EndPoint="0%, 100%">
             <GradientStops>
-                <GradientStop Color="#241F48" Offset="0"/>
-                <GradientStop Color="#1F1C38" Offset="1"/>
+                <GradientStop Color="#755A00" Offset="0"/>
+                <GradientStop Color="#1A1400" Offset="1"/>
             </GradientStops>
         </LinearGradientBrush>
         
         <LinearGradientBrush x:Key="FPContentCardBackgroundBright" StartPoint="0%, 0%" EndPoint="0%, 100%">
             <GradientStops>
-                <GradientStop Color="#342F58" Offset="0"/>
-                <GradientStop Color="#2F2C48" Offset="1"/>
+                <GradientStop Color="#FFCE2E" Offset="0"/>
+                <GradientStop Color="#A37D00" Offset="1"/>
             </GradientStops>
         </LinearGradientBrush>
 
-        <SolidColorBrush x:Key="TextFillPrimaryBrush" Color="#E6E6FF" />
-        <SolidColorBrush x:Key="TextFillPrimaryDisabledBrush" Color="#80E6E6FF" />
+        <SolidColorBrush x:Key="TextFillPrimaryBrush" Color="#FFF9E6" />
+        <SolidColorBrush x:Key="TextFillPrimaryDisabledBrush" Color="#FEEEB8" />
 
-        <SolidColorBrush x:Key="TextFillSecondaryBrush" Color="#B0AEE6" />
-        <SolidColorBrush x:Key="TextFillSecondaryDisabledBrush" Color="#80B0AEE6" />
+        <SolidColorBrush x:Key="TextFillSecondaryBrush" Color="#FDD85D" />
+        <SolidColorBrush x:Key="TextFillSecondaryDisabledBrush" Color="#CEBE8D" />
 
-        <SolidColorBrush x:Key="TextFillTertiaryBrush" Color="#807EB0" />
-        <SolidColorBrush x:Key="TextFillTertiaryDisabledBrush" Color="#80807EB0" />
+        <SolidColorBrush x:Key="TextFillTertiaryBrush" Color="#FDD85D" />
+        <SolidColorBrush x:Key="TextFillTertiaryDisabledBrush" Color="#CEBE8D" />
 
-        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#0D0B1E" />
-        <SolidColorBrush x:Key="ContentBorderBackgroundBrush" Color="#100F25" />
-        <SolidColorBrush x:Key="ContentBorderBorderBrush" Color="#2A2445" />
+        <SolidColorBrush x:Key="WindowBackgroundBrush" Color="#322B15" />
+        <SolidColorBrush x:Key="ContentBorderBackgroundBrush" Color="#473601" />
+        <SolidColorBrush x:Key="ContentBorderBorderBrush" Color="#A27C02" />
         
-        <SolidColorBrush x:Key="ContentBorderLayer2BackgroundBrush" Color="#0B0A14" />
-        <SolidColorBrush x:Key="ContentBorderLayer2BorderBrush" Color="#1C1A2E" />
+        <SolidColorBrush x:Key="ContentBorderLayer2BackgroundBrush" Color="#191300" />
+        <SolidColorBrush x:Key="ContentBorderLayer2BorderBrush" Color="#745901" />
 
-        <SolidColorBrush x:Key="DialogOverlayBackgroundBrush" Color="#80000055" />
-        <SolidColorBrush x:Key="BroadcastOverlayBackgroundBrush" Color="#80000055" />
+        <SolidColorBrush x:Key="DialogOverlayBackgroundBrush" Color="#745901" />
+        <SolidColorBrush x:Key="BroadcastOverlayBackgroundBrush" Color="#745901" />
         
-        <SolidColorBrush x:Key="FPTitleTextBrush" Color="#E6D9FF" /> 
+        <SolidColorBrush x:Key="FPTitleTextBrush" Color="#FFF9E6" /> 
         
-        <Color x:Key="FPAccentColor">#7A3FF5</Color>
+        <Color x:Key="FPAccentColor">#FFC300</Color>
         <SolidColorBrush x:Key="FPAccentBrush" Color="{DynamicResource FPAccentColor}" />
         
-        <Bitmap x:Key="FPLogoBitmap">avares://FNAFPorting/Assets/LogoPurple.png</Bitmap>
+        <Bitmap x:Key="FPLogoBitmap">avares://FNAFPorting/Assets/LogoChica.png</Bitmap>
     </controls:FPStyles.Resources>
 </controls:FPStyles>

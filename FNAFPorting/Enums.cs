@@ -29,8 +29,8 @@ public enum EFNAFVersion
     [Icon(MaterialIconKind.AccountLock)]
     SOTM,
     
-    [Description("The Joy of Creation (Demo)"), UEVersion(EGame.GAME_UE5_4)]
-    [Icon(MaterialIconKind.Comedy)]
+    [Description("The Joy of Creation (Demo)"), UEVersion(EGame.GAME_UE5_4), AESKey(Globals.ZERO_CHAR), MappingsFile(Globals.TJOC_MAPPINGS)]
+    [Icon(MaterialIconKind.EyeCircleOutline)]
     TJOC,
 
     [Description("Custom")]
@@ -392,29 +392,26 @@ public enum EFileFilterType
 public enum EThemeType
 {
     
-    [Description("FNAF")]
+    [Description("FNFAF Porting Default")]
     [Icon(MaterialIconKind.TeddyBear)]
     Fnaf,
     
-    [Description("Rose")]
-    [Icon(MaterialIconKind.Flower)]
+    [Description("Cupcake")]
+    [Icon(MaterialIconKind.Cupcake)]
     Rose,
     
-    [Description("Amethyst")]
-    [Icon(MaterialIconKind.DiamondStone)]
+    [Description("Bonnie")]
+    [Icon(MaterialIconKind.Bunny)]
     Amethyst,
     
-    [Description("Royal")]
-    [Icon(MaterialIconKind.Crown)]
+    [Description("Chica")]
+    [Icon(MaterialIconKind.Chicken)]
     RoyalPurple,
     
-    [Description("Ocean")]
-    [Icon(MaterialIconKind.WaterDrop)]
+    [Description("Monty")]
+    [Icon(MaterialIconKind.Golf)]
     OceanBlue,
     
-    [Description("Dark")]
-    [Icon(MaterialIconKind.WeatherNight)]
-    Dark,
     
     [Description("Mica")]
     [Icon(MaterialIconKind.CircleOpacity)]

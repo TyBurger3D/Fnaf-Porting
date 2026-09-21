@@ -1757,20 +1757,52 @@ public static class FNAFManualAssets
     [
             new ManuallyDefinedAsset
             {
-                Name = "DLC Pirate Foxy",
-                AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/PirateFoxy/RIG_PirateFoxy",
-                IconPath = "avares://FNAFPorting/Assets/HW/PRFY.png",
-                LocalIconPath = "avares://FNAFPorting/Assets/HW/PRFY.png",
-                Description = "A fun ride for all."
+                Name = "Ignited Bonnie",
+                AssetPath = "JOY/Content/Game/Characters/Ignited/Bonnie/SK_Ignited_Bonnie",
+                IconPath = "avares://FNAFPorting/Assets/TJOC/IB.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/TJOC/IB.png",
+                Description = "*Punches you cutely*"
             },
             new ManuallyDefinedAsset
             {
-                Name = "DLC Dreadbear",
-                AssetPath = "freddys/Plugins/HalloweenDLC/Content/CharacterAssets/DLCFreddy/RIG_DLC1_Freddy",
-                IconPath = "avares://FNAFPorting/Assets/HW/DRDB.png",
-                LocalIconPath = "avares://FNAFPorting/Assets/HW/DRDB.png",
-                Description = "Run from the curse. The curse? death. It is my curse. The curse, of Dreadbear."
-            }
+                Name = "Ignited Chica",
+                AssetPath = "JOY/Content/Game/Characters/Ignited/Chica/Ignited_Chica_send",
+                IconPath = "avares://FNAFPorting/Assets/TJOC/IC.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/TJOC/IC.png",
+                Description = "Rawr."
+            },
+            new ManuallyDefinedAsset
+            {
+                Name = "Ignited Cupcake",
+                AssetPath = "JOY/Content/Game/Characters/Ignited/Cupcakes/SK_IgnitedCupcake_3",
+                IconPath = "avares://FNAFPorting/Assets/TJOC/ICC.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/TJOC/ICC.png",
+                Description = "I won't forget you buddy."
+            },
+            new ManuallyDefinedAsset
+            {
+                Name = "Ignited Foxy",
+                AssetPath = "JOY/Content/Game/Characters/Ignited/Foxy/SK_Ignited_Foxy_OLD",
+                IconPath = "avares://FNAFPorting/Assets/TJOC/IFX.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/TJOC/IFX.png",
+                Description = "YEOWCH!"
+            },
+            new ManuallyDefinedAsset
+            {
+                Name = "Ignited Freddy",
+                AssetPath = "JOY/Content/Game/Characters/Ignited/Freddy/SK_Ignited_Freddy",
+                IconPath = "avares://FNAFPorting/Assets/TJOC/IFD.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/TJOC/IFD.png",
+                Description = "Ignition!!"
+            },
+            new ManuallyDefinedAsset
+            {
+                Name = "Inner Freddy",
+                AssetPath = "JOY/Content/Game/Characters/Inner/Freddy/SK_Inner_Freddy",
+                IconPath = "avares://FNAFPorting/Assets/TJOC/INFD.png",
+                LocalIconPath = "avares://FNAFPorting/Assets/TJOC/INFD.png",
+                Description = "The Inner Workings"
+            },
     ];
     
     private static readonly ManuallyDefinedAsset[] Chapter1Animatronics = [];
@@ -1781,7 +1813,7 @@ public static class FNAFManualAssets
         ..SecurityBreachAnimatronics, 
         ..FLAFAnimatronics, 
         ..SotMAnimatronics, 
-        ..Chapter1Animatronics
+        ..TJOCAnimatronics
     ];
 
     private static readonly ManuallyDefinedAsset[] HelpWantedItems =

@@ -46,6 +46,8 @@ public static class Globals
     public const string SOTM_AES = "0x38CE9CDC970FF5A18F5980CB0CE729495ED103A5388A81A58C32E9CA8AD776E1";
     public const string FLAF_AES = "0x5DD2FE6F83F51EB1B2C1B5074B0BE7FD732F59C0302412CB65AF7D9219BD7772";
     public const string DBD_AES = "0x22B1639B548124925CF7B9CBAA09F9AC295FCF0324586D6B37EE1D42670B39B3";
+    
+    public const string TJOC_MAPPINGS = "5.4.3-34507850+++UE5+Release-5.4-JOY.usmap";
 
     public static readonly ReadOnlyCollection<string> LATEST_EXTRA_AES = new([]);
 
